@@ -1,0 +1,93 @@
+@use 'baseColors' as *;
+@use 'base' as *;
+
+@mixin animate($animation, $duration, $times){
+  animation: $animation $duration $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: $blue3;
+  background-repeat: no-repeat;
+  color: $white;
+}
+
+main {
+  margin: 0 4rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 0;
+}
+
+.intro {
+  height: 20vh;
+  margin: 10vh 0;
+}
+
+.intro__title {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  background: linear-gradient(-45deg, $blue8, $blue7, $blue9, $blue6, $blue9, $blue5);
+  background-size: 400% 400%;
+  text-align: right;
+  margin: 0 0 0 -6rem;
+  padding: .5rem;
+  border-radius: .2rem;
+  box-shadow: 0 0 1rem $blue2;
+
+  @include keyframes(bg-animation) {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @include animate(bg-animation, 15s, infinite);
+}
+
+.lists {
+  margin-top: 5vh;
+}
+
+.left, .right {
+  background: $blue4;
+  padding: 1rem;
+  border-radius: .2rem;
+  box-shadow: 0px 0px .5rem $blue2;
+}
+
+.left__link, .right__link {
+  display: block;
+  text-decoration: none;
+  color: $aqua0;
+  max-width: fit-content;
+  margin: 0rem 0rem .5vh .5rem;
+}
+
+.left__see-all, .right__see-all {
+  display: block;
+  text-decoration: none;
+  max-width: fit-content;
+  margin: 1rem 0 0 90%;
+  white-space: nowrap;
+}

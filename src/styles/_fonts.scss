@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'outfit-thin';
+  src: url('./fonts/Outfit-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'outfit-xlight';
+  src: url('./fonts/Outfit-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'outfit-light';
+  src: url('./fonts/Outfit-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'outfit';
+  src: url('./fonts/Outfit-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'outfit-medium';
+  src: url('./fonts/Outfit-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'outfit-bold';
+  src: url('./fonts/Outfit-Bold.ttf') format('truetype');
+}
+
+@mixin outfit-thin {
+  font-family: 'outfit-thin', Arial, Helvetica, sans-serif;
+}
+@mixin outfit-xlight {
+  font-family: 'outfit-xlight', Arial, Helvetica, sans-serif;
+}
+@mixin outfit-light {
+  font-family: 'outfit-light', Arial, Helvetica, sans-serif;
+}
+@mixin outfit {
+  font-family: 'outfit', Arial, Helvetica, sans-serif;
+}
+@mixin outfit-medium {
+  font-family: 'outfit-medium', Arial, Helvetica, sans-serif;
+}
+@mixin outfit-bold {
+  font-family: 'outfit-bold', Arial, Helvetica, sans-serif;
+}
