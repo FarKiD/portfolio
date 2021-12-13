@@ -1,5 +1,6 @@
 @use 'baseColors' as *;
 @use 'base' as *;
+@use 'sass:color';
 
 @mixin animate($animation, $duration, $times){
   animation: $animation $duration $times;
@@ -45,8 +46,8 @@ main {
   background-size: 400% 400%;
   text-align: right;
   margin: 0 0 0 -6rem;
-  padding: .5rem;
-  border-radius: .2rem;
+  padding: 1.2rem .5rem;
+  border-radius: .3rem;
   box-shadow: 0 0 1rem $blue2;
 
   @include keyframes(bg-animation) {
@@ -65,29 +66,43 @@ main {
   @include animate(bg-animation, 15s, infinite);
 }
 
-.lists {
-  margin-top: 5vh;
+.intro__title--right {
+  text-align: left;
+  margin: 0 -6rem 0 0;
 }
 
-.left, .right {
-  background: $blue4;
-  padding: 1rem;
+.intro__paragraph {
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+   margin-bottom: 2rem;
+}
+
+.intro__paragraph--right {
+  text-align: right;
+}
+
+.intro__link {
+  background: color.adjust($aqua0, $alpha: -0.8);
+  border: .1rem solid color.adjust($aqua2, $alpha: -0.5);
   border-radius: .2rem;
-  box-shadow: 0px 0px .5rem $blue2;
+  color: $aqua1;
+  padding: .2rem .4rem;
+  transition: 300ms;
+  text-decoration: none;
 }
 
-.left__link, .right__link {
-  display: block;
-  text-decoration: none;
-  color: $aqua0;
-  max-width: fit-content;
-  margin: 0rem 0rem .5vh .5rem;
+.intro__link--right {
+  float: right;
 }
 
-.left__see-all, .right__see-all {
-  display: block;
-  text-decoration: none;
-  max-width: fit-content;
-  margin: 1rem 0 0 90%;
-  white-space: nowrap;
+.intro__link:hover {
+  background: $aqua0;
+  border-color: $aqua2;
+  border-radius: .1rem;
+  box-shadow: 0 0 .5rem .5rem $blue1;
+  color: $blue1;
 }

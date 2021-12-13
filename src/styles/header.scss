@@ -1,4 +1,5 @@
 @use 'baseColors' as *;
+@use 'base' as *;
 
 .header {
   background: $blue0;
@@ -23,7 +24,7 @@
   box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
   color: $white;
   display: flex;
-  font-size: 1.6rem;
+  font-size: $h3;
   text-decoration: none;
   height: 101%;
   align-items: center;
@@ -35,8 +36,9 @@
 }
 
 .navigation__item:hover {
-  font-size: 1.7rem;
   color: $aqua0;
+  background: $blue4;
+  box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
 }
 
 .navigation__title {
