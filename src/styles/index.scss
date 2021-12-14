@@ -12,6 +12,28 @@
   }
 }
 
+@mixin banner {
+  background: linear-gradient(-45deg, $blue8, $blue7, $blue9, $blue6, $blue9, $blue5);
+  background-size: 400% 400%;
+  border-radius: .3rem;
+  box-shadow: 0 0 1rem $blue2;
+
+  @include keyframes(bg-animation) {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @include animate(bg-animation, 15s, infinite);
+}
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -36,7 +58,7 @@ main {
 
 .intro {
   height: 20vh;
-  margin: 10vh 0;
+  margin: 10vh 0 0 0;
 }
 
 .intro__title {
@@ -45,55 +67,21 @@ main {
   justify-content: right;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  background: linear-gradient(-45deg, $blue8, $blue7, $blue9, $blue6, $blue9, $blue5);
-  background-size: 400% 400%;
   text-align: right;
   margin: 0 0 0 -6rem;
   padding: 0 1rem;
-  min-height: 8rem;
-  border-radius: .3rem;
-  box-shadow: 0 0 1rem $blue2;
-
-  @include keyframes(bg-animation) {
-    0% {
-      background-position: 0% 50%;
-    }
-  
-    50% {
-      background-position: 100% 50%;
-    }
-  
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @include animate(bg-animation, 15s, infinite);
+  height: 8rem;
+  @include banner;
 }
 
 .intro__banner {
-  background: linear-gradient(-45deg, $blue8, $blue7, $blue9, $blue6, $blue9, $blue5);
-  background-size: 400% 400%;
   margin: 0 -6rem 0 0;
-  border-radius: .3rem;
-  box-shadow: 0 0 1rem $blue2;
-
-  @include keyframes(bg-animation) {
-    0% {
-      background-position: 0% 50%;
-    }
-  
-    50% {
-      background-position: 100% 50%;
-    }
-  
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @include animate(bg-animation, 15s, infinite);
+  max-height: 8rem;
+  @include banner;
 }
 
-.intro__text {
+.intro__text,
+.second__text {
   position: relative;
   max-width: fit-content;
   height: 8rem;
@@ -103,7 +91,8 @@ main {
   margin-bottom: 0;
 }
 
-.intro__link {
+.intro__link,
+.second__link {
   position: absolute;
   bottom: 0;
   background: color.adjust($aqua0, $alpha: -0.8);
@@ -115,10 +104,38 @@ main {
   text-decoration: none;
 }
 
-.intro__link:hover {
+.intro__link:hover,
+.second__link:hover {
   background: $aqua0;
   border-color: $aqua2;
   border-radius: .1rem;
   box-shadow: 0 0 .5rem .5rem $blue1;
   color: $blue1;
+}
+
+.second__title {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  text-align: right;
+  margin: 0 0 0 -6rem;
+  padding: 0 1rem;
+  max-height: 8rem;
+  @include banner;
+}
+
+.second__banner {
+  margin: 0 -6rem 0 0;
+  max-height: 8rem;
+  @include banner;
+}
+
+.outro__github {
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
 }

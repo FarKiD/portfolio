@@ -1,5 +1,9 @@
 @use 'fonts' as *;
 
+.no-pad {
+  padding: 0;
+}
+
 // Variables
 $h1: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
 $h2: clamp(1.400rem, calc( 12px + 1.600vw ), 1.800rem);
