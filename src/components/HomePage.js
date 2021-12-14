@@ -12,7 +12,7 @@ const HomePage = () => {
               am I?
             </h2>
           </div>
-          <div className="col-4">
+          <div className="intro__text col">
             <p className="intro__paragraph">
               My name is Sajjad Ostadebrahim
               <br />
@@ -22,25 +22,10 @@ const HomePage = () => {
               Read More About Me
             </a>
           </div>
-          <div className="col-4">
-            <p className="intro__paragraph intro__paragraph--right">
-              A full-stack web application that showcase
-              <br />
-              pretty much my entire profession.
-            </p>
-            <a className="intro__link intro__link--right" href="#">
-              Read More About It
-            </a>
-          </div>
-          <div className="col-2">
-            <h2 className="intro__title intro__title--right">
-              what <br />
-              is this?
-            </h2>
-          </div>
+          <div className="intro__banner col"></div>
         </div>
         <div className="row">
-
+          
         </div>
       </main>
     </div>
