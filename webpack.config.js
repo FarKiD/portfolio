@@ -22,6 +22,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(png|svg|jpe?g)$/i,
+        use: [
+          {
+            loader: "file-loader"
+          }
+        ]
       }
     ]
   },
