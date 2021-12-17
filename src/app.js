@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import "./styles/index.scss";
+import "./animation/wow-js-plugin-animate.css";
 
 import AppRouter from './routers/AppRouter';
 

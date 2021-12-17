@@ -7,8 +7,8 @@ const HomePage = () => {
     <div className="container-fluid">
       <main>
         <div className="intro row">
-          <div className="col-2 no-pad">
-            <h2 className="intro__title">
+          <div className="col-2 intro__title">
+            <h2>
               who <br />
               am I?
             </h2>
