@@ -74,6 +74,13 @@ main {
   margin: 5rem 0;
 }
 
+.intro__h2 {
+  position: relative;
+  opacity: 0;
+  left: -8rem;
+  transition: 1000ms;
+}
+
 .intro {
   min-height: 20vh;
   margin: 3rem 0 0 0;
@@ -138,6 +145,11 @@ main {
   margin: 0 -6rem 0 0;
   max-height: 8rem;
   @include banner;
+}
+
+.outro {
+  opacity: 0;
+  transition: 1000ms;
 }
 
 .outro__github {

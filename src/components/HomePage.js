@@ -1,6 +1,9 @@
 import React from 'react';
 import halftone from '../images/halftone.png';
 
+import "../styles/index.scss";
+import "../js/index.js";
+
 const HomePage = () => {
   return(
   <>
@@ -8,7 +11,7 @@ const HomePage = () => {
       <main>
         <div className="intro row">
           <div className="col-2 intro__title">
-            <h2>
+            <h2 className='intro__h2 intro__h2--first'>
               who <br />
               am I?
             </h2>
@@ -27,7 +30,7 @@ const HomePage = () => {
         </div>
         <div className="second row">
           <div className="second__title col-8">
-            <h2>
+            <h2 className='intro__h2 intro__h2--second'>
               what is <br />
               this?
             </h2>
