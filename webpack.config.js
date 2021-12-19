@@ -55,6 +55,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "public", "dist")
     },
-    watchFiles: ['src/**']
+    watchFiles: ['src/**'],
+    historyApiFallback: true
   }
 }

@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const errorController = require('./controllers/error');
 
@@ -10,17 +10,18 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 // static path
-const serve = express.static(path.join(__dirname, 'public', 'dist'));
+const root = path.join(__dirname, 'public', 'dist');
+const serve = express.static(root);
 app.use(serve);
 
-// route
+// routes
+app.use('/projects', (req, res, next) => {
+  res.sendFile('index.html', {root});
+});
+
 app.get('/', (req, res, next) => {
   res.sendFile('index.html');
 });
-
-// app.use((req, res, next) => {
-//   res.status(404).send('404 page not found');
-// });
 
 app.use(errorController.pageNotFound);
 

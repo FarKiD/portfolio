@@ -1,8 +1,8 @@
 import React from 'react';
 import halftone from '../images/halftone.png';
 
-import "../styles/index.scss";
 import "../js/index.js";
+import "../styles/index.scss";
 
 const HomePage = () => {
   return(
