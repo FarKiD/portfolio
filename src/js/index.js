@@ -1,4 +1,4 @@
-export function loadAnim() {
+export const loadAnim = () => {
   console.log('hey hey!');
   // Slide in title
   setTimeout(() => {
