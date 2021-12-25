@@ -1,5 +1,4 @@
 export const loadAnim = () => {
-  console.log('hey hey!');
   // Slide in title
   setTimeout(() => {
     $('.intro__h2--first').css({

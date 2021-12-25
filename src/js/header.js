@@ -1,3 +1,5 @@
+import regenatorRuntime from "regenerator-runtime";
+
 // Remove activation class from all navlinks
 export const rmvClassActive = () => {
   $('.navigation__item').removeClass('navigation__active');
@@ -13,8 +15,25 @@ export const isActive = (event, path) => {
 
 // Gives the active class to the links on load
 export const onLoadActive = () => {
-  const pathName = window.location.pathname;
-  const location = pathName.slice(1).toString();
-  // gives the active class to any link containing current location
-  $(`a[href*=${location}]`).addClass('navigation__active');
+  // get pathname on load
+  async function getPathAsync() {
+    let pathName;
+    return pathName = window.location.pathname;
+  }
+
+  // take the slash from the start of the pathname
+  getPathAsync().then(
+    function(pathName) {
+     let location;
+     return location = pathName.slice(1).toString();
+    }
+  )
+  .then(
+    function(location) {
+      // gives the active class to any link containing current location
+      if(location) {
+        $(`a[href*=${location}]`).addClass('navigation__active');
+      };
+    }
+  )
 };
