@@ -1,8 +1,5 @@
+@use 'baseColors' as *;
 @use 'fonts' as *;
-
-.no-pad {
-  padding: 0;
-}
 
 // Variables
 $h1: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
@@ -12,7 +9,30 @@ $h4: clamp(1.000rem, calc( 12px + 0.800vw ), 1.200rem);
 $p: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
 $span: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
 
-// General Rules
+// Scrollbar Style
+/* width */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $purple0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $purple1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $purple2;
+}
+
+
+// General Rules and Classes
+// Font rules
 body {
   @include outfit;
 }
@@ -34,4 +54,9 @@ p, a {
 }
 span {
   font-size: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
+}
+
+// Custom Special Classes
+.no-pad {
+  padding: 0;
 }

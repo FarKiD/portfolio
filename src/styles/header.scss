@@ -12,14 +12,14 @@
   display: flex;
   height: 5vh;
   min-height: 3rem;
-  width: 50%;
+  width: 100%;
 }
 
-.navigation__item-first {
+.navigation--item_first {
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%) !important;
 }
 
-.navigation__item {
+.navigation--item {
   background: $blue2;
   box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
   color: $white;
@@ -35,16 +35,21 @@
   white-space: nowrap;
 }
 
-.navigation__item:hover {
+.navigation--item:hover {
   color: $aqua0;
   background: $blue4;
   box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
 }
 
-.navigation__title {
+.navigation--title-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+  width: 100%;
+}
+
+.navigation--title {
   color: $white;
-  position: absolute;
-  right: 2rem;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 2rem;
@@ -52,10 +57,10 @@
   transition: 300ms;
 }
 
-.navigation__title:hover {
+.navigation--title:hover {
   color: $aqua0;
 }
 
-.navigation__active {
+.navigation_active {
   color: $aqua0;
 }

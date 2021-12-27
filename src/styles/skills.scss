@@ -1,0 +1,15 @@
+@use 'baseColors' as *;
+@use 'base' as *;
+
+.front {
+  margin: 3rem 1rem;
+  height: 95vh;
+}
+
+.front--title {
+  border-bottom: .2rem solid $aqua2;
+  background: $blue3;
+  width: 0;
+  white-space: nowrap;
+  transition: 1000ms;
+}

@@ -1,14 +1,18 @@
-export const loadAnim = () => {
+export const indexLoad = () => {
+  $('html, body').css({
+    'overflow': 'hidden'
+  });
+
   // Slide in title
   setTimeout(() => {
-    $('.intro__h2--first').css({
+    $('.intro--h2_first').css({
       'left': '0',
       'opacity': '100%'
     });
   }, 500);
   // Slide in the second title
   setTimeout(() => {
-    $('.intro__h2--second').css({
+    $('.intro--h2_second').css({
       'left': '0',
       'opacity': '100%'
     });
