@@ -37,22 +37,22 @@ body {
   @include outfit;
 }
 
-h1 {
+h1, .h1 {
   font-size: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
 }
-h2 {
+h2, .h2 {
   font-size: clamp(1.400rem, calc( 12px + 1.600vw ), 1.800rem);
 }
-h3 {
+h3, .h3 {
   font-size: clamp(1.140rem, calc( 12px + 1.200vw ), 1.500rem);
 }
-h4 {
+h4, .h4 {
   font-size: clamp(1.000rem, calc( 12px + 0.800vw ), 1.200rem);
 }
-p, a {
+p, a, .p, .a {
   font-size: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
 }
-span {
+span, .span {
   font-size: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
 }
 

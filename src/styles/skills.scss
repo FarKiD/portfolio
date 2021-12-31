@@ -1,15 +1,23 @@
 @use 'baseColors' as *;
 @use 'base' as *;
 
+@mixin skillTitle {
+  border-bottom: .2rem solid $aqua2;
+  margin: 0 0 2rem 0;
+  width: 0;
+  white-space: nowrap;
+  transition: 1000ms;
+}
+
 .front {
   margin: 3rem 1rem;
   height: 95vh;
 }
 
 .front--title {
-  border-bottom: .2rem solid $aqua2;
-  background: $blue3;
-  width: 0;
-  white-space: nowrap;
-  transition: 1000ms;
+  @include skillTitle;
+}
+
+.front--skill--title {
+  background: $blue2;
 }
