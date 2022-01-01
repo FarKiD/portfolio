@@ -49,6 +49,17 @@ class Skills extends React.Component {
                   <h4 className='p'>
                     Bootstrap
                   </h4>
+                  <h4 className='p'>
+                    jQuery UI
+                  </h4>
+                  <div className='front--skill--item'>
+                    <h4 className='p'>
+                      Icon Libraries
+                    </h4>
+                    <p className='small'>
+                      Bootstrap Icons, Font Awesome, Line Icons etc.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className='col front--skill'>
@@ -61,6 +72,12 @@ class Skills extends React.Component {
                   <h4 className='p'>
                     JavaScript
                   </h4>
+                  <h4 className='p'>
+                    jQuery
+                  </h4>
+                  <h4 className='p'>
+                    EcmaScript6+
+                  </h4>
                 </div>
               </div>
             </div>
@@ -72,24 +89,28 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front--skill--body'>
-                  <h4 className='p'>
-                    React.js
-                  </h4> 
-                  <h4 className='p'>
-                    Webpack
-                  </h4> 
-                  <h4 className='p'>
-                    NPM and Yarn
-                  </h4> 
-                  <h4 className='p'>
-                    React Router
-                  </h4> 
-                  <h4 className='p'>
-                    Redux
-                  </h4>
-                  <h4 className='p'>
-                    Git, Github, Gitlab
-                  </h4>
+                  <div className='row'>
+                    <h4 className='p col'>
+                      React.js
+                    </h4> 
+                    <h4 className='p col'>
+                      Webpack
+                    </h4> 
+                    <h4 className='p col'>
+                      NPM and Yarn
+                    </h4> 
+                  </div>
+                  <div className='row'>
+                    <h4 className='p col'>
+                      React Router
+                    </h4> 
+                    <h4 className='p col'>
+                      Redux
+                    </h4>
+                    <h4 className='p col'>
+                      Git, Github, Gitlab
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>

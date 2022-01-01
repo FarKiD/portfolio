@@ -19,5 +19,22 @@
 }
 
 .front--skill--title {
+  align-items: center;
   background: $blue2;
+  border-radius: .4rem;
+  display: flex;
+  margin: 0 0 .4rem 0;
+  padding: .4rem;
+}
+
+.front--skill--title > h3 {
+  margin: 0;
+}
+
+.front--skill--body {
+  margin: 0 0 0 .4rem;
+}
+
+.front--skill--item > h4 {
+  margin: 0;
 }
