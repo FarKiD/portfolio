@@ -45,7 +45,6 @@
   display: flex;
   justify-content: end;
   margin-right: 2rem;
-  width: 100%;
 }
 
 .navigation--title {
@@ -59,6 +58,43 @@
 
 .navigation--title:hover {
   color: $aqua0;
+}
+
+.navigation--language {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+  width: 100%;
+}
+
+.navigation--language--container {
+  position: relative;
+  display: inline-block;
+}
+
+.navigation--language--dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .2rem;
+  background: transparent;
+  border: .2rem solid #fff;
+  border-radius: .5rem;
+}
+
+.navigation--language--dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.navigation--language--flag {
+  width: 1.8rem;
+  margin: 0rem 1rem 0rem 0;
+}
+
+.navigation--language--chevron {
+  color: #fff
 }
 
 .navigation_active {
