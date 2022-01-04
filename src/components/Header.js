@@ -8,8 +8,36 @@ import flagJP from '../images/jp.svg';
 import flagIR from '../images/ir.svg';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dropDownState: false
+    };
+  }
+
   componentDidMount() {
     onLoadActive();
+  }
+
+  langDropDown(event) {
+    if(!this.state.dropDownState) {
+      event.preventDefault();
+      $('.navigation--language--dropdown').css({
+        'display': 'block'
+      });
+      this.setState({
+        dropDownState: true
+      });
+      console.log('IT WORKS!');
+    } else {
+      event.preventDefault();
+      $('.navigation--language--dropdown').css({
+        'display': 'none'
+      });
+      this.setState({
+        dropDownState: false
+      });
+    };
   }
   
   render() {
@@ -22,13 +50,17 @@ class Header extends React.Component {
           <Link onClick={(e) => isActive(e, '/contact')} className="navigation--item" to="/contact">Contact</Link>
           <div className='navigation--language'>
              <div className='navigation--language--container'>
-                <button onClick={(e) => langDropDown(e)} className='navigation--language--dropbtn'>
+                <button onClick={(e) => this.langDropDown(e)} className='navigation--language--dropbtn'>
                   <img className='navigation--language--flag' src={flagGB} />
                   <i class="navigation--language--chevron bi bi-chevron-down"></i>
                 </button>
                 <div id='languageDropdown' className='navigation--language--dropdown'>
-                  <img src={flagIR} />
-                  <img src={flagJP} />
+                  <a>
+                    <img className='navigation--language--flag' src={flagIR} />
+                  </a>
+                  <a>
+                    <img className='navigation--language--flag' src={flagJP} />
+                  </a>
                 </div>
              </div>
           </div>
