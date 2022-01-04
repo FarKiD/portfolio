@@ -28,7 +28,6 @@ class Header extends React.Component {
       this.setState({
         dropDownState: true
       });
-      console.log('IT WORKS!');
     } else {
       event.preventDefault();
       $('.navigation--language--dropdown').css({
