@@ -37,24 +37,3 @@ export const onLoadActive = () => {
     }
   );
 };
-
-export const isDropDownActive = (event, state) => {
-  if(!state.dropDownState) {
-    event.preventDefault();
-    $('.navigation--language--dropdown').css({
-      'display': 'block'
-    });
-    this.setState({
-      dropDownState: true
-    });
-    console.log('IT WORKS!');
-  } else {
-    event.preventDefault();
-    $('.navigation--language--dropdown').css({
-      'display': 'none'
-    });
-    this.setState({
-      dropDownState: false
-    });
-  };
-}
