@@ -2,14 +2,14 @@ import regenatorRuntime from "regenerator-runtime";
 
 // Remove activation class from all navlinks
 export const rmvClassActive = () => {
-  $('.navigation--item').removeClass('navigation_active');
+  $('.navigation__item').removeClass('navigation--active');
 };
 
 // Select the target nav item and make it active
 export const isActive = (event, path) => {
   if($(event.target).attr('href') === path) {
     rmvClassActive();
-    $(event.target).addClass('navigation_active');
+    $(event.target).addClass('navigation--active');
   }
 };
 
@@ -32,7 +32,7 @@ export const onLoadActive = () => {
     function(location) {
       // gives the active class to any link containing current location
       if(location) {
-        $(`a[href*=${location}]`).addClass('navigation_active');
+        $(`a[href*=${location}]`).addClass('navigation--active');
       };
     }
   );

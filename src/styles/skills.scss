@@ -14,11 +14,11 @@
   height: 95vh;
 }
 
-.front--title {
+.front__title {
   @include skillTitle;
 }
 
-.front--skill--title {
+.front__skill__title {
   align-items: center;
   background: $blue2;
   border-radius: .4rem;
@@ -27,14 +27,14 @@
   padding: .4rem;
 }
 
-.front--skill--title > h3 {
+.front__skill__title > h3 {
   margin: 0;
 }
 
-.front--skill--body {
+.front__skill__body {
   margin: 0 0 0 .4rem;
 }
 
-.front--skill--item > h4 {
+.front__skill__item > h4 {
   margin: 0;
 }

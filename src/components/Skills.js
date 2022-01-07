@@ -14,17 +14,17 @@ class Skills extends React.Component {
       <>
         <div className='container-fluid'>
           <section className='front'>
-            <h2 className='front--title h1'>
+            <h2 className='front__title h1'>
               Front-End
             </h2>
             <div className='row'>
-              <div className='col front--skill'>
-                <div className='front--skill--title'>
+              <div className='col front__skill'>
+                <div className='front__skill__title'>
                   <h3>
                     Markup Languages
                   </h3>
                 </div>
-                <div className='front--skill--body'>
+                <div className='front__skill__body'>
                   <h4 className='p'>
                     HTML
                   </h4>
@@ -33,13 +33,13 @@ class Skills extends React.Component {
                   </h4>
                 </div>
               </div>
-              <div className='col front--skill'>
-                <div className='front--skill--title'>
+              <div className='col front__skill'>
+                <div className='front__skill__title'>
                   <h3>
                     Styling
                   </h3>
                 </div>
-                <div className='front--skill--body'>
+                <div className='front__skill__body'>
                   <h4 className='p'>
                     CSS
                   </h4>
@@ -52,7 +52,7 @@ class Skills extends React.Component {
                   <h4 className='p'>
                     jQuery UI
                   </h4>
-                  <div className='front--skill--item'>
+                  <div className='front__skill__item'>
                     <h4 className='p'>
                       Icon Libraries
                     </h4>
@@ -62,13 +62,13 @@ class Skills extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className='col front--skill'>
-                <div className='front--skill--title'>
+              <div className='col front__skill'>
+                <div className='front__skill__title'>
                   <h3>
                     Scripting
                   </h3>
                 </div>
-                <div className='front--skill--body'>
+                <div className='front__skill__body'>
                   <h4 className='p'>
                     JavaScript
                   </h4>
@@ -82,13 +82,13 @@ class Skills extends React.Component {
               </div>
             </div>
             <div className='row'>
-              <div className='col front--skill'>
-                <div className='front--skill--title'>
+              <div className='col front__skill'>
+                <div className='front__skill__title'>
                   <h3>
                     Other Skills
                   </h3>
                 </div>
-                <div className='front--skill--body'>
+                <div className='front__skill__body'>
                   <div className='row'>
                     <h4 className='p col'>
                       React.js

@@ -5,7 +5,7 @@ export const skillsLoad = () => {
   });
 
   setTimeout(() => {
-    $('.front--title').css({
+    $('.front__title').css({
       'width': '25%'
     });
   }, 500);

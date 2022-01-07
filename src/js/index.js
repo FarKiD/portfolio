@@ -5,14 +5,14 @@ export const indexLoad = () => {
 
   // Slide in title
   setTimeout(() => {
-    $('.intro--h2_first').css({
+    $('.intro__h2--first').css({
       'left': '0',
       'opacity': '100%'
     });
   }, 500);
   // Slide in the second title
   setTimeout(() => {
-    $('.intro--h2_second').css({
+    $('.intro__h2--second').css({
       'left': '0',
       'opacity': '100%'
     });
