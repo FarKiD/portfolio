@@ -8,6 +8,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Skills from '../components/Skills';
 import NotFound from '../components/NotFound';
+import Icons from '../components/Icons';
 
 import "../styles/header.scss";
 
@@ -15,6 +16,7 @@ const AppRouter = () => {
   return(
     <Router>
         <Header />
+        <Icons />
         <Routes>
           <Route path="/" element={<HomePage />} exact={true} />
           <Route path="/projects" element={<Projects />} exact={true} />

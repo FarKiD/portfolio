@@ -44,6 +44,13 @@
   @include animate(lang-border-anim, 5s, infinite);
 }
 
+@mixin iconSVG {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: #fff;
+  transition: 300ms;
+}
+
 .header {
   background: $blue0;
   height: 5vh;
@@ -90,17 +97,40 @@
   margin-right: 2rem;
 }
 
+.navigation__title-container:hover {
+  .navigation__title
+  .bi-house-door {
+    opacity: 0;
+  }
+
+  .navigation__title
+  .bi-house-door-fill {
+    opacity: 100%;
+  }
+}
+
 .navigation__title {
   color: $white;
+  display: grid;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 2rem;
   margin: 0;
+}
+
+.navigation__title
+.bi-house-door,
+.navigation__title
+.bi-house-door-fill {
+  grid-column: 1;
+  grid-row: 1;
   transition: 300ms;
 }
 
-.navigation__title:hover {
+.navigation__title
+.bi-house-door-fill {
   color: $aqua0;
+  opacity: 0;
 }
 
 .navigation__language {
@@ -123,6 +153,14 @@
   border: none;
 }
 
+.navigation__language__dropbtn > svg {
+  @include iconSVG;
+}
+
+.navigation__language__dropbtn > svg:hover {
+  fill: $aqua0;
+}
+
 .navigation__language__dropdown {
   background: color.adjust($aqua0, $alpha: -0.9);
   display: flex;
@@ -133,7 +171,7 @@
   opacity: 0;
   padding: .3rem .7rem;
   position: absolute;
-  right: 6.1rem;
+  right: 2.75rem;
   transition: 300ms;
   visibility: hidden;
   z-index: 1;
@@ -171,6 +209,10 @@
 
 .navigation__language__dropdown > a:nth-of-type(2) {
   margin: 0 1rem;
+}
+
+.navigation__language__dropdown svg {
+  @include iconSVG;
 }
 
 .navigation__language__icon {
