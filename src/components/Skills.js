@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import { skillsLoad } from "../js/skills.js";
 import "../styles/skills.scss";
 
@@ -115,8 +113,8 @@ class Skills extends React.Component {
               </div>
             </div>
           </section>
-          <section className=''>
-            <h2 className='h1'>
+          <section className='back'>
+            <h2 className='h1 back__title'>
               Back-End
             </h2>
           </section>
