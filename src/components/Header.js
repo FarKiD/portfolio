@@ -14,20 +14,43 @@ class Header extends React.Component {
 
   componentDidMount() {
     onLoadActive();
+    this.langDropDownClickHandler();
   }
 
-  langDropDown(event) {
-    if(!this.state.dropDownState) {
-      event.preventDefault();
-      $('.navigation__language__dropdown').css({
-        'visibility': 'visible',
-        'opacity': '100%'
-      });
-      this.setState({
-        dropDownState: true
-      });
-    } else {
-      event.preventDefault();
+  /* 
+    Opens the language dropdown if you click it
+    Closes it when you click it again
+    Closes it when you click outside of it
+    Doesn't close it when you click inside the dropdown
+  */
+  langDropDownClickHandler = () => {
+    document.addEventListener('click', (event) => {
+      let languageContainer = 'navigation__language__container';
+      let languageDropdown = 'navigation__language__dropdown';
+      let targetElement = event.target;
+
+      // Check if the thing you clicked contains the language container
+      do {
+        if (targetElement.className == languageContainer
+            && !this.state.dropDownState){
+          $('.navigation__language__dropdown').css({
+            'visibility': 'visible',
+            'opacity': '100%'
+          });
+          this.setState({
+            dropDownState: true
+          });
+          return;
+        } else if (targetElement.className == languageDropdown
+            && this.state.dropDownState) {
+              // return when you click the flags (for now)
+              // TODO actually change language when you click the flags
+              return;
+          }
+
+        targetElement = targetElement.parentNode;
+      } while (targetElement);
+
       $('.navigation__language__dropdown').css({
         'visibility': 'hidden',
         'opacity': '0'
@@ -35,7 +58,7 @@ class Header extends React.Component {
       this.setState({
         dropDownState: false
       });
-    };
+    });
   }
   
   render() {
@@ -48,7 +71,7 @@ class Header extends React.Component {
           <Link onClick={(e) => isActive(e, '/contact')} className="navigation__item" to="/contact">Contact</Link>
           <div className='navigation__language'>
              <div className='navigation__language__container'>
-                <button onClick={(e) => this.langDropDown(e)} className='navigation__language__dropbtn'>
+                <button className='navigation__language__dropbtn'>
                   <svg>
                     <use href="#languageSVG" />
                   </svg>
