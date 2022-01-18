@@ -3,8 +3,48 @@ import { skillsLoad } from "../js/skills.js";
 import "../styles/skills.scss";
 
 class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false
+    };
+  }
+
   componentDidMount() {
     skillsLoad();
+  }
+
+  toggleSkill = (event) => {
+    let targetElement = ['.front__skill__item', 'front__skill__item h4', 'front__skill__item h4 i'];
+    let parentElement = event.target;
+    if (jQuery.inArray(event.target, targetElement)) {
+      do {
+        if (parentElement.className == 'front__skill__item') {
+          if (!this.state.visible) {
+            $(parentElement.childNodes[1]).css({
+              'top': '0',
+              'opacity': '100%',
+              'max-height': '50rem'
+            });
+            this.setState({
+              visible: true
+            });
+          } else if (this.state.visible) {
+            $(parentElement.childNodes[1]).css({
+              'top': '-1.2rem',
+              'opacity': '0',
+              'max-height': '0'
+            });
+            this.setState({
+              visible: false
+            });
+          }
+          return;
+        }
+  
+        parentElement = parentElement.parentNode;
+      } while (parentElement);
+    }
   }
 
   render() {
@@ -50,11 +90,11 @@ class Skills extends React.Component {
                   <h4 className='p'>
                     jQuery UI
                   </h4>
-                  <div className='front__skill__item'>
+                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item'>
                     <h4 className='p'>
-                      Icon Libraries
+                      Icon Libraries <i class="bi bi-chevron-double-down"></i>
                     </h4>
-                    <p className='small'>
+                    <p className='small front__skill__item--info'>
                       Bootstrap Icons, Font Awesome, Line Icons etc.
                     </p>
                   </div>
