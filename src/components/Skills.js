@@ -26,6 +26,8 @@ class Skills extends React.Component {
               'opacity': '100%',
               'max-height': '50rem'
             });
+            $(parentElement.childNodes[0].children[0])
+            .toggleClass('bi-chevron-double-down bi-chevron-double-up');
             this.setState({
               visible: true
             });
@@ -35,6 +37,8 @@ class Skills extends React.Component {
               'opacity': '0',
               'max-height': '0'
             });
+            $(parentElement.childNodes[0].children[0])
+            .toggleClass('bi-chevron-double-down bi-chevron-double-up');
             this.setState({
               visible: false
             });

@@ -38,34 +38,3 @@ export const skillsLoad = () => {
     'overflow-x': 'hidden'
   });
 };
-
-/* 
-export const toggleSkill = (event) => {
-  let targetElement = ['.front__skill__item', 'front__skill__item h4', 'front__skill__item h4 i'];
-  let parentElement = event.target;
-  let visible = false;
-  if (jQuery.inArray(event.target, targetElement)) {
-    do {
-      if (parentElement.className == 'front__skill__item' && !visible) {
-        $(parentElement.childNodes[1]).css({
-          'top': '0',
-          'opacity': '100%',
-          'max-height': '50rem'
-        });
-        visible = true;
-        return;
-      } else if (parentElement.className == 'front__skill__item' && visible) {
-        $(parentElement.childNodes[1]).css({
-          'top': '-1.2rem',
-          'opacity': '0',
-          'max-height': '0'
-        });
-        visible = false;
-        return;
-      }
-
-      parentElement = parentElement.parentNode;
-    } while (parentElement);
-  }
-}; 
-*/
