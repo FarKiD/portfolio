@@ -1,5 +1,6 @@
 @use 'baseColors' as *;
 @use 'base' as *;
+@use 'sass:color';
 
 @mixin skillTitle {
   border-bottom: .2rem solid $aqua2;
@@ -12,6 +13,10 @@
 .front {
   margin: 3rem 1rem;
   height: calc(100vh - 8rem);
+}
+
+.front__row {
+  margin-bottom: 1rem;
 }
 
 .front__title {
@@ -35,8 +40,21 @@
   margin: 0 0 0 .4rem;
 }
 
+.front__skill__item {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to left,
+    color.adjust($aqua2, $alpha: -1),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -1)
+  );
+  border-image-slice: 1;
+  padding-bottom: .4rem;
+  margin-bottom: .4rem;
+}
+
 .front__skill__item > h4 {
-  cursor: pointer;
   margin: 0;
 }
 
@@ -50,6 +68,7 @@
   position: relative;
   top: -1.2rem;
   max-height: 0;
+  margin-bottom: 0;
   z-index: -1;
   opacity: 0;
   transition: 300ms;

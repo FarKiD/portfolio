@@ -19,7 +19,7 @@ class Skills extends React.Component {
     let parentElement = event.target;
     if (jQuery.inArray(event.target, targetElement)) {
       do {
-        if (parentElement.className == 'front__skill__item') {
+        if (parentElement.className.includes('front__skill__item')) {
           if (!this.state.visible) {
             $(parentElement.childNodes[1]).css({
               'top': '0',
@@ -59,7 +59,7 @@ class Skills extends React.Component {
             <h2 className='front__title h1'>
               Front-End
             </h2>
-            <div className='row'>
+            <div className='row front__row'>
               <div className='col front__skill'>
                 <div className='front__skill__title'>
                   <h3>
@@ -67,12 +67,16 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front__skill__body'>
-                  <h4 className='p'>
-                    HTML
-                  </h4>
-                  <h4 className='p'>
-                    XML
-                  </h4>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      HTML
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      XML
+                    </h4>
+                  </div>
                 </div>
               </div>
               <div className='col front__skill'>
@@ -82,24 +86,32 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front__skill__body'>
-                  <h4 className='p'>
-                    CSS
-                  </h4>
-                  <h4 className='p'>
-                    SCSS
-                  </h4>
-                  <h4 className='p'>
-                    Bootstrap
-                  </h4>
-                  <h4 className='p'>
-                    jQuery UI
-                  </h4>
-                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item'>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      CSS
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      SCSS
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      Bootstrap
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      jQuery UI
+                    </h4>
+                  </div>
+                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer'>
                     <h4 className='p'>
                       Icon Libraries <i class="bi bi-chevron-double-down"></i>
                     </h4>
                     <p className='small front__skill__item--info'>
-                      Bootstrap Icons, Font Awesome, Line Icons etc.
+                      - Bootstrap Icons, Font Awesome, Line Icons etc.
                     </p>
                   </div>
                 </div>
@@ -111,15 +123,21 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front__skill__body'>
-                  <h4 className='p'>
-                    JavaScript
-                  </h4>
-                  <h4 className='p'>
-                    jQuery
-                  </h4>
-                  <h4 className='p'>
-                    EcmaScript6+
-                  </h4>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      JavaScript
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      jQuery
+                    </h4>
+                  </div>
+                  <div className='front__skill__item'>
+                    <h4 className='p'>
+                      EcmaScript6+
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,26 +150,38 @@ class Skills extends React.Component {
                 </div>
                 <div className='front__skill__body'>
                   <div className='row'>
-                    <h4 className='p col'>
-                      React.js
-                    </h4> 
-                    <h4 className='p col'>
-                      Webpack
-                    </h4> 
-                    <h4 className='p col'>
-                      NPM and Yarn
-                    </h4> 
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        React.js
+                      </h4>   
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        Webpack
+                      </h4> 
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        NPM and Yarn
+                      </h4>
+                    </div>
                   </div>
                   <div className='row'>
-                    <h4 className='p col'>
-                      React Router
-                    </h4> 
-                    <h4 className='p col'>
-                      Redux
-                    </h4>
-                    <h4 className='p col'>
-                      Git, Github, Gitlab
-                    </h4>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        React Router
+                      </h4> 
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        Redux
+                      </h4>
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        Git, Github, Gitlab
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>

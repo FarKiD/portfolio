@@ -1,5 +1,6 @@
 @use 'baseColors' as *;
 @use 'fonts' as *;
+@use 'sass:color';
 
 // Variables
 $h1: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
@@ -59,4 +60,15 @@ span, .span {
 // Custom Special Classes
 .no-pad {
   padding: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.neon-text {
+  text-shadow: 0 0 .2rem $aqua0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: color.adjust($aqua0, $alpha: -0.5);
+
 }

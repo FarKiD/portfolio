@@ -28,7 +28,7 @@ class HomePage extends React.Component {
               </div>
               <div className="intro__text col">
                 <p className="intro__paragraph">
-                  My name is Sajjad Ostadebrahim
+                  My name is <span className='neon-text'>Sajjad Ostadebrahim</span>
                   <br />
                   I'm a Full-Stack Developer.
                 </p>
@@ -47,7 +47,7 @@ class HomePage extends React.Component {
               </div>
               <div className='second__text col'>
                 <p className='second__paragraph'>
-                  This is my Portfolio
+                  This is my <span className='neon-text'>Portfolio</span>
                   <br />
                   A modern and comprehensive project.
                 </p>
