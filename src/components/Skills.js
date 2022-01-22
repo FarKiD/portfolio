@@ -3,13 +3,6 @@ import { skillsLoad } from "../js/skills.js";
 import "../styles/skills.scss";
 
 class Skills extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: false
-    };
-  }
-
   componentDidMount() {
     skillsLoad();
   }
@@ -20,7 +13,8 @@ class Skills extends React.Component {
     if (jQuery.inArray(event.target, targetElement)) {
       do {
         if (parentElement.className.includes('front__skill__item')) {
-          if (!this.state.visible) {
+          if (!parentElement.className.includes('itemClicked')) {
+            $(parentElement).addClass('itemClicked');
             $(parentElement.childNodes[1]).css({
               'top': '0',
               'opacity': '100%',
@@ -28,10 +22,8 @@ class Skills extends React.Component {
             });
             $(parentElement.childNodes[0].children[0])
             .toggleClass('bi-chevron-double-down bi-chevron-double-up');
-            this.setState({
-              visible: true
-            });
-          } else if (this.state.visible) {
+          } else if (parentElement.className.includes('itemClicked')) {
+            $(parentElement).removeClass('itemClicked');
             $(parentElement.childNodes[1]).css({
               'top': '-1.2rem',
               'opacity': '0',
@@ -39,9 +31,6 @@ class Skills extends React.Component {
             });
             $(parentElement.childNodes[0].children[0])
             .toggleClass('bi-chevron-double-down bi-chevron-double-up');
-            this.setState({
-              visible: false
-            });
           }
           return;
         }
@@ -123,10 +112,13 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front__skill__body'>
-                  <div className='front__skill__item'>
+                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer'>
                     <h4 className='p'>
-                      JavaScript
+                      JavaScript <i class="bi bi-chevron-double-down"></i>
                     </h4>
+                    <p className='small front__skill__item--info'>
+                      - And modern ECMAScript versions.
+                    </p>
                   </div>
                   <div className='front__skill__item'>
                     <h4 className='p'>
