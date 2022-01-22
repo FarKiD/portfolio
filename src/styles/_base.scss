@@ -34,6 +34,14 @@ $span: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
 
 // General Rules and Classes
 // Font rules
+html {
+  font-size: 10px;
+}
+
+body, html {
+  letter-spacing: 1px;
+}
+
 body {
   @include outfit;
 }

@@ -112,13 +112,10 @@ class Skills extends React.Component {
                   </h3>
                 </div>
                 <div className='front__skill__body'>
-                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer'>
+                  <div className='front__skill__item'>
                     <h4 className='p'>
-                      JavaScript <i class="bi bi-chevron-double-down"></i>
+                      JavaScript
                     </h4>
-                    <p className='small front__skill__item--info'>
-                      - And modern ECMAScript versions.
-                    </p>
                   </div>
                   <div className='front__skill__item'>
                     <h4 className='p'>
@@ -127,7 +124,7 @@ class Skills extends React.Component {
                   </div>
                   <div className='front__skill__item'>
                     <h4 className='p'>
-                      EcmaScript6+
+                      ECMAScript6+
                     </h4>
                   </div>
                 </div>
