@@ -47,9 +47,9 @@ class HomePage extends React.Component {
               </div>
               <div className='second__text col'>
                 <p className='second__paragraph'>
-                  This is my <span className='neon-text'>Portfolio</span>
+                  My comprehensive <span className='neon-text'>Portfolio</span>
                   <br />
-                  A modern and comprehensive project.
+                  Showcasing a large array of my abilities.
                 </p>
                 <a className='second__link' href='#'>
                   Read More About It

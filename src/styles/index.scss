@@ -36,10 +36,10 @@
 
 @mixin btn {
   background: color.adjust($aqua0, $alpha: -0.8);
-  border: .1rem solid color.adjust($aqua2, $alpha: -0.5);
+  border: .2rem solid color.adjust($aqua2, $alpha: -0.5);
   border-radius: .2rem;
   color: $aqua1;
-  padding: .2rem .4rem;
+  padding: .2rem .6rem;
   transition: 300ms;
   text-decoration: none;
 }
@@ -47,7 +47,7 @@
 @mixin btn-hover {
   background: $aqua0;
   border-color: $aqua2;
-  border-radius: .1rem;
+  border-radius: 0rem;
   box-shadow: 0 0 .5rem .5rem $blue1;
   color: $blue1;
 }
@@ -69,8 +69,8 @@ main {
 }
 
 .intro {
-  min-height: 20vh; // TODO change, buggy in responsive
-  margin: 3rem 0 0 0;
+  height: 12rem;
+  margin: 4.7rem 0 2rem 0;
 }
 
 .intro__h2 {
@@ -85,17 +85,16 @@ main {
   align-items: center;
   justify-content: right;
   text-transform: uppercase;
-  letter-spacing: .1rem;
   text-align: right;
   margin: 0 0 0 -6rem;
-  padding: 0 1rem;
-  height: 8rem;
+  padding: 0 1rem 0 0;
+  height: 12rem;
   @include banner;
 }
 
 .intro__banner {
   margin: 0 -6rem 0 0;
-  max-height: 8rem;
+  max-height: 12rem;
   @include banner;
 }
 
@@ -103,7 +102,7 @@ main {
 .second__text {
   position: relative;
   max-width: fit-content;
-  height: 8rem;
+  height: 12rem;
 }
 
 .intro__paragraph {
@@ -127,17 +126,16 @@ main {
   align-items: center;
   justify-content: right;
   text-transform: uppercase;
-  letter-spacing: .1rem;
   text-align: right;
   margin: 0 0 0 -6rem;
-  padding: 0 1rem;
-  max-height: 8rem;
+  padding: 0 1rem 0 0;
+  height: 12rem;
   @include banner;
 }
 
 .second__banner {
   margin: 0 -6rem 0 0;
-  max-height: 8rem;
+  max-height: 12rem;
   @include banner;
 }
 
@@ -148,13 +146,15 @@ main {
 
 .outro__github {
   align-items: center;
-  bottom: 15vh;
+  position: absolute;
+  left: 50%;
+  bottom: 15vh; //TODO responsive
+  transform: translate(-50%);
   background: color.adjust($aqua0, $alpha: -0.98);
   border: 1px solid color.adjust($aqua0, $alpha: -0.6);
   border-radius: .6rem;
   display: flex;
   flex-direction: column;
-  margin: 6rem auto 0 auto;
   padding: 1.2rem;
 }
 
@@ -162,7 +162,7 @@ main {
   @include btn;
   display: flex;
   justify-content: space-between;
-  width: 6rem;
+  width: 10rem;
 }
 
 .outro__btn:hover {
@@ -171,9 +171,9 @@ main {
 
 .halftone {
   position: absolute;
-  bottom: -12rem;
-  width: 30rem;
-  height: 30rem;
+  bottom: -20rem;
+  width: 40rem;
+  height: 40rem;
   -webkit-mask-image: linear-gradient(-45deg, black, transparent);
   mask-image: linear-gradient(45deg, black, transparent);
   user-select: none;
