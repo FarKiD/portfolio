@@ -3,17 +3,17 @@
 @use 'sass:color';
 
 // Variables
-$h1: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
-$h2: clamp(1.400rem, calc( 12px + 1.600vw ), 1.800rem);
-$h3: clamp(1.140rem, calc( 12px + 1.200vw ), 1.500rem);
-$h4: clamp(1.000rem, calc( 12px + 0.800vw ), 1.200rem);
-$p: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
-$span: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
+$h1: clamp(2.763rem, calc( 12px + 3.575vw ), 3.738rem);
+$h2: clamp(2.275rem, calc( 12px + 2.600vw ), 2.925rem);
+$h3: clamp(1.853rem, calc( 12px + 1.950vw ), 2.438rem);
+$h4: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
+$p: clamp(1.495rem, calc( 12px + 0.780vw ), 1.625rem);
+$span: clamp(1.300rem, calc( 12px + 0.520vw ), 1.463rem);
 
 // Scrollbar Style
 /* width */
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: .6rem;
 }
 
 /* Track */
@@ -35,11 +35,11 @@ $span: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
 // General Rules and Classes
 // Font rules
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body, html {
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 }
 
 body {
@@ -47,22 +47,22 @@ body {
 }
 
 h1, .h1 {
-  font-size: clamp(1.700rem, calc( 12px + 2.200vw ), 2.300rem);
+  font-size: clamp(2.763rem, calc( 12px + 3.575vw ), 3.738rem);
 }
 h2, .h2 {
-  font-size: clamp(1.400rem, calc( 12px + 1.600vw ), 1.800rem);
+  font-size: clamp(2.275rem, calc( 12px + 2.600vw ), 2.925rem);
 }
 h3, .h3 {
-  font-size: clamp(1.140rem, calc( 12px + 1.200vw ), 1.500rem);
+  font-size: clamp(1.853rem, calc( 12px + 1.950vw ), 2.438rem);
 }
 h4, .h4 {
-  font-size: clamp(1.000rem, calc( 12px + 0.800vw ), 1.200rem);
+  font-size: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
 }
 p, a, .p, .a {
-  font-size: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
+  font-size: clamp(1.495rem, calc( 12px + 0.780vw ), 1.625rem);
 }
 span, .span {
-  font-size: clamp(0.800rem, calc( 12px + 0.320vw ), 0.900rem);
+  font-size: clamp(1.300rem, calc( 12px + 0.520vw ), 1.463rem);
 }
 
 // Custom Special Classes
@@ -75,8 +75,7 @@ span, .span {
 }
 
 .neon-text {
-  text-shadow: 0 0 .2rem $aqua0;
-  -webkit-text-stroke-width: 1px;
+  text-shadow: 0 0 .3rem $aqua0;
+  -webkit-text-stroke-width: .1rem;
   -webkit-text-stroke-color: color.adjust($aqua0, $alpha: -0.5);
-
 }

@@ -45,23 +45,23 @@
 }
 
 @mixin iconSVG {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 3rem;
+  height: 3rem;
   fill: #fff;
   transition: 300ms;
 }
 
 .header {
   background: $blue0;
-  height: 5vh;
-  min-height: 3rem;
+  height: 8vh;
+  min-height: 5rem;
 }
 
 .navigation {
   align-items: center;
   display: flex;
-  height: 5vh;
-  min-height: 3rem;
+  height: 8vh;
+  min-height: 5rem;
   width: 100%;
 }
 
@@ -71,15 +71,15 @@
 
 .navigation__item {
   background: $blue2;
-  box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
+  box-shadow: 0 -2.2rem 1rem -1.1rem $blue3 inset;
   color: $white;
   display: flex;
   font-size: $h3;
   text-decoration: none;
   height: 101%;
   align-items: center;
-  padding: 0 2rem;
-  margin: 0 -1rem;
+  padding: 0 2.4rem;
+  margin: 0 -1.2rem;
   clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
   transition: 300ms;
   white-space: nowrap;
@@ -114,7 +114,7 @@
   display: grid;
   text-transform: capitalize;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -165,13 +165,13 @@
   background: color.adjust($aqua0, $alpha: -0.9);
   display: flex;
   flex-direction: row;
-  min-height: 3rem;
+  min-height: 4.5rem;
   align-items: center;
-  margin: .35rem 0 0 0;
+  margin: 1rem 0 0 0;
   opacity: 0;
   padding: .3rem .7rem;
   position: absolute;
-  right: 2.75rem;
+  right: 2.65rem;
   transition: 300ms;
   visibility: hidden;
   z-index: 1;
@@ -185,7 +185,7 @@
   left: 0; right: 0;
   padding: .15rem;
   border-radius: .3rem;
-  border-width: .2rem;
+  border-width: .3rem;
   border-style: solid;
   border-image-source: linear-gradient(
     to left,
@@ -208,21 +208,9 @@
 } 
 
 .navigation__language__dropdown > a:nth-of-type(2) {
-  margin: 0 1rem;
+  margin: 0 1.2rem;
 }
 
 .navigation__language__dropdown svg {
   @include iconSVG;
-}
-
-.navigation__language__icon {
-  width: 1.8rem;
-}
-
-.navigation__language__chevron {
-  color: #fff
-}
-
-.navigation--active {
-  color: $aqua0;
 }
