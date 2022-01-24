@@ -5,14 +5,14 @@
 @mixin skillTitle {
   border-bottom: .2rem solid $aqua2;
   width: 0;
-  margin: 1rem 0 0 1.2rem;
+  margin: 1rem 0 0 .25rem;
   white-space: nowrap;
   transition: 1000ms;
 }
 
 .front {
   margin: 0 1rem 10rem 1rem;
-  height: calc(100vh - 20rem);
+  height: calc(100vh - 16rem);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -26,7 +26,7 @@
   @include skillTitle;
 }
 
-.front__skill:nth-of-type(2) {
+.skill:nth-of-type(2) {
   border-width: 0 0 0 .1rem;
   border-style: solid;
   border-image: linear-gradient(
@@ -38,7 +38,7 @@
   border-image-slice: 1;
 }
 
-.front__skill__title {
+.skill__title {
   align-items: center;
   background: $blue2;
   border-radius: .4rem;
@@ -47,15 +47,15 @@
   padding: .4rem;
 }
 
-.front__skill__title > h3 {
+.skill__title > h3 {
   margin: 0;
 }
 
-.front__skill__body {
+.skill__body {
   margin: 0 0 0 .4rem;
 }
 
-.front__skill__item {
+.skill__item {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-image: linear-gradient(
@@ -70,17 +70,17 @@
   margin-bottom: 1rem;
 }
 
-.front__skill__item > h4 {
+.skill__item > h4 {
   margin: 0;
 }
 
-.front__skill__item > h4 > i {
+.skill__item > h4 > i {
   cursor: pointer;
   font-size: .6rem;
   margin-left: .2rem;
 }
 
-.front__skill__item--info {
+.skill__item--info {
   position: relative;
   top: -1.2rem;
   max-height: 0;
@@ -91,6 +91,14 @@
 }
 
 // Back
+
+.back {
+  margin: 0 1rem 0 1rem;
+  height: calc(100vh - 20rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .back__title {
   @include skillTitle;
