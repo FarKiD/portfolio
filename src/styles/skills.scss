@@ -4,15 +4,18 @@
 
 @mixin skillTitle {
   border-bottom: .2rem solid $aqua2;
-  margin: 0 0 2rem 0;
   width: 0;
+  margin: 1rem 0 0 1.2rem;
   white-space: nowrap;
   transition: 1000ms;
 }
 
 .front {
-  margin: 3rem 1rem;
-  height: calc(100vh - 8rem);
+  margin: 0 1rem 10rem 1rem;
+  height: calc(100vh - 20rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .front__row {
@@ -23,12 +26,24 @@
   @include skillTitle;
 }
 
+.front__skill:nth-of-type(2) {
+  border-width: 0 0 0 .1rem;
+  border-style: solid;
+  border-image: linear-gradient(
+    to top,
+    color.adjust($aqua2, $alpha: -1),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -1)
+  );
+  border-image-slice: 1;
+}
+
 .front__skill__title {
   align-items: center;
   background: $blue2;
   border-radius: .4rem;
   display: flex;
-  margin: 0 0 .4rem 0;
+  margin: 0 0 1rem 0;
   padding: .4rem;
 }
 
@@ -49,9 +64,10 @@
     $aqua2,
     color.adjust($aqua2, $alpha: -1)
   );
+  height: fit-content;
   border-image-slice: 1;
-  padding-bottom: .4rem;
-  margin-bottom: .4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .front__skill__item > h4 {

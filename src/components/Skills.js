@@ -44,30 +44,13 @@ class Skills extends React.Component {
     return(
       <>
         <div className='container-fluid'>
-          <section className='front'>
+          <div>
             <h2 className='front__title h1'>
               Front-End
             </h2>
+          </div>
+          <section className='front'>
             <div className='row front__row'>
-              <div className='col front__skill'>
-                <div className='front__skill__title'>
-                  <h3>
-                    Markup Languages
-                  </h3>
-                </div>
-                <div className='front__skill__body'>
-                  <div className='front__skill__item'>
-                    <h4 className='p'>
-                      HTML
-                    </h4>
-                  </div>
-                  <div className='front__skill__item'>
-                    <h4 className='p'>
-                      XML
-                    </h4>
-                  </div>
-                </div>
-              </div>
               <div className='col front__skill'>
                 <div className='front__skill__title'>
                   <h3>
@@ -89,19 +72,6 @@ class Skills extends React.Component {
                     <h4 className='p'>
                       Bootstrap
                     </h4>
-                  </div>
-                  <div className='front__skill__item'>
-                    <h4 className='p'>
-                      jQuery UI
-                    </h4>
-                  </div>
-                  <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer'>
-                    <h4 className='p'>
-                      Icon Libraries <i class="bi bi-chevron-double-down"></i>
-                    </h4>
-                    <p className='small front__skill__item--info'>
-                      - Bootstrap Icons, Font Awesome, Line Icons etc.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -159,6 +129,23 @@ class Skills extends React.Component {
                     <div className='front__skill__item col'>
                       <h4 className='p'>
                         React Router
+                      </h4>   
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        jQuery UI
+                      </h4> 
+                    </div>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        BEM Naming Convention
+                      </h4>
+                    </div>
+                  </div>
+                  <div className='row'>
+                    <div className='front__skill__item col'>
+                      <h4 className='p'>
+                        Jest
                       </h4> 
                     </div>
                     <div className='front__skill__item col'>
@@ -168,8 +155,34 @@ class Skills extends React.Component {
                     </div>
                     <div className='front__skill__item col'>
                       <h4 className='p'>
-                        Git, Github, Gitlab
+                        Responsive Web Design (RWD)
                       </h4>
+                    </div>
+                  </div>
+                  <div className='row'>
+                    <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer col'>
+                      <h4 className='p'>
+                        Icon Libraries <i class="bi bi-chevron-double-down"></i>
+                      </h4>
+                      <p className='small front__skill__item--info'>
+                        - Bootstrap Icons, Font Awesome, Line Icons...
+                      </p>
+                    </div>
+                    <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer col'>
+                      <h4 className='p'>
+                        Version Control <i class="bi bi-chevron-double-down"></i>
+                      </h4>
+                      <p className='small front__skill__item--info'>
+                        - Git, GitHub, GitLab...
+                      </p>
+                    </div>
+                    <div onClick={(e) => this.toggleSkill(e)} className='front__skill__item pointer col'>
+                      <h4 className='p'>
+                        W3Schools <i class="bi bi-chevron-double-down"></i>
+                      </h4>
+                      <p className='small front__skill__item--info'>
+                        - W3.CSS &amp; W3.JS
+                      </p>
                     </div>
                   </div>
                 </div>
