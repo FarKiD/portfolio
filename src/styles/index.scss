@@ -52,25 +52,9 @@
   color: $blue1;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  margin: 0;
-  background: $blue3;
-  background-repeat: no-repeat;
-  color: $white;
-}
-
-main {
-  margin: 0 4rem;
-}
-
 .intro {
   height: 12rem;
-  margin: 4.7rem 0 2rem 0;
+  margin: 4.8rem 0 2rem 0;
 }
 
 .intro__h2 {

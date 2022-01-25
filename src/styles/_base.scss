@@ -35,15 +35,27 @@ $span: clamp(1.200rem, calc( 12px + 0.480vw ), 1.350rem);
 // General Rules and Classes
 // Font rules
 html {
+  // 1rem = 10px
   font-size: 62.5%;
 }
 
-body, html {
+html, body {
+  // for single view pages, change if page is scrollable
+  height: 100%;
+  overflow: hidden;
   letter-spacing: .1rem;
 }
 
 body {
+  margin: 0;
+  background: $blue3;
+  background-repeat: no-repeat;
+  color: $white;
   @include outfit;
+}
+
+main {
+  margin: 0 4rem;
 }
 
 h1, .h1 {
