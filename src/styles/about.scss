@@ -2,7 +2,40 @@
 @use 'base' as *;
 @use 'sass:color';
 
+@mixin animate($animation, $duration, $times){
+  animation: $animation $duration $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin banner($c1, $c2, $c3, $c4, $c5, $c6) {
+  background: linear-gradient(-45deg, $c1, $c2, $c3, $c4, $c5, $c6);
+  background-size: 400% 400%;
+  border-radius: .3rem;
+  box-shadow: 0 0 1rem $blue2;
+
+  @include keyframes(bg-animation) {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @include animate(bg-animation, 15s, infinite);
+}
+
 .profile {
+  display: flex;
   margin-top: 4.8rem;
 }
 
@@ -35,6 +68,28 @@
   );
   border-image-slice: 1;
   padding: 0 2rem;
+  height: 20rem;
   width: fit-content;
   white-space: nowrap;
+}
+
+.profile__slogans__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+  width: 100%;
+}
+
+.profile__slogans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  height: fit-content;
+  padding: .2rem 1rem;
+  width: 100%;
+  @include banner($blue8, $blue7, $purple0, $blue6, $blue9, $blue5);
 }

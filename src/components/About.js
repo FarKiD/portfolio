@@ -9,7 +9,7 @@ const About = () => {
     <>
       <div className='container-fluid'>
         <main>
-          <section className='profile row'>
+          <section className='profile'>
             <div className='profile__image__container'>
               <img className='profile__image' src={mySelfPic} />
             </div>
@@ -29,6 +29,23 @@ const About = () => {
               <p>
                 <strong>Development Experience: </strong>+3 Years
               </p>
+            </div>
+            <div className='profile__slogans__container'>
+              <div className='profile__slogans'>
+                <h2>
+                  Dedication
+                </h2>
+              </div>
+              <div className='profile__slogans'>
+                <h2>
+                  Aspiration
+                </h2>
+              </div>
+              <div className='profile__slogans'>
+                <h2>
+                  Comprehension
+                </h2>
+              </div>
             </div>
           </section>
         </main>
