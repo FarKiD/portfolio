@@ -43,9 +43,30 @@ const About = () => {
               </div>
               <div className='profile__slogans'>
                 <h2>
-                  Comprehension
+                  Intuition
                 </h2>
               </div>
+            </div>
+          </section>
+          <section className='row'>
+            <div className='col'>
+              <h3>
+                Biography
+              </h3>
+              <p>
+                Born and raised in Tehran, Iran. I had a fairly simple childhood.
+                I participated in Biology studies in high-school but very soon after,
+                I realized my real passion in programming.
+                after a few months of practicing C++ to become a game developer, and
+                doing a very short SEO internship, I found interest in Web Developing
+                and I have been occupied doing this ever since.
+                <br />
+                I am a very proficient self-learner, I've taught myself English and everything I know
+                about Programming, but that hasn't stop me from learning more!
+              </p>
+            </div>
+            <div className='col'>
+              points
             </div>
           </section>
         </main>

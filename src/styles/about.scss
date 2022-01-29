@@ -37,6 +37,16 @@
 .profile {
   display: flex;
   margin-top: 4.8rem;
+  padding-bottom: 3rem;
+  border-width: 0 0 .1rem 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to left,
+    color.adjust($aqua2, $alpha: -1),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -1)
+  );
+  border-image-slice: 1;
 }
 
 .profile__image__container {
