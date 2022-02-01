@@ -48,15 +48,15 @@ const About = () => {
               </div>
             </div>
           </section>
-          <section className='row'>
-            <div className='col'>
+          <section className='row info'>
+            <div className='col info__biography'>
               <h3>
                 Biography
               </h3>
               <p>
                 Born and raised in Tehran, Iran. I had a fairly simple childhood.
-                I participated in Biology studies in high-school but very soon after,
-                I realized my real passion in programming.
+                I participated in Biology studies in high-school but very soon after graduation,
+                I realized my real passion is in programming.
                 after a few months of practicing C++ to become a game developer, and
                 doing a very short SEO internship, I found interest in Web Developing
                 and I have been occupied doing this ever since.
@@ -66,7 +66,18 @@ const About = () => {
               </p>
             </div>
             <div className='col'>
-              points
+              <div className='row'>
+                <div className='col info__points'>
+                  <h3>
+                    Strong Points
+                  </h3>
+                </div>
+                <div className='col info__points'>
+                  <h3>
+                    Weak Points
+                  </h3>
+                </div>
+              </div>
             </div>
           </section>
         </main>
