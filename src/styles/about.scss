@@ -102,14 +102,28 @@
 
 .info {
   padding: 3rem 0;
+  margin-bottom: 3rem;
   @include myBorder(0 0 .1rem 0, left);
 }
 
 .info__biography {
-  padding: 0 2rem;
+  padding: 0 3rem;
+  text-align: justify;
   @include myBorder(0 .1rem 0 0, top);
 }
 
 .info__points {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 3rem;
+
+    a {
+      
+    }
+}
+
+.info__points__items {
+  display: flex;
+  justify-content: space-between;
 }
