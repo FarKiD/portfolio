@@ -1,8 +1,11 @@
 export const indexLoad = () => {
+  // Scroll ? Yes
   $('html, body').css({
-    'overflow': 'hidden'
+    'overflow-y': 'visible',
+    'overflow-x': 'hidden'
   });
 
+// Animations
   // Slide in title
   setTimeout(() => {
     $('.intro__h2--first').css({
@@ -23,4 +26,6 @@ export const indexLoad = () => {
       'opacity': '100%'
     });
   }, 1500);
+// Animations End
+
 };
