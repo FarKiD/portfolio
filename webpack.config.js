@@ -5,7 +5,9 @@ module.exports = {
   entry: path.join(__dirname, "src", "app.js"),
   output: {
     path: path.resolve(__dirname, "public","dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    // Workaround for 'digital envelope routines::unsupported error'
+    hashFunction: 'xxhash64'
   },
   module: {
     rules: [
