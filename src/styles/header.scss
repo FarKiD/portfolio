@@ -96,9 +96,7 @@
 }
 
 .navigation__item:hover {
-  color: $aqua0;
-  background: $blue4;
-  box-shadow: 0 -2rem 1rem -1rem $blue3 inset;
+  @include headerActive;
 }
 
 .navigation__title-container {
