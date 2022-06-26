@@ -1,7 +1,7 @@
 export const indexLoad = () => {
-  // Scroll ? Yes
+  // Scrollability
   $('html, body').css({
-    'overflow-y': 'visible',
+    'overflow-y': 'hidden',
     'overflow-x': 'hidden'
   });
 

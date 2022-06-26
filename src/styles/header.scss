@@ -51,6 +51,12 @@
   transition: 300ms;
 }
 
+@mixin headerActive {
+  color: $aqua0 !important;
+  background: $blue4 !important;
+  box-shadow: 0 -2rem 1rem -1rem $blue3 inset !important;
+}
+
 .header {
   background: $blue0;
   height: 8vh;
@@ -63,6 +69,10 @@
   height: 8vh;
   min-height: 5rem;
   width: 100%;
+}
+
+.navigation--active {
+  @include headerActive;
 }
 
 .navigation__item_first {
