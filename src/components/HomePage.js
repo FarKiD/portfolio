@@ -59,16 +59,35 @@ class HomePage extends React.Component {
             </div>
             <section>
               <div className='outro row'>
-                <div className='outro__github col-4'>
-                  <h4>
-                    Interested in the website?
-                  </h4>
-                  <p>
-                    Visit and explore the source code on my GitHub!
-                  </p>
+                <div className='outro__boxes col'>
+                  <div className='outro__content'>
+                    <h4>
+                      Interested in the website?
+                    </h4>
+                    <p>
+                      Visit and explore the source code on my GitHub!
+                    </p>
+                  </div>
                   <a className='outro__btn' href='#' target="_blank">
                     <i className='bi bi-github'></i>
                     GitHub
+                  </a>
+                </div>
+                <div className='outro__boxes col'>
+                  <div className='outro__content'>
+                    <h4>
+                      You can contact me via:
+                    </h4>
+                    <p>
+                      Email: sajjad.eros@gmail.com
+                    </p>
+                    <p>
+                      Cellphone: +989032371898
+                    </p>
+                  </div>
+                  <a className='outro__btn' href='#' target="_blank">
+                    <i className='bi bi-telegram'></i>
+                    Telegram
                   </a>
                 </div>
               </div>
