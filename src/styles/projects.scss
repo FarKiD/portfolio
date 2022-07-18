@@ -1,0 +1,13 @@
+@use 'baseColors' as *;
+@use 'base' as *;
+@use 'sass:color';
+
+.kanda {
+  margin: 4.8rem 0 0 0;
+  height: 30vh;
+}
+
+.portfolio {
+  margin: 0;
+  height: 30vh;
+}

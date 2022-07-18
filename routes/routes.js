@@ -8,8 +8,6 @@ router.get('/projects', controller.getProjects);
 
 router.get('/about', controller.getAbout);
 
-router.get('/contact', controller.getContact);
-
 router.get('/skills', controller.getSkills);
 
 router.get('/', controller.getIndex);

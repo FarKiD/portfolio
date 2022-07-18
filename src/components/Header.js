@@ -68,7 +68,6 @@ class Header extends React.Component {
           <Link onClick={(e) => isActive(e, '/projects')} className="navigation__item navigation__item_first" to="/projects">Projects</Link>
           <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">Skills</Link>
           <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">About Me</Link>
-          <Link onClick={(e) => isActive(e, '/contact')} className="navigation__item" to="/contact">Contact</Link>
           <div className='navigation__language'>
              <div className='navigation__language__container'>
                 <button className='navigation__language__dropbtn'>

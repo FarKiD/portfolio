@@ -59,16 +59,25 @@ class Skills extends React.Component {
                   <div className='skill__item'>
                     <h4 className='p'>
                       CSS
+                    <svg>
+                      <use href="#cssLogo" />
+                    </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
                     <h4 className='p'>
                       SCSS
+                      <svg>
+                        <use href="#sassLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
                     <h4 className='p'>
                       Bootstrap
+                      <svg>
+                        <use href="#bootstrapLogo" />
+                      </svg>
                     </h4>
                   </div>
                 </div>
@@ -83,16 +92,25 @@ class Skills extends React.Component {
                   <div className='skill__item'>
                     <h4 className='p'>
                       JavaScript
+                      <svg>
+                        <use href="#jsLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
                     <h4 className='p'>
                       jQuery
+                      <svg>
+                        <use href="#jqueryLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
                     <h4 className='p'>
                       ECMAScript6+
+                      <svg>
+                        <use href="#es6Logo" />
+                      </svg>
                     </h4>
                   </div>
                 </div>
@@ -110,16 +128,25 @@ class Skills extends React.Component {
                     <div className='skill__item col'>
                       <h4 className='p'>
                         React.js
+                        <svg>
+                           <use href="#reactLogo" />
+                        </svg>
                       </h4>   
                     </div>
                     <div className='skill__item col'>
                       <h4 className='p'>
                         Webpack
+                        <svg>
+                           <use href="#webpackLogo" />
+                        </svg>
                       </h4> 
                     </div>
                     <div className='skill__item col'>
                       <h4 className='p'>
                         NPM and Yarn
+                        <svg>
+                           <use href="#npmLogo" />
+                        </svg>
                       </h4>
                     </div>
                   </div>
@@ -127,6 +154,9 @@ class Skills extends React.Component {
                     <div className='skill__item col'>
                       <h4 className='p'>
                         React Router
+                        <svg>
+                           <use href="#reactRouterLogo" />
+                        </svg>
                       </h4>   
                     </div>
                     <div className='skill__item col'>
@@ -137,6 +167,9 @@ class Skills extends React.Component {
                     <div className='skill__item col'>
                       <h4 className='p'>
                         BEM Naming Convention
+                        <svg>
+                           <use href="#bemLogo" />
+                        </svg>
                       </h4>
                     </div>
                   </div>
@@ -144,11 +177,17 @@ class Skills extends React.Component {
                     <div className='skill__item col'>
                       <h4 className='p'>
                         Jest
+                        <svg>
+                           <use href="#jestLogo" />
+                        </svg>
                       </h4> 
                     </div>
                     <div className='skill__item col'>
                       <h4 className='p'>
                         Redux
+                        <svg>
+                           <use href="#reduxLogo" />
+                        </svg>
                       </h4>
                     </div>
                     <div className='skill__item col'>
@@ -169,6 +208,9 @@ class Skills extends React.Component {
                     <div onClick={(e) => this.toggleSkill(e)} className='skill__item pointer col'>
                       <h4 className='p'>
                         Version Control <i class="bi bi-chevron-double-down"></i>
+                        <svg>
+                           <use href="#githubLogo" />
+                        </svg>
                       </h4>
                       <p className='small skill__item--info'>
                         - Git, GitHub, GitLab...
@@ -202,6 +244,9 @@ class Skills extends React.Component {
                   <div className='skill__item'>
                     <h4 className='p'>
                       Node.js
+                      <svg>
+                        <use href="#nodejsLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
@@ -219,18 +264,24 @@ class Skills extends React.Component {
               <div className='col skill'>
                 <div className='skill__title'>
                   <h3>
-                    Database
+                    Data Handling
                   </h3>
                 </div>
                 <div className='skill__body'>
                   <div className='skill__item'>
                     <h4 className='p'>
                       MySQL
+                      <svg>
+                        <use href="#mySQLLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
                     <h4 className='p'>
                       MongoDB
+                      <svg>
+                        <use href="#mongodbLogo" />
+                      </svg>
                     </h4>
                   </div>
                   <div className='skill__item'>
