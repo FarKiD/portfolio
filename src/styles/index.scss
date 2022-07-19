@@ -61,6 +61,7 @@
   position: relative;
   opacity: 0;
   left: -8rem;
+  user-select: none;
   transition: 1000ms;
 }
 
@@ -134,7 +135,7 @@
   // left: 50%;
   // bottom: 15vh;
   // transform: translate(-50%);
-  background: color.adjust($aqua0, $alpha: -0.98);
+  background: color.adjust($aqua0, $alpha: -0.96);
   border: 1px solid color.adjust($aqua0, $alpha: -0.6);
   border-radius: .6rem;
   display: flex;
