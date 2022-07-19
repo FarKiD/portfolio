@@ -13,6 +13,21 @@ export const isActive = (event, path) => {
   }
 };
 
+// Activate the corresponding nav item on link redirect
+export const activateNavItem = (event, path) => {
+  switch (event.target.attr('href')) {
+    case '/about':
+      $('navigation > a[href$="/about"]').addClass('navigation--active');
+      break;
+    case '/skills':
+      $('navigation > a[href$="/skills"]').addClass('navigation--active');
+      break;
+    case '/projects':
+      $('navigation > a[href$="/projects"]').addClass('navigation--active');
+      break;
+  }
+};
+
 // Gives the active class to the links on load
 export const onLoadActive = () => {
   // get pathname on load

@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import halftone from '../images/halftone.png';
 
 import { indexLoad } from "../js/index.js";
-import { rmvClassActive } from "../js/header.js";
+import { rmvClassActive, activateNavItem } from "../js/header.js";
 
 import "../styles/index.scss";
 
@@ -32,9 +33,9 @@ class HomePage extends React.Component {
                   <br />
                   I'm a Full-Stack Developer.
                 </p>
-                <a className="intro__link" href="#">
+                <Link onClick={(e) => activateNavItem(e, '/about')} className="intro__link" to="/about">
                   Read More About Me
-                </a>
+                </Link>
               </div>
               <div className="intro__banner col"></div>
             </div>
@@ -51,9 +52,9 @@ class HomePage extends React.Component {
                   <br />
                   Showcasing a large array of my abilities.
                 </p>
-                <a className='second__link' href='#'>
+                <Link onClick={(e) => activateNavItem(e, '/projects')} className='second__link' to='/projects'>
                   Read More About It
-                </a>
+                </Link>
               </div>
               <div className='second__banner col'></div>
             </div>
@@ -68,7 +69,7 @@ class HomePage extends React.Component {
                       Visit and explore the source code on my GitHub!
                     </p>
                   </div>
-                  <a className='outro__btn' href='#' target="_blank">
+                  <a className='outro__btn' href='https://github.com/FarKiD/portfolio' target="_blank">
                     <i className='bi bi-github'></i>
                     GitHub
                   </a>
@@ -85,7 +86,7 @@ class HomePage extends React.Component {
                       Cellphone: +989032371898
                     </p>
                   </div>
-                  <a className='outro__btn' href='#' target="_blank">
+                  <a className='outro__btn' href='https://t.me/farkid' target="_blank">
                     <i className='bi bi-telegram'></i>
                     Telegram
                   </a>
