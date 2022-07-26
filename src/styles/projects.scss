@@ -7,7 +7,41 @@
   height: 30vh;
 }
 
+.kanda__image,
+.portfolio__image  {
+  margin-left: -1.5rem;
+  clip-path: polygon(0 0, 75% 0, 90% 100%, 0% 100%) !important;
+  -webkit-mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
+  mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
+}
+
 .portfolio {
-  margin: 0;
+  margin: 0 0 1.4rem 0;
   height: 30vh;
+  padding: 1.4rem 0 0 0;
+  border-width: .1rem 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    color.adjust($aqua2, $alpha: -1),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -1)
+  );
+  border-image-slice: 1;
+}
+
+.others {
+  text-align: center;
+
+  div:nth-of-type(2) {
+    border-width: 0 .1rem;
+    border-style: solid;
+    border-image: linear-gradient(
+      to bottom,
+      color.adjust($aqua2, $alpha: -1),
+      $aqua2,
+      color.adjust($aqua2, $alpha: -1)
+    );
+    border-image-slice: 1;
+  }
 }
