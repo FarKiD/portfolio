@@ -2,16 +2,22 @@ import React from 'react';
 
 import "../styles/projects.scss";
 
+import scrollActivator from '../util/scrollActivator';
+
 import kandaPic from '../images/kanda.jpg';
 import shopPic from '../images/shop.jpg';
 
 class Projects extends React.Component {
+  componentDidMount() {
+    scrollActivator();
+  }
+
   render() {
     return(
       <>
         <div className='container-fluid'>
           <div className='row kanda'>
-            <div className='col-3'>
+            <div className='col-3 image-container'>
               <img className='kanda__image img-fluid' src={kandaPic} />
             </div>
             <div className='col'>
@@ -19,7 +25,7 @@ class Projects extends React.Component {
             </div>
           </div>
           <div className='row portfolio'>
-            <div className='col-3'>
+            <div className='col-3 image-container'>
               <img className='portfolio__image img-fluid' src={shopPic} />
             </div>
             <div className='col'>

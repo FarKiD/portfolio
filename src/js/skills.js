@@ -31,10 +31,4 @@ export const skillsLoad = () => {
   let observer = new IntersectionObserver(observerCallback, observerOptions);
   observer.observe(backTitleQuery);
   /* CODE FOR TITLES ANIMATION END */
-
-
-  $('html, body').css({
-    'overflow-y': 'visible',
-    'overflow-x': 'hidden'
-  });
 };

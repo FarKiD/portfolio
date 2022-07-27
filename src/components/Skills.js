@@ -1,10 +1,12 @@
 import React from 'react';
 import { skillsLoad } from "../js/skills.js";
+import scrollActivator from '../util/scrollActivator';
 import "../styles/skills.scss";
 
 class Skills extends React.Component {
   componentDidMount() {
     skillsLoad();
+    scrollActivator();
   }
 
   toggleSkill = (event) => {
