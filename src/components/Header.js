@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { rmvClassActive, isActive, onLoadActive } from "../js/header.js";
+import { rmvClassActive, isActive, onLoadActive, browserHistory } from "../js/header.js";
 import 'bootstrap-icons/font/bootstrap-icons';
 
 class Header extends React.Component {

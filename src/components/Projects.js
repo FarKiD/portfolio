@@ -59,13 +59,13 @@ class Projects extends React.Component {
           </div>
           <div className='row others'>
             <div className='col'>
-              Content here
+              <a href='/jcards.rar'>Japanese Cards</a>
             </div>
             <div className='col'>
-              Content here
+              <a href='/reader'>Speed Reader App</a>
             </div>
             <div className='col'>
-              Content here
+              <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
             </div>
           </div>
         </div>

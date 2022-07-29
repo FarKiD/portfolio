@@ -10,4 +10,3 @@ const jsx = (
 );
 
 ReactDOM.render(jsx, domContainer);
-

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Stopwatch App</title>
+
+    <style>
+      body {
+          font-family: Arvo, serif;
+          background: radial-gradient(circle, rgba(200,200,200,0.5), rgba(0,0,0,0.25));
+          background-size: cover;
+          height: 100%;
+          margin-bottom: 50px;
+      }
+
+      #header h1 {
+          font-size: 5vw;
+          text-align: center;
+          color: #222222;
+          margin-top: 5px;
+      }
+
+      #lap {
+          text-align: right;
+          margin-right: 20px; /*TODO on large screens, make it a bigger value*/
+          font-size: 3.5vw;
+      }
+
+      #time {
+          text-align: center;
+          margin-top: 1vh;
+          font-size: 8vw;
+      }
+
+      #controlsContainer {
+          margin-bottom: 40px;
+      }
+
+      .container .row .control {
+          height: 9vw;
+          width: 9vw;
+          line-height: 9vw;
+          color: white;
+          border-radius: 10vw;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.29);
+          border: 1px solid #343434;
+          font-size: 2vw;
+          font-weight: bold;
+          cursor: pointer;
+          color: white;
+          
+          -webkit-user-select: none;   
+          -moz-user-select: none; 
+          -ms-user-select: none; 
+          user-select: none;
+      }
+
+      #stopButton {
+          background-color: red;
+      }
+
+      #stopButton:active {
+          background: #e31818;
+      }
+
+      .container .row .control:active {
+          background: #4a4a4a; 
+          color: white;
+          border-color: #4a4a4a;
+      }
+
+      #laps {
+          max-height: 22vh;
+          overflow-y: scroll;
+      }
+
+      .lap {
+          border-bottom: 2px solid white;
+          margin: 15px;
+          padding-bottom: 18px;
+      }
+
+      .laptimetitle {
+          float: left;
+          font-size: 1.5em;
+      }
+
+      .laptime {
+          float: right;
+          font-size: 1.5em;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .footer span {
+          color: #e0e0e0!important;
+      }
+
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+
+
+      .footer > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 3px;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.2);
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border-radius: 3px;   
+      }
+
+      @media (max-width:768px) {
+          #lap {
+              font-size: 4.3vw;
+          }
+          
+          #header h1 {
+              font-size: 6vw;
+          }
+          
+          #time {
+              font-size: 9vw;
+          }
+      }
+
+      @media (max-width: 500px) {
+          #lap {
+              font-size: 5vw;
+          }
+          
+          #header h1 {
+              font-size: 7.5vw;
+          }
+          
+          #time {
+              font-size: 10vw;
+          }
+          
+          .container .row .control {
+              width: 11.5vw;
+              height: 11.5vw;
+              line-height: 11.5vw;
+              font-size: 2.5vw;
+          }
+          
+          #laps {
+          max-height: 30vh;
+          overflow-y: scroll;
+          }
+      }
+
+      @media (min-width: 1400px) {
+          .contentFooterGap {
+              height: 7vh;
+          }
+      }
+
+      @media (min-width: 1800px) {
+          #controlsContainer {
+          margin: 0px -10vw;
+          margin-bottom: 5vh;
+          }
+      }
+
+      @media (min-width: 2800px) {
+          #controlsContainer {
+          margin: 0px -20vw;
+          margin-bottom: 5vh;
+          }
+          
+          #laps {
+              font-size: 40px;
+          }
+      }
+
+      @media (max-height: 630px) and (min-width: 1000px) {
+          .contentFooterGap {
+              height: 80px;
+          }
+      }
+
+      @media (max-height: 740px) and (min-width: 1200px) {
+          .contentFooterGap {
+              height: 80px;
+          }
+      }
+
+      @media (max-height: 450px) and (max-width: 800px) {
+          .contentFooterGap {
+              height: 80px;
+          }
+      }
+
+      @media (max-height: 550px) and (max-width: 1000px) {
+          .contentFooterGap {
+              height: 80px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+      <!--Header/Title-->
+      <div class="container-fluid">
+        <div id="header">
+          <h1>Stopwatch</h1>
+        </div>
+
+      
+      <!--Lap Time-->
+      <div id="lap"><span id="lapMinute">00</span>:<span id="lapSecond">00</span>:<span id="lapMiliSecond">00</span></div>
+
+      <!--Stopwatch Time-->
+      <div id="time"><span id="timeMinute">00</span>:<span id="timeSecond">00</span>:<span id="timeMiliSecond">00</span></div>
+       
+      
+     
+      
+      <!--Buttons-->
+      <div class="container">
+          <div id="controlsContainer" class="row">
+             <div class="col-2 offset-4">
+                 <!--Start Button-->
+                <div class="control" id="startButton">Start</div>
+                 <!--Stop Button-->
+                 <div class="control" id="stopButton">Stop</div>
+                 <!--Resume Button-->
+                 <div class="control" id="resumeButton">Resume</div>
+             </div>
+
+              <div class="col-2">
+                 <!--Lap Button-->
+                <div class="control" id="lapButton">Lap</div>
+                 <!--Reset Button-->
+                 <div class="control" id="resetButton">Reset</div>
+             </div>
+          </div>
+      </div>
+          
+          <div id="laps"></div>
+      
+   </div>
+      
+        <div class="contentFooterGap">
+      
+        </div>
+      
+        <footer class="footer">
+        <div class="container-fluid">
+            <span class="text-muted">&copy;2020 Copy right reserved for Ostadebrahim.</span>
+          </div>
+        </footer>
+      
+   
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function(){
+        var mode = false;
+        var timeCounter = 0;
+        var lapCounter = 0;
+        var action;
+        var lapNumber = 0;
+        var timeMinutes, timeSeconds, timeMiliseconds, lapMinutes, lapSeconds, lapMiliseconds;
+        
+        hideShowButtons("#startButton","#lapButton");
+        
+        //on start
+        $("#startButton").click(function(){
+            mode = true; //app mode on
+            hideShowButtons("#stopButton","#lapButton"); //show stop button
+            
+            startAction(); //start counter
+        });
+        //on stop
+        $("#stopButton").click(function(){
+            hideShowButtons("#resumeButton","#resetButton");
+            clearInterval(action);
+        });
+        //on resume
+        $("#resumeButton").click(function(){
+            hideShowButtons("#stopButton","#lapButton");
+            startAction();
+        });
+        //on reset
+        $("#resetButton").click(function(){
+            location.reload();
+        });
+        //on lap
+        $("#lapButton").click(function(){
+            if(mode==true) {
+                clearInterval(action);
+                lapCounter = 0;
+                addLap();
+                startAction();
+            }
+        });
+        
+        //functions
+        function hideShowButtons(x,y){
+            $(".control").hide();
+            $(x).show();
+            $(y).show();
+        }
+        
+        function startAction(){
+            action = setInterval(function(){
+                timeCounter++;
+                lapCounter++;
+                updateTime();
+            },10);
+        }
+        
+        function updateTime(){
+            //1min = 6000centiseconds
+            timeMinutes = Math.floor(timeCounter/6000);
+            //1sec=100centiseconds
+            timeSeconds = Math.floor((timeCounter%6000)/100);
+            //centi seconds
+            timeMiliSecond = (timeCounter%6000)%100;
+            
+            $("#timeMinute").text(formatNumber(timeMinutes));
+            $("#timeSecond").text(formatNumber(timeSeconds));
+            $("#timeMiliSecond").text(formatNumber(timeMiliSecond));
+            
+            lapMinutes = Math.floor(lapCounter/6000);
+            lapSeconds = Math.floor((lapCounter%6000)/100);
+            lapMiliSeconds = (lapCounter%6000)%100;
+            
+            //actually centi seconds
+            $("#lapMinute").text(formatNumber(lapMinutes));
+            $("#lapSecond").text(formatNumber(lapSeconds));
+            $("#lapMiliSecond").text(formatNumber(lapMiliSeconds));
+        }
+        
+        function formatNumber(number){
+            if (number<10) {
+                return "0"+number;
+            } else {return number};
+        }
+        
+        function addLap(){
+            lapNumber++;
+            var myLaps = 
+                '<div class="lap">'+
+                    '<div class="laptimetitle">'+
+                        'Lap ' + lapNumber +
+                    '</div>'+
+                    '<div class="laptime">'+
+                        '<span>'+formatNumber(lapMinutes)+'</span>'+
+                        ':<span>'+formatNumber(lapSeconds)+'</span>'+
+                        ':<span>'+formatNumber(lapMiliSeconds)+'</span>'+
+                    '</div>'+'</br>'
+                '</div>';
+            $(myLaps).prependTo("#laps");
+        }
+      });
+    </script>
+  </body>
+</html>
