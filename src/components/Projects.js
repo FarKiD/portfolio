@@ -4,13 +4,34 @@ import "../styles/projects.scss";
 
 import scrollActivator from '../util/scrollActivator';
 
+import {Modal, Button} from 'react-bootstrap';
+
 import kandaPic from '../images/kanda.jpg';
 import shopPic from '../images/shop.jpg';
 
 class Projects extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ModalVisibility: false
+    }
+  }
+  
   componentDidMount() {
     scrollActivator();
   }
+
+  handleModalShow = () => {
+    this.setState({
+      ModalVisibility: true
+    });
+  };
+
+  handleModalClose = () => {
+    this.setState({
+      ModalVisibility: false
+    });
+  };
 
   render() {
     return(
@@ -20,29 +41,27 @@ class Projects extends React.Component {
             <div className='col-3 image-container'>
               <img className='kanda__image img-fluid' src={kandaPic} />
             </div>
-            <div className='col'>
+            <div className='col kanda__content'>
               <h3>
                 Kanda Idea
               </h3>
               <p>
                 Kanda Idea is a respectable GIS and technology based company.
                 in 2021 I had the great opportunity to work together with their development team and I was tasked with the 
-                Front-End of their new website. I got to work alongside their talented design team and understanding co-ordinators,
-                it was a great experience for me.
+                Front-End of their new website, this was the result.
                 <br />
-                One of the toughests challenges was the large sitemap, we created around 20 pages for the website. some of which are private or unused in the main website.
-                <br />
+                <span><small>Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.</small></span>
               </p>
-              <a href='https://kandaidea.com/'>Kanda Idea</a>
-              <span>Keywords: Front-End, Pure Javascript, Responsive Design</span>
-              <span><small>Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.</small></span>
+              <a className='h4 content-link' href='https://kandaidea.com/'>Kanda Idea</a>
+              <br />
+              <span>Keywords: Front-End, Javascript, Responsive</span>
             </div>
           </div>
-          <div className='row portfolio'>
+          <div className='row shop'>
             <div className='col-3 image-container'>
-              <img className='portfolio__image img-fluid' src={shopPic} />
+              <img className='shop__image img-fluid' src={shopPic} />
             </div>
-            <div className='col'>
+            <div className='col shop__content'>
               <h3>
                 Online Shop Project
               </h3>
@@ -51,15 +70,20 @@ class Projects extends React.Component {
                 and this project was the ultimate result of that.
                 <br />
                 it pretty much is a back-end skill showcase.
+                <br />
+                <span><small>Disclaimer: Since using Heroku, the website might not work it's full potential.</small></span>
               </p>
-              <a href='https://ostadebrahim-shop.herokuapp.com/'>Online Shop</a>
+              <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>Online Shop</a>
+              <br />
               <span>Keywords: Back-End, Authentication, Database</span>
-              <span><small>Disclaimer: Since using Heroku, the website might not work it's full potential.</small></span>
             </div>
           </div>
           <div className='row others'>
             <div className='col'>
               <a href='/jcards.rar'>Japanese Cards</a>
+            </div>
+            <div className='col'>
+              <a href='/projects/portfolio'>Online Portfolio</a>
             </div>
             <div className='col'>
               <a href='/reader'>Speed Reader App</a>
@@ -68,6 +92,23 @@ class Projects extends React.Component {
               <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
             </div>
           </div>
+          <Button variant="primary" onClick={this.handleModalShow}>
+            Launch demo modal
+          </Button>
+          <Modal show={this.state.ModalVisibility} onHide={this.handleModalClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.handleModalClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={this.handleModalClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
       </>
     );

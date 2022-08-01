@@ -13,7 +13,7 @@
 }
 
 .kanda__image,
-.portfolio__image  {
+.shop__image  {
   margin-left: -1.5rem;
   max-height: 15rem;
   clip-path: polygon(0 0, 75% 0, 90% 100%, 0% 100%) !important;
@@ -21,7 +21,7 @@
   mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
 }
 
-.portfolio {
+.shop {
   margin: 0 0 1.4rem 0;
   padding: 1.4rem 0;
   border-width: .1rem 0;
@@ -35,10 +35,24 @@
   border-image-slice: 1;
 }
 
+.kanda__content,
+.shop__content {
+  margin-left: -5rem;
+}
+
+.content-link {
+  text-decoration: none;
+}
+
 .others {
   text-align: center;
 
-  div:nth-of-type(2) {
+  a {
+    text-decoration: none;
+  }
+
+  // Borders
+  div:nth-of-type(n+2):not(div:last-of-type) {
     border-width: 0 .1rem;
     border-style: solid;
     border-image: linear-gradient(
