@@ -22,8 +22,8 @@
 }
 
 .shop {
-  margin: 0 0 1.4rem 0;
-  padding: 1.4rem 0;
+  margin: 2rem 0 1.4rem 0;
+  padding: 2rem 0;
   border-width: .1rem 0;
   border-style: solid;
   border-image: linear-gradient(
@@ -38,6 +38,21 @@
 .kanda__content,
 .shop__content {
   margin-left: -5rem;
+  padding: .5rem 4rem .5rem 1rem;
+  background: linear-gradient(
+    75deg, color.adjust($blue1, $alpha: -.4),
+    color.adjust($blue1, $alpha: -.9) 70%,
+    color.adjust($blue1, $alpha: -1) 80%
+  );
+  border-width: 0 0 0 .1rem;
+  border-style: solid;
+  border-image: linear-gradient(
+    to bottom,
+    color.adjust($aqua2, $alpha: -.9),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -.9)
+  );
+  border-image-slice: 1;
 }
 
 .content-link {
@@ -46,9 +61,16 @@
 
 .others {
   text-align: center;
+  height: 8rem;
 
   a {
     text-decoration: none;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   // Borders
