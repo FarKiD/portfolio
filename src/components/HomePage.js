@@ -52,7 +52,7 @@ class HomePage extends React.Component {
                   <br />
                   Showcasing a large array of my abilities.
                 </p>
-                <Link onClick={(e) => activateNavItem(e, '/projects')} className='second__link' to='/projects'>
+                <Link onClick={(e) => activateNavItem(e, '/projects')} className='second__link' to='/projects#portfolio'>
                   Read More About It
                 </Link>
               </div>

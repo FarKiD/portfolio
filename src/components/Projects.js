@@ -3,6 +3,7 @@ import React from 'react';
 import "../styles/projects.scss";
 
 import scrollActivator from '../util/scrollActivator';
+import { loadModalFromURL } from '../js/projects';
 
 import {Modal, Button} from 'react-bootstrap';
 
@@ -19,6 +20,7 @@ class Projects extends React.Component {
   
   componentDidMount() {
     scrollActivator();
+    loadModalFromURL(this.handleModalShow);
   }
 
   handleModalShow = () => {
@@ -82,8 +84,8 @@ class Projects extends React.Component {
             <div className='col'>
               <a href='/jcards.rar'>Japanese Cards</a>
             </div>
-            <div className='col'>
-              <a href='/projects/portfolio'>Online Portfolio</a>
+            <div className='col' onClick={this.handleModalShow}>
+              <a id='portfolioLink' href='/projects#portfolio'>Online Portfolio</a>
             </div>
             <div className='col'>
               <a href='/reader'>Speed Reader App</a>
@@ -92,10 +94,7 @@ class Projects extends React.Component {
               <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
             </div>
           </div>
-          <Button variant="primary" onClick={this.handleModalShow}>
-            Launch demo modal
-          </Button>
-          <Modal show={this.state.ModalVisibility} onHide={this.handleModalClose}>
+          <Modal id="portfolioModal" show={this.state.ModalVisibility} onHide={this.handleModalClose}>
             <Modal.Header closeButton>
               <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>

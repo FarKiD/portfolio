@@ -9,7 +9,7 @@ export const rmvClassActive = () => {
 export const isActive = (event, path) => {
   if($(event.target).attr('href') === path) {
     rmvClassActive();
-    $(event.target).addClass('navigation--active');
+    $('.navigation > ' + event.target).addClass('navigation--active');
   }
 };
 
@@ -17,13 +17,13 @@ export const isActive = (event, path) => {
 export const activateNavItem = (event, path) => {
   switch (event.target.attr('href')) {
     case '/about':
-      $('navigation > a[href$="/about"]').addClass('navigation--active');
+      $('.navigation > a[href$="/about"]').addClass('navigation--active');
       break;
     case '/skills':
-      $('navigation > a[href$="/skills"]').addClass('navigation--active');
+      $('.navigation > a[href$="/skills"]').addClass('navigation--active');
       break;
     case '/projects':
-      $('navigation > a[href$="/projects"]').addClass('navigation--active');
+      $('.navigation > a[href$="/projects"]').addClass('navigation--active');
       break;
   }
 };
@@ -47,7 +47,7 @@ export const onLoadActive = () => {
     function(location) {
       // gives the active class to any link containing current location
       if(location) {
-        $(`a[href*=${location}]`).addClass('navigation--active');
+        $(`.navigation > a[href*=${location}]`).addClass('navigation--active');
       };
     }
   );
