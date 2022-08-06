@@ -2,6 +2,25 @@
 @use 'base' as *;
 @use 'sass:color';
 
+@mixin btn {
+  text-decoration: none;
+  background: color.adjust($aqua0, $alpha: -0.8);
+  border: .2rem solid color.adjust($aqua2, $alpha: -0.5);
+  border-radius: .2rem;
+  color: $aqua1;
+  padding: .2rem .6rem;
+  margin: 0 .6rem 0 0;
+  transition: 300ms;
+}
+
+@mixin btn-hover {
+  background: $aqua0;
+  border-color: $aqua2;
+  border-radius: 0rem;
+  box-shadow: 0 0 .5rem .5rem $blue1;
+  color: $blue1;
+}
+
 .kanda {
   margin: 4.8rem 0 0 0;
   padding: 0 0 1.4rem 0;
@@ -14,11 +33,15 @@
 
 .kanda__image,
 .shop__image  {
+  position: relative;
+  left: -15rem;
+  opacity: 0;
   margin-left: -1.5rem;
   max-height: 15rem;
   clip-path: polygon(0 0, 75% 0, 90% 100%, 0% 100%) !important;
   -webkit-mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
   mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
+  transition: 600ms;
 }
 
 .shop {
@@ -53,24 +76,52 @@
     color.adjust($aqua2, $alpha: -.9)
   );
   border-image-slice: 1;
+
+  h3 {
+    color: $aqua5;
+  }
+
+  .keywords {
+    color: $grey1;
+  }
 }
 
 .content-link {
-  text-decoration: none;
+  @include btn;
+  opacity: 0;
+}
+
+.content-link:hover {
+  @include btn-hover;
+}
+
+.keywords {
+  margin: 1.2rem 0 0 0;
 }
 
 .others {
+  position: relative;
+  left: -500rem;
   text-align: center;
-  height: 8rem;
+  height: 20vh;
+  opacity: 0;
+  transition: 1800ms;
 
   a {
-    text-decoration: none;
+    @include btn;
+    margin-bottom: .6rem;
+  }
+
+  a:hover {
+    @include btn-hover;
   }
 
   div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: color.adjust($blue1, $alpha: -.5);
   }
 
   // Borders

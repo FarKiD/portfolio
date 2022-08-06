@@ -3,7 +3,7 @@ import React from 'react';
 import "../styles/projects.scss";
 
 import scrollActivator from '../util/scrollActivator';
-import { loadModalFromURL } from '../js/projects';
+import { loadModalFromURL, loadAnimations } from '../js/projects';
 
 import {Modal, Button} from 'react-bootstrap';
 
@@ -21,6 +21,7 @@ class Projects extends React.Component {
   componentDidMount() {
     scrollActivator();
     loadModalFromURL(this.handleModalShow);
+    loadAnimations();
   }
 
   handleModalShow = () => {
@@ -54,9 +55,9 @@ class Projects extends React.Component {
                 <br />
                 <span><small>Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.</small></span>
               </p>
-              <a className='h4 content-link' href='https://kandaidea.com/'>Kanda Idea</a>
+              <span className='h4'>Visit:</span> &nbsp; <a className='h4 content-link' href='https://kandaidea.com/'>Kanda Idea</a>
               <br />
-              <span>Keywords: Front-End, Javascript, Responsive</span>
+              <p className='small keywords'>Keywords: Front-End, Javascript, Responsive</p>
             </div>
           </div>
           <div className='row shop'>
@@ -75,23 +76,35 @@ class Projects extends React.Component {
                 <br />
                 <span><small>Disclaimer: Since using Heroku, the website might not work it's full potential.</small></span>
               </p>
-              <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>Online Shop</a>
+              <span className='h4'>Visit:</span> &nbsp; <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>Online Shop</a>
               <br />
-              <span>Keywords: Back-End, Authentication, Database</span>
+              <p className='small keywords'>Keywords: Back-End, Authentication, Database</p>
             </div>
           </div>
           <div className='row others'>
             <div className='col'>
               <a href='/jcards.rar'>Japanese Cards</a>
+              <p className='span'>
+                Practice your Hiragana and Katakana
+              </p>
             </div>
             <div className='col' onClick={this.handleModalShow}>
               <a id='portfolioLink' href='/projects#portfolio'>Online Portfolio</a>
+              <p className='span'>
+                More info about the portfolio
+              </p>
             </div>
             <div className='col'>
               <a href='/reader'>Speed Reader App</a>
+              <p className='span'>
+                A small app for speed reading
+              </p>
             </div>
             <div className='col'>
               <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
+              <p className='span'>
+                A stopwatch helpful during workouts
+              </p>
             </div>
           </div>
           <Modal id="portfolioModal" show={this.state.ModalVisibility} onHide={this.handleModalClose}>

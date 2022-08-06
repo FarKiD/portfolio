@@ -9,3 +9,40 @@ export const loadModalFromURL = (cb) => {
     cb();
   };
 };
+
+export const loadAnimations = () => {
+  setTimeout(() => {
+    $('.kanda__image').css({
+      'left': '0',
+      'opacity': '100%'
+    });
+
+    $('.kanda__content > a').css({
+      'opacity': '100%'
+    });
+    
+  }, 500);
+
+  setTimeout(() => {
+    $('.kanda__image, .shop__image').css({
+      'left': '0',
+      'opacity': '100%'
+    });
+
+    $('.shop__content > a').css({
+      'opacity': '100%'
+    });
+  }, 1000);
+
+  setTimeout(() => {
+    $('.others').css({
+      'left': '0'
+    });
+  }, 1000);
+
+  setTimeout(() => {
+    $('.others').css({
+      'opacity': '100%'
+    });
+  }, 1800);
+};
