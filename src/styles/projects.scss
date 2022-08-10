@@ -100,12 +100,8 @@
 }
 
 .others {
-  position: relative;
-  left: -500rem;
   text-align: center;
   height: 20vh;
-  opacity: 0;
-  transition: 1800ms;
 
   a {
     @include btn;
@@ -118,13 +114,26 @@
 
   div {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: color.adjust($blue1, $alpha: -.5);
+    opacity: 0;
+    transition: 1800ms;
   }
 
-  // Borders
+  // first two div
+  div:nth-of-type(n+1):not(div:nth-of-type(n+3)) {
+    left: -500rem;
+  }
+
+  // last two div
+  div:nth-of-type(n+3) {
+    right: -500rem;
+  }
+
+  // Borders, div number 2 and 3
   div:nth-of-type(n+2):not(div:last-of-type) {
     border-width: 0 .1rem;
     border-style: solid;

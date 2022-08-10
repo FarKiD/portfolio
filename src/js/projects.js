@@ -35,13 +35,17 @@ export const loadAnimations = () => {
   }, 1000);
 
   setTimeout(() => {
-    $('.others').css({
+    $('.others div:nth-of-type(n+1):not(div:nth-of-type(n+3))').css({
       'left': '0'
+    });
+
+    $('.others div:nth-of-type(n+3)').css({
+      'right': '0'
     });
   }, 1000);
 
   setTimeout(() => {
-    $('.others').css({
+    $('.others div').css({
       'opacity': '100%'
     });
   }, 1800);

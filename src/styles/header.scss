@@ -183,6 +183,10 @@
   transition: 300ms;
   visibility: hidden;
   z-index: 1;
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .navigation__language__dropdown::before {
