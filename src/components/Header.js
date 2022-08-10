@@ -8,9 +8,29 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropDownState: false
+      dropDownState: false,
+      language: 'english'
     };
   }
+
+  content = {
+    english: {
+      titles: {
+        projects: 'Projects',
+        skills: 'Skills',
+        about: 'About Me'
+      }
+    },
+    farsi: {
+      titles: {
+        projects: 'پروژه ها',
+        skills: 'مهارت ها',
+        about: 'درباره من'
+      }
+    }
+  }
+
+  contentResult = {...this.content.english}
 
   componentDidMount() {
     onLoadActive();
@@ -60,14 +80,41 @@ class Header extends React.Component {
       });
     });
   }
+
+  languageSelectHandler() {
+    document.addEventListener('click', (event) => {
+      console.log(this.state.language);
+      switch(event.target.parentNode.parentNode.id) {
+        case 'englishLanguage':
+          this.setState({
+            language: 'english'
+          });
+          this.contentResult = this.content.english;
+          console.log(this.contentResult);
+          break;
+        case 'farsiLanguage':
+          this.setState({
+            language: 'farsi'
+          });
+          this.contentResult = this.content.farsi;
+          console.log(this.contentResult);
+          break;
+        case 'japaneseLanguage':
+          this.setState({
+            language: 'japanese'
+          });
+          break;
+      };
+    });
+  }
   
   render() {
     return(
       <header className="header">
         <nav className="navigation">
-          <Link onClick={(e) => isActive(e, '/projects')} className="navigation__item navigation__item_first" to="/projects">Projects</Link>
-          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">Skills</Link>
-          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">About Me</Link>
+          <Link onClick={(e) => isActive(e, '/projects')} className="navigation__item navigation__item_first" to="/projects">{this.contentResult.titles.projects}</Link>
+          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">{this.contentResult.titles.skills}</Link>
+          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">{this.contentResult.titles.about}</Link>
           <div className='navigation__language'>
              <div className='navigation__language__container'>
                 <button className='navigation__language__dropbtn'>
@@ -76,17 +123,17 @@ class Header extends React.Component {
                   </svg>
                 </button>
                 <div id='languageDropdown' className='navigation__language__dropdown'>
-                  <a>
+                  <a onClick={(e) => this.languageSelectHandler()} id='englishLanguage'>
                     <svg>
                       <use href="#gbSVG" />
                     </svg>
                   </a>
-                  <a>
+                  <a onClick={(e) => this.languageSelectHandler()} id='farsiLanguage'>
                   <svg>
                       <use href="#irSVG" />
                     </svg>
                   </a>
-                  <a>
+                  <a onClick={(e) => this.languageSelectHandler()} id='japaneseLanguage'>
                   <svg>
                       <use href="#jpSVG" />
                     </svg>
