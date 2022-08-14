@@ -1,5 +1,4 @@
 export const loadModalFromURL = (cb) => {
-  console.log(window.location.pathname);
   $('#portfolioLink').click((e) => {
     e.preventDefault();
   });

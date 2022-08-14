@@ -9,7 +9,7 @@ export const rmvClassActive = () => {
 export const isActive = (event, path) => {
   if($(event.target).attr('href') === path) {
     rmvClassActive();
-    $('.navigation > ' + event.target).addClass('navigation--active');
+    $(`.navigation > a[href$="${$(event.target).attr('href')}"]`).addClass('navigation--active');
   }
 };
 

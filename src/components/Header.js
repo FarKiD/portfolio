@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import store from '../store/store';
-import { rmvClassActive, isActive, onLoadActive, browserHistory } from "../js/header.js";
+import { rmvClassActive, isActive, onLoadActive } from "../js/header.js";
 import LanguageSwitch from './LanguageSwitch';
 import 'bootstrap-icons/font/bootstrap-icons';
 
@@ -17,7 +17,6 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    console.log(store.getState().language.value);
     onLoadActive();
     this.langDropDownClickHandler();
   }
@@ -65,20 +64,6 @@ class Header extends React.Component {
       });
     });
   }
-
-  // languageSelectHandler() {
-  //   switch(store.getState().language.value) {
-  //     case 'english':
-  //       this.contentResult = this.content.english;
-  //       break;
-  //     case 'farsi':
-  //       this.contentResult = this.content.farsi;
-  //       break;
-  //     case 'japanese':
-  //       console.log('hi');
-  //       break;
-  //   };
-  // }
   
   render() {
     return(
@@ -89,8 +74,16 @@ class Header extends React.Component {
               store.getState().language.value.content.header.projects
             }
           </Link>
-          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">{/*{this.contentResult.titles.skills}*/}1</Link>
-          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">{/*{this.contentResult.titles.about}*/}2</Link>
+          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">
+            {
+              store.getState().language.value.content.header.skills
+            }
+          </Link>
+          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">
+            {
+              store.getState().language.value.content.header.about
+            }
+          </Link>
           <LanguageSwitch />
           <div className='navigation__title-container'>
             <Link onClick={() => rmvClassActive()} className="navigation__title" to="/">
