@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./public/dist/bundle.js",
+  "engines": {
+    "node": "18.2.0"
+  },
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",

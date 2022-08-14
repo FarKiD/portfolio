@@ -1,38 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+import store from '../store/store';
 import { rmvClassActive, isActive, onLoadActive, browserHistory } from "../js/header.js";
+import LanguageSwitch from './LanguageSwitch';
 import 'bootstrap-icons/font/bootstrap-icons';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      dropDownState: false,
-      language: 'english'
+      dropDownState: false
     };
   }
 
-  content = {
-    english: {
-      titles: {
-        projects: 'Projects',
-        skills: 'Skills',
-        about: 'About Me'
-      }
-    },
-    farsi: {
-      titles: {
-        projects: 'پروژه ها',
-        skills: 'مهارت ها',
-        about: 'درباره من'
-      }
-    }
-  }
-
-  contentResult = {...this.content.english}
-
   componentDidMount() {
+    console.log(store.getState().language.value);
     onLoadActive();
     this.langDropDownClickHandler();
   }
@@ -81,66 +66,32 @@ class Header extends React.Component {
     });
   }
 
-  languageSelectHandler() {
-    document.addEventListener('click', (event) => {
-      console.log(this.state.language);
-      switch(event.target.parentNode.parentNode.id) {
-        case 'englishLanguage':
-          this.setState({
-            language: 'english'
-          });
-          this.contentResult = this.content.english;
-          console.log(this.contentResult);
-          break;
-        case 'farsiLanguage':
-          this.setState({
-            language: 'farsi'
-          });
-          this.contentResult = this.content.farsi;
-          console.log(this.contentResult);
-          break;
-        case 'japaneseLanguage':
-          this.setState({
-            language: 'japanese'
-          });
-          break;
-      };
-    });
-  }
+  // languageSelectHandler() {
+  //   switch(store.getState().language.value) {
+  //     case 'english':
+  //       this.contentResult = this.content.english;
+  //       break;
+  //     case 'farsi':
+  //       this.contentResult = this.content.farsi;
+  //       break;
+  //     case 'japanese':
+  //       console.log('hi');
+  //       break;
+  //   };
+  // }
   
   render() {
     return(
       <header className="header">
         <nav className="navigation">
-          <Link onClick={(e) => isActive(e, '/projects')} className="navigation__item navigation__item_first" to="/projects">{this.contentResult.titles.projects}</Link>
-          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">{this.contentResult.titles.skills}</Link>
-          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">{this.contentResult.titles.about}</Link>
-          <div className='navigation__language'>
-             <div className='navigation__language__container'>
-                <button className='navigation__language__dropbtn'>
-                  <svg>
-                    <use href="#languageSVG" />
-                  </svg>
-                </button>
-                <div id='languageDropdown' className='navigation__language__dropdown'>
-                  <a onClick={(e) => this.languageSelectHandler()} id='englishLanguage'>
-                    <svg>
-                      <use href="#gbSVG" />
-                    </svg>
-                  </a>
-                  <a onClick={(e) => this.languageSelectHandler()} id='farsiLanguage'>
-                  <svg>
-                      <use href="#irSVG" />
-                    </svg>
-                  </a>
-                  <a onClick={(e) => this.languageSelectHandler()} id='japaneseLanguage'>
-                  <svg>
-                      <use href="#jpSVG" />
-                    </svg>
-                  </a>
-                </div>
-             </div>
-          </div>
+          <Link onClick={(e) => isActive(e, '/projects')} className="navigation__item navigation__item_first" to="/projects">
+            {
+              store.getState().language.value.content.header.projects
+            }
+          </Link>
+          <Link onClick={(e) => isActive(e, '/skills')} className="navigation__item" to="/skills">{/*{this.contentResult.titles.skills}*/}1</Link>
+          <Link onClick={(e) => isActive(e, '/about')} className="navigation__item" to="/about">{/*{this.contentResult.titles.about}*/}2</Link>
+          <LanguageSwitch />
           <div className='navigation__title-container'>
             <Link onClick={() => rmvClassActive()} className="navigation__title" to="/">
               <i className="bi bi-house-door"></i>
@@ -153,4 +104,10 @@ class Header extends React.Component {
   }
 };
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    language: state.language
+  };
+};
+
+export default connect(mapStateToProps)(Header);

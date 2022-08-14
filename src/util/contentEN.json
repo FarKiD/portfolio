@@ -1,0 +1,22 @@
+{
+  "language": "english",
+  "content": {
+    "header": {
+      "projects": "Projects",
+      "skills": "Skills",
+      "about": "About Me"
+    },
+    "index": {
+      "title1": "Who Am I?",
+      "title2": "What is this?",
+      "content1": "My name is Sajjad Ostadebrahim I'm a Full-Stack Developer.",
+      "content2": "My comprehensive Portfolio Showcasing a large array of my abilities.",
+      "link1": "Read More About Me",
+      "link2": "Read More About It",
+      "outroHeader1": "Interested in the website?",
+      "outroHeader2": "You can contact me via:",
+      "outroContent1": "Visit and explore the source code on my GitHub!",
+      "outroContent2": "Email: sajjad.eros@gmail.com Cellphone: +989032371898"
+    }
+  }
+}
