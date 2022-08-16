@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import store from '../store/store';
 
 import halftone from '../images/halftone.png';
 
@@ -23,15 +26,29 @@ class HomePage extends React.Component {
             <div className="intro row">
               <div className="col-2 intro__title">
                 <h2 className='intro__h2 intro__h2--first'>
-                  who <br />
-                  am I?
+                {
+                  store.getState().language.value.content.index.title1.split("\n")[0]
+                }
+                <br />
+                {
+                  store.getState().language.value.content.index.title1.split("\n")[1]
+                }
                 </h2>
               </div>
               <div className="intro__text col">
                 <p className="intro__paragraph">
-                  My name is <span className='neon-text'>Sajjad Ostadebrahim</span>
+                  {
+                    store.getState().language.value.content.index.content1.split("\n")[0]
+                  }
+                  <span className='neon-text'>
+                    {
+                      store.getState().language.value.content.index.neon[0]
+                    }
+                  </span>
                   <br />
-                  I'm a Full-Stack Developer.
+                  {
+                    store.getState().language.value.content.index.content1.split("\n")[1]
+                  }
                 </p>
                 <Link onClick={(e) => activateNavItem(e, '/about')} className="intro__link" to="/about">
                   Read More About Me
@@ -42,8 +59,13 @@ class HomePage extends React.Component {
             <div className="second row">
               <div className="second__title col-8">
                 <h2 className='intro__h2 intro__h2--second'>
-                  what is <br />
-                  this?
+                {
+                  store.getState().language.value.content.index.title2.split("\n")[0]
+                }
+                <br />
+                {
+                  store.getState().language.value.content.index.title2.split("\n")[1]
+                }
                 </h2>
               </div>
               <div className='second__text col'>
@@ -102,4 +124,10 @@ class HomePage extends React.Component {
   }
 };
 
-export default HomePage;
+const mapStateToProps = state => {
+  return {
+    language: state.language
+  };
+};
+
+export default connect(mapStateToProps)(HomePage);

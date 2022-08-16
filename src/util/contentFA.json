@@ -7,9 +7,10 @@
       "about": "درباره من"
     },
     "index": {
-      "title1": "من کی ام؟",
-      "title2": "What is this?",
-      "content1": "My name is Sajjad Ostadebrahim I'm a Full-Stack Developer.",
+      "title1": "من \n کی ام؟",
+      "title2": "این دقیقا \n چیه؟",
+      "neon": ["سجاد استادابراهیم", "Portfolio"],
+      "content1": "My name is \n I'm a Full-Stack Developer.",
       "content2": "My comprehensive Portfolio Showcasing a large array of my abilities.",
       "link1": "Read More About Me",
       "link2": "Read More About It",
