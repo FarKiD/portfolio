@@ -20,6 +20,10 @@ class HomePage extends React.Component {
 
   componentWillUpdate() {
     if(store.getState().language.value.language === 'farsi') {
+      $('body').css({
+        'font-family': "'vazirmatn', Arial, sans-serif"
+      });
+      
       $(`
         .intro__paragraph,
         .second__paragraph,
@@ -36,6 +40,10 @@ class HomePage extends React.Component {
         'align-items': 'flex-end'
       });
     } else if (store.getState().language.value.language === 'english') {
+      $('body').css({
+        'font-family': "'outfit', Arial, Helvetica, sans-serif"
+      });
+
       $(`
         .intro__paragraph,
         .second__paragraph,

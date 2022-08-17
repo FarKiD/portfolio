@@ -22,6 +22,22 @@
   font-family: 'outfit-bold';
   src: url('./fonts/Outfit-Bold.ttf') format('truetype');
 }
+// Farsi fonts
+@font-face {
+  font-family: 'vazirmatn-light';
+  src: url('./fonts/Vazirmatn-Light.ttf') format('truetype');
+  unicode-range: U+0600-06FF;
+}
+@font-face {
+  font-family: 'vazirmatn';
+  src: url('./fonts/Vazirmatn-Regular.ttf') format('truetype');
+  unicode-range: U+0600-06FF;
+}
+@font-face {
+  font-family: 'vazirmatn-bold';
+  src: url('./fonts/Vazirmatn-Bold.ttf') format('truetype');
+  unicode-range: U+0600-06FF;
+}
 
 @mixin outfit-thin {
   font-family: 'outfit-thin', Arial, Helvetica, sans-serif;
@@ -40,4 +56,8 @@
 }
 @mixin outfit-bold {
   font-family: 'outfit-bold', Arial, Helvetica, sans-serif;
+}
+
+@mixin vazirmatn {
+  font-family: 'vazirmatn', Arial, sans-serif;
 }
