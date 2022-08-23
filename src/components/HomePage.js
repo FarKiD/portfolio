@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Cookies from 'universal-cookie';
 
 import store from '../store/store';
 
@@ -8,20 +9,38 @@ import halftone from '../images/halftone.png';
 
 import { indexLoad } from "../js/index.js";
 import { rmvClassActive, activateNavItem } from "../js/header.js";
+import { useDispatch } from 'react-redux';
+import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
 
 import "../styles/index.scss";
 
 class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cookieLanguage: new Cookies().get('language')
+    };
+  }
+
   // makes the router to reload the script
   componentDidMount() {
-    indexLoad();
+    indexLoad(store.getState().language.value.language);
     rmvClassActive();
+
+    if(this.state.cookieLanguage === 'farsi') {
+      this.props.languageCookieDispatch('farsi');
+    } else if (this.state.cookieLanguage === 'english') {
+      this.props.languageCookieDispatch('english');
+    } else {
+
+    }
   }
 
   componentWillUpdate() {
     if(store.getState().language.value.language === 'farsi') {
       $('body').css({
-        'font-family': "'vazirmatn', Arial, sans-serif"
+        'font-family': "'vazirmatn', Arial, sans-serif",
+        'letter-spacing': '0.05rem'
       });
       
       $(`
@@ -198,4 +217,22 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(HomePage);
+const mapDispatchToProps = dispatch => {
+  return {
+    languageCookieDispatch: (lang) => {
+      switch(lang) {
+        case 'farsi':
+          dispatch(switchFarsi());
+          break;
+        case 'english':
+          dispatch(switchEnglish());
+          break;
+        case 'japanese':
+          dispatch(switchJapanese());
+          break;
+      } 
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

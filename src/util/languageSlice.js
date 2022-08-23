@@ -1,8 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import Cookies from 'universal-cookie';
+
 import contentEN from './contentEN.json';
 import contentFA from './contentFA.json';
 import contentJP from './contentJP.json';
+
+const cookies = new Cookies();
 
 export const languageSlice = createSlice({
   name: 'language',
@@ -11,13 +15,16 @@ export const languageSlice = createSlice({
   },
   reducers: {
     switchEnglish: (state) => {
-      state.value = contentEN
+      state.value = contentEN;
+      cookies.set('language', 'english', { path: '/' });
     },
     switchFarsi: (state) => {
-      state.value = contentFA
+      state.value = contentFA;
+      cookies.set('language', 'farsi', { path: '/' });
     },
     switchJapanese: (state) => {
-      state.value = contentJP
+      state.value = contentJP;
+      cookies.set('language', 'japanese', { path: '/' });
     }
   }
 });

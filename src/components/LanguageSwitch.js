@@ -15,18 +15,24 @@ const LanguageSwitch = () => {
         </svg>
       </button>
       <div id='languageDropdown' className='navigation__language__dropdown'>
-        <a onClick={() => dispatch(switchEnglish())} id='englishLanguage'>
+        <a onClick={function() {
+          dispatch(switchEnglish());
+        }} id='englishLanguage'>
           <svg>
             <use href="#gbSVG" />
           </svg>
         </a>
-        <a onClick={() => dispatch(switchFarsi())} id='farsiLanguage'>
-        <svg>
+        <a onClick={function() {
+          dispatch(switchFarsi());
+        }} id='farsiLanguage'>
+          <svg>
             <use href="#irSVG" />
           </svg>
         </a>
-        <a onClick={() => dispatch(switchJapanese())} id='japaneseLanguage'>
-        <svg>
+        <a onClick={function() {
+          dispatch(switchJapanese());
+        }} id='japaneseLanguage'>
+          <svg>
             <use href="#jpSVG" />
           </svg>
         </a>
