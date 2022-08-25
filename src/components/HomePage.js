@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 
 import store from '../store/store';
 
-import halftone from '../images/halftone.png';
+import halftone from '../images/1.png';
 
 import { indexLoad } from "../js/index.js";
 import { rmvClassActive, activateNavItem } from "../js/header.js";
@@ -175,7 +175,9 @@ class HomePage extends React.Component {
                   </div>
                   <a className='outro__btn' href='https://github.com/FarKiD/portfolio' target="_blank">
                     <i className='bi bi-github'></i>
-                    GitHub
+                    {
+                      store.getState().language.value.content.index.outroBtn1
+                    }
                   </a>
                 </div>
                 <div className='outro__boxes col'>
@@ -197,14 +199,97 @@ class HomePage extends React.Component {
                   </div>
                   <a className='outro__btn' href='https://t.me/farkid' target="_blank">
                     <i className='bi bi-telegram'></i>
-                    Telegram
+                    {
+                      store.getState().language.value.content.index.outroBtn2
+                    }
                   </a>
                 </div>
               </div>
+              <div className="slider__container">
+                <section className="slide-option">
+                  <div id="infinite" className="highway-slider">
+                    <div className="container highway-barrier">
+                      <ul className="highway-lane">
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#cssLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#sassLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#bootstrapLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reactLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reduxLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#nodejsLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#mongodbLogo" />
+                          </svg>
+                        </li>
+                        
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#cssLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#sassLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#bootstrapLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reactLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reduxLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#nodejsLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#mongodbLogo" />
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </section>
           </main>
-          <img className='halftone halftone--left' src={halftone}></img>
-          <img className='halftone halftone--right' src={halftone}></img>
+          {/* <img className='halftone halftone--left' src={halftone}></img>
+          <img className='halftone halftone--right' src={halftone}></img> */}
         </div>
       </>
     );

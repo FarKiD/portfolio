@@ -17,7 +17,9 @@
       "outroHeader1": "Interested in the website?",
       "outroHeader2": "You can contact me via:",
       "outroContent1": "Visit and explore the source code on my GitHub!",
-      "outroContent2": "Email: sajjad.eros@gmail.com \n Cellphone: +989032371898"
+      "outroContent2": "Email: sajjad.eros@gmail.com \n Cellphone: +989032371898",
+      "outroBtn1": "GitHub",
+      "outroBtn2": "Telegram"
     }
   }
 }
