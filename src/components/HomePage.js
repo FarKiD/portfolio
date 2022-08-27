@@ -5,8 +5,6 @@ import Cookies from 'universal-cookie';
 
 import store from '../store/store';
 
-import halftone from '../images/1.png';
-
 import { indexLoad } from "../js/index.js";
 import { rmvClassActive, activateNavItem } from "../js/header.js";
 import { useDispatch } from 'react-redux';
@@ -245,6 +243,21 @@ class HomePage extends React.Component {
                             <use href="#mongodbLogo" />
                           </svg>
                         </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#mySQLLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#jestLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reactRouterLogo" />
+                          </svg>
+                        </li>
                         
                         <li className="highway-car">
                           <svg>
@@ -279,6 +292,21 @@ class HomePage extends React.Component {
                         <li className="highway-car">
                           <svg>
                             <use href="#mongodbLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#mySQLLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#jestLogo" />
+                          </svg>
+                        </li>
+                        <li className="highway-car">
+                          <svg>
+                            <use href="#reactRouterLogo" />
                           </svg>
                         </li>
                       </ul>

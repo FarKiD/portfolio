@@ -215,11 +215,10 @@ div.highway-slider {
 }
 
 @keyframes translateinfinite {
-	100% { transform:translateX(calc(-180px * 12));  }
+	100% { transform:translateX(calc(-120px * 12));  }
 }
 #infinite div.highway-barrier {
 	background:transparent;
-	box-shadow:0 3px 10px -3px rgba(0,0,0,0.3);
 	&::before,
 	&::after {
 		content: " ";
@@ -230,17 +229,17 @@ div.highway-slider {
 	}
 	&::before {
 		top:0;left:0;
-		// background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(to right, $blue3 0%, rgba(255,255,255,0) 100%);
 	}
 	&::after {
 		top:0;right:0;
-		// background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(to left, $blue3 0%, rgba(255,255,255,0) 100%);
 	}
 	ul.highway-lane {
-		width:calc(180px * 24);
+		width:calc(120px * 24);
 		li.highway-car {
-			width:180px;
-			animation:translateinfinite 25s linear infinite;
+			width:120px;
+			animation:translateinfinite 20s linear infinite;
 			span.fab {
 				font-size:65px;
 			}
@@ -252,26 +251,4 @@ div.highway-slider {
   width: 8rem;
   height: 8rem;
   position: relative;
-}
-
-.halftone {
-  position: absolute;
-  bottom: -20rem;
-  width: 40rem;
-  height: 40rem;
-  -webkit-mask-image: linear-gradient(-45deg, black, transparent);
-  mask-image: linear-gradient(45deg, black, transparent);
-  user-select: none;
-  -webkit-user-drag: none;
-  z-index: 0;
-}
-
-.halftone--left {
-  left: -12rem;
-}
-
-.halftone--right {
-  right: -12rem;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
