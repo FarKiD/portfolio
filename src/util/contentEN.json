@@ -20,6 +20,87 @@
       "outroContent2": "Email: sajjad.eros@gmail.com \n Cellphone: +989032371898",
       "outroBtn1": "GitHub",
       "outroBtn2": "Telegram"
+    },
+    "projects": {
+      "title": {
+        "kanda": "Kanda Idea",
+        "shop": "Online Shop Project"
+      },
+      "button": {
+        "kanda": "Kanda Idea",
+        "shop": "Online Shop",
+        "jcards": "Japanese Cards",
+        "portfolio": "Online Portfolio",
+        "reader": "Speed Reader App",
+        "stopwatch": "Simple Stopwatch"
+      },
+      "text": {
+        "kanda": "Kanda Idea is a respectable GIS and technology based company. in 2021 I had the great opportunity to work together with their development team and I was tasked with the Front-End of their new website, this was the result.",
+        "kandaDisclaimer": "Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.",
+        "kandaKeywords": "Keywords: Front-End, Javascript, Responsive",
+        "shop": "Shortly after my departure with Kanda Idea, I focused on learning Back-End, and this project was the ultimate result of that. it pretty much is a back-end skill showcase.",
+        "shopDisclaimer": "Disclaimer: Since using Heroku, the website might not work it's full potential.",
+        "shopKeywords": "Keywords: Back-End, Authentication, Database",
+        "visit": "Visit:",
+        "jcards": "Practice your Hiragana and Katakana",
+        "portfolio": "More info about the portfolio",
+        "reader": "A small app for speed reading",
+        "stopwatch": "A stopwatch helpful during workouts"
+      }
+    },
+    "skills": {
+      "title": {
+        "front": "Front-End",
+        "back": "Back-End",
+        "styling": "Styling",
+        "scripting": "Scripting",
+        "server": "Server",
+        "data": "Data Handling",
+        "other": "Other Skills"
+      }
+    },
+    "about": {
+      "name": {
+        "title": "Name: ",
+        "text": "Sajjad Ostadebrahim"
+      },
+      "bday": {
+        "title": "Birthdate: ",
+        "text": "25 Nov. 1998"
+      },
+      "address": {
+        "title": "Location: ",
+        "text": "Tehran, Shahriyar"
+      },
+      "status": {
+        "title": "Marital Status: ",
+        "text": "Single"
+      },
+      "exp": {
+        "title": "Development Experience: ",
+        "text": "+3 Years"
+      },
+      "slogan": {
+        "dedication": "Dedication",
+        "aspiration": "Aspiration",
+        "intuition": "Intuition"
+      },
+      "point": {
+        "strong": {
+          "focused": "Focused",
+          "unflappable": "Unflappable",
+          "disciplined": "Disciplined"
+        },
+        "weak": {
+          "recluse": "Recluse",
+          "prideful": "Prideful",
+          "irritable": "Irritable"
+        }
+      },
+      "bio": {
+        "title": "Biography",
+        "text": "Born and raised in Tehran, Iran. I had a fairly simple childhood. I participated in Biology studies in high-school but very soon after graduation, I realized my real passion is in programming. after a few months of practicing C++ to become a game developer, and doing a very short SEO internship, I found interest in Web Developing and I have been occupied doing this ever since. \n I am a very proficient self-learner, I've taught myself English and everything I know about Programming, but that hasn't stop me from learning more!"
+      }
     }
   }
 }

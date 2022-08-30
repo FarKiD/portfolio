@@ -26,6 +26,13 @@ export const indexLoad = (lang) => {
       'opacity': '100%'
     });
   }, 1500);
+  // Fade in the infinite slider
+  setTimeout(() => {
+    $('.slider__container').css({
+      'opacity': '100%'
+    });
+  }, 2000);
+  
 // Animations End
 
 // Small correction for Farsi, in case of going back to the page

@@ -1,8 +1,8 @@
-@use 'baseColors' as *;
-@use 'base' as *;
+@use 'baseColors'as *;
+@use 'base'as *;
 @use 'sass:color';
 
-@mixin animate($animation, $duration, $times){
+@mixin animate($animation, $duration, $times) {
   animation: $animation $duration $times;
 }
 
@@ -22,15 +22,16 @@
     0% {
       background-position: 0% 50%;
     }
-  
+
     50% {
       background-position: 100% 50%;
     }
-  
+
     100% {
       background-position: 0% 50%;
     }
   }
+
   @include animate(bg-animation, 15s, infinite);
 }
 
@@ -53,7 +54,7 @@
 }
 
 @mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .intro {
@@ -182,73 +183,94 @@
   @include btn-hover;
 }
 
+// Infinite Slider start
 .slider__container {
   margin: 0 -5rem;
+  opacity: 0;
+  transition: 1000ms;
 }
 
-// Infinite Slider
 section.slide-option {
-	margin:0 0 50px 0;
-	.no-marg { margin:0 0 0 0; }
+  margin: 0 0 5rem 0;
+
+  .no-marg {
+    margin: 0 0 0 0;
+  }
 }
 
 div.highway-slider {
-	display:flex;
-	justify-content:center;
-	width:100%;
-	height:150px;
-	div.highway-barrier {
-		overflow:hidden;
-		position:relative;
-	}
-	ul.highway-lane {
-		display:flex;
-		height:100%;
-		li.highway-car {
-			flex:1;
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			background:transparent;
-		}
-	}
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 15rem;
+
+  div.highway-barrier {
+    overflow: hidden;
+    position: relative;
+  }
+
+  ul.highway-lane {
+    display: flex;
+    height: 100%;
+
+    li.highway-car {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+  }
 }
 
 @keyframes translateinfinite {
-	100% { transform:translateX(calc(-120px * 12));  }
-}
-#infinite div.highway-barrier {
-	background:transparent;
-	&::before,
-	&::after {
-		content: " ";
-		position:absolute;
-		z-index:9;
-		width:180px;
-		height:100%;	
-	}
-	&::before {
-		top:0;left:0;
-		background: linear-gradient(to right, $blue3 0%, rgba(255,255,255,0) 100%);
-	}
-	&::after {
-		top:0;right:0;
-		background: linear-gradient(to left, $blue3 0%, rgba(255,255,255,0) 100%);
-	}
-	ul.highway-lane {
-		width:calc(120px * 24);
-		li.highway-car {
-			width:120px;
-			animation:translateinfinite 20s linear infinite;
-			span.fab {
-				font-size:65px;
-			}
-		}
-	}
+  100% {
+    transform: translateX(calc(-12rem * 12));
+  }
 }
 
-.highway-car > svg {
+#infinite div.highway-barrier {
+  background: transparent;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    z-index: 9;
+    width: 12rem;
+    height: 100%;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, $blue3 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, $blue3 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  ul.highway-lane {
+    width: calc(12rem * 24);
+
+    li.highway-car {
+      width: 12rem;
+      animation: translateinfinite 20s linear infinite;
+
+      span.fab {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}
+
+.highway-car>svg {
   width: 8rem;
   height: 8rem;
   position: relative;
 }
+
+// Infinite Slider End

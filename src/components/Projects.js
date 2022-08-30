@@ -88,8 +88,8 @@ class Projects extends React.Component {
                 Practice your Hiragana and Katakana
               </p>
             </div>
-            <div className='col' onClick={this.handleModalShow}>
-              <a id='portfolioLink' href='/projects#portfolio'>Online Portfolio</a>
+            <div className='col'>
+              <a id='portfolioLink' onClick={this.handleModalShow} href='/projects#portfolio'>Online Portfolio</a>
               <p className='span'>
                 More info about the portfolio
               </p>
