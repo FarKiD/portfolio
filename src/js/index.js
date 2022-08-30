@@ -1,7 +1,7 @@
 export const indexLoad = (lang) => {
   // Scrollability
   $('html, body').css({
-    'overflow-y': 'hidden',
+    'overflow-y': 'visible',
     'overflow-x': 'hidden'
   });
 

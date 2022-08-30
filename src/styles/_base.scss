@@ -3,12 +3,12 @@
 @use 'sass:color';
 
 // Variables
-$h1: clamp(2.763rem, calc( 12px + 3.575vw ), 3.738rem);
-$h2: clamp(2.275rem, calc( 12px + 2.600vw ), 2.925rem);
-$h3: clamp(1.853rem, calc( 12px + 1.950vw ), 2.438rem);
-$h4: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
-$p: clamp(1.380rem, calc( 12px + 0.720vw ), 1.500rem);
-$span: clamp(1.200rem, calc( 12px + 0.480vw ), 1.350rem);
+$h1: clamp(2.763rem, calc( 10px + 3.575vw ), 3.738rem);
+$h2: clamp(2.275rem, calc( 10px + 2.600vw ), 2.925rem);
+$h3: clamp(1.853rem, calc( 10px + 1.950vw ), 2.438rem);
+$h4: clamp(1.625rem, calc( 10px + 1.300vw ), 1.950rem);
+$p: clamp(1.380rem, calc( 10px + 0.720vw ), 1.500rem);
+$span: clamp(1.200rem, calc( 10px + 0.480vw ), 1.350rem);
 
 // Scrollbar Style
 /* width */
@@ -59,22 +59,22 @@ main {
 }
 
 h1, .h1 {
-  font-size: clamp(2.763rem, calc( 12px + 3.575vw ), 3.738rem);
+  font-size: clamp(2.763rem, calc( 10px + 3.575vw ), 3.738rem);
 }
 h2, .h2 {
-  font-size: clamp(2.275rem, calc( 12px + 2.600vw ), 2.925rem);
+  font-size: clamp(2.275rem, calc( 10px + 2.600vw ), 2.925rem);
 }
 h3, .h3 {
-  font-size: clamp(1.853rem, calc( 12px + 1.950vw ), 2.438rem);
+  font-size: clamp(1.853rem, calc( 10px + 1.950vw ), 2.438rem);
 }
 h4, .h4 {
-  font-size: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
+  font-size: clamp(1.625rem, calc( 10px + 1.300vw ), 1.950rem);
 }
 p, a, .p, .a {
-  font-size: clamp(1.380rem, calc( 12px + 0.720vw ), 1.500rem);
+  font-size: clamp(1.380rem, calc( 10px + 0.720vw ), 1.500rem);
 }
 span, .span {
-  font-size: clamp(1.200rem, calc( 12px + 0.480vw ), 1.350rem);
+  font-size: clamp(1.200rem, calc( 10px + 0.480vw ), 1.350rem);
 }
 
 // Custom Special Classes

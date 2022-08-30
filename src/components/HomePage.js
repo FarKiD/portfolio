@@ -87,7 +87,7 @@ class HomePage extends React.Component {
         <div className="container-fluid">
           <main>
             <div className="intro row">
-              <div className="col-2 intro__title">
+              <div className="col-4 col-md-2 intro__title">
                 <h2 className='intro__h2 intro__h2--first'>
                 {
                   store.getState().language.value.content.index.title1.split("\n")[0]
@@ -98,7 +98,7 @@ class HomePage extends React.Component {
                 }
                 </h2>
               </div>
-              <div className="intro__text col">
+              <div className="intro__text col-6 col-md">
                 <p className="intro__paragraph">
                   {
                     store.getState().language.value.content.index.content1.split("\n")[0]
@@ -119,10 +119,10 @@ class HomePage extends React.Component {
                   }
                 </Link>
               </div>
-              <div className="intro__banner col"></div>
+              <div className="intro__banner col-4 col-sm"></div>
             </div>
             <div className="second row">
-              <div className="second__title col-8">
+              <div className="second__title col-4 col-md-6 col-lg-7 col-xl-8">
                 <h2 className='intro__h2 intro__h2--second'>
                   {
                     store.getState().language.value.content.index.title2.split("\n")[0]
@@ -133,7 +133,7 @@ class HomePage extends React.Component {
                   }
                 </h2>
               </div>
-              <div className='second__text col'>
+              <div className='second__text col-6 col-md'>
                 <p className='second__paragraph'>
                   {
                     store.getState().language.value.content.index.content2.split("\n")[0]
@@ -154,11 +154,11 @@ class HomePage extends React.Component {
                   }
                 </Link>
               </div>
-              <div className='second__banner col'></div>
+              <div className='second__banner col-4 col-sm'></div>
             </div>
             <section>
               <div className='outro row'>
-                <div className='outro__boxes col'>
+                <div className='outro__boxes col-12 col-md'>
                   <div className='outro__content'>
                     <h4>
                       {
@@ -178,7 +178,7 @@ class HomePage extends React.Component {
                     }
                   </a>
                 </div>
-                <div className='outro__boxes col'>
+                <div className='outro__boxes col-12 col-md'>
                   <div className='outro__content'>
                     <h4>
                       {
