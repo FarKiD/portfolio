@@ -41,7 +41,7 @@ class Projects extends React.Component {
       <>
         <div className='container-fluid'>
           <div className='row kanda'>
-            <div className='col-3 image-container'>
+            <div className='col-md-3 image-container'>
               <img className='kanda__image img-fluid' src={kandaPic} />
             </div>
             <div className='col kanda__content'>
@@ -82,25 +82,28 @@ class Projects extends React.Component {
             </div>
           </div>
           <div className='row others'>
-            <div className='col'>
+            <div className='col-6 col-md mobile__border'>
               <a href='/jcards.rar'>Japanese Cards</a>
               <p className='span'>
                 Practice your Hiragana and Katakana
               </p>
             </div>
-            <div className='col'>
+            <div className='col-6 col-md'>
               <a id='portfolioLink' onClick={this.handleModalShow} href='/projects#portfolio'>Online Portfolio</a>
               <p className='span'>
                 More info about the portfolio
               </p>
             </div>
-            <div className='col'>
+
+            <div className='w-100 d-block d-md-none'></div>
+
+            <div className='col-6 col-md mobile__border'>
               <a href='/reader'>Speed Reader App</a>
               <p className='span'>
                 A small app for speed reading
               </p>
             </div>
-            <div className='col'>
+            <div className='col-6 col-md'>
               <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
               <p className='span'>
                 A stopwatch helpful during workouts

@@ -47,8 +47,13 @@ class Header extends React.Component {
           return;
         } else if (targetElement.className == languageDropdown
             && this.state.dropDownState) {
-              // return when you click the flags (for now)
-              // TODO actually change language when you click the flags
+              $('.navigation__language__dropdown').css({
+                'visibility': 'hidden',
+                'opacity': '0%'
+              });
+              this.setState({
+                dropDownState: false
+              });
               return;
           }
 

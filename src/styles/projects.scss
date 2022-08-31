@@ -37,7 +37,7 @@
   left: -15rem;
   opacity: 0;
   margin-left: -1.5rem;
-  max-height: 15rem;
+  // max-height: 15rem;
   clip-path: polygon(0 0, 75% 0, 90% 100%, 0% 100%) !important;
   -webkit-mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
   mask-image: linear-gradient(75deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 65%, rgba(0,0,0,0) 75%);
@@ -103,6 +103,10 @@
   text-align: center;
   height: 20vh;
 
+  p {
+    white-space: nowrap;
+  }
+
   a {
     @include btn;
     margin-bottom: .6rem;
@@ -143,6 +147,90 @@
       $aqua2,
       color.adjust($aqua2, $alpha: -1)
     );
+    border-image-slice: 1;
+  }
+}
+
+// RESPONSIVE
+
+@media only screen and (max-width: 992px) {
+  .image-container {
+    align-items: flex-start;
+  }
+
+  .others {
+    p {
+      white-space: unset;
+    }
+
+    div {
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  }
+  // .kanda__image,
+  // .shop__image {
+  //   max-height: 15rem;
+  // }
+}
+
+@media only screen and (max-width: 768px) {
+  .d-block {
+    border-width: .1rem 0 !important;
+    border-style: solid !important;
+    border-image: linear-gradient(to right, rgba(170, 229, 255, 0), #AAE5FF, rgba(170, 229, 255, 0)) !important;
+    border-image-slice: 1 !important;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .kanda__content,
+  .shop__content {
+    margin-left: 0;
+  }
+
+  .others div:nth-of-type(n+2):not(div:last-of-type) {
+    border-width: 0;
+  }
+
+  .mobile__border {
+    border-width: 0 .1rem 0 0 !important;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgba(170, 229, 255, 0), #AAE5FF, rgba(170, 229, 255, 0));
+    border-image-slice: 1;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .kanda__content,
+  .shop__content {
+    background: linear-gradient(
+      180deg, color.adjust($blue1, $alpha: -.4),
+      color.adjust($blue1, $alpha: -.9) 70%,
+      color.adjust($blue1, $alpha: -1) 80%
+    );
+    border-width: .1rem 0;
+    border-style: solid;
+    border-image: linear-gradient(
+      to right,
+      color.adjust($aqua2, $alpha: -.9),
+      $aqua2,
+      color.adjust($aqua2, $alpha: -.9)
+    );
+    border-image-slice: 1;
+  }
+
+  .shop {
+    border-width: 0;
+  }
+
+  .others {
+    border-width: .1rem 0 0 0;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgba(170, 229, 255, 0), #AAE5FF, rgba(170, 229, 255, 0));
     border-image-slice: 1;
   }
 }
