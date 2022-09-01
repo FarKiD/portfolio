@@ -73,6 +73,7 @@ class About extends React.Component {
                   about Programming, but that hasn't stop me from learning more!
                 </p>
               </div>
+              <div className='w-100 d-lg-none d-block'></div>
               <div className='col info__points'>
                 <div className='info__strong'>
                   <h3>
