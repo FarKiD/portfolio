@@ -25,6 +25,7 @@ class Header extends React.Component {
     Opens the language dropdown if you click it
     Closes it when you click it again
     Closes it when you click outside of it
+    Closes it when you click a flag
     Doesn't close it when you click inside the dropdown
   */
   langDropDownClickHandler = () => {

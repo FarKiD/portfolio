@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import Cookies from 'universal-cookie';
+
+import store from '../store/store';
+import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
 
 import "../styles/projects.scss";
-
 import scrollActivator from '../util/scrollActivator';
 import { loadModalFromURL, loadAnimations } from '../js/projects';
-
 import {Modal, Button} from 'react-bootstrap';
 
 import kandaPic from '../images/kanda.jpg';
@@ -14,7 +17,8 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ModalVisibility: false
+      ModalVisibility: false,
+      cookieLanguage: new Cookies().get('language')
     }
   }
   
@@ -22,6 +26,14 @@ class Projects extends React.Component {
     scrollActivator();
     loadModalFromURL(this.handleModalShow);
     loadAnimations();
+
+    if(this.state.cookieLanguage === 'farsi') {
+      this.props.languageCookieDispatch('farsi');
+    } else if (this.state.cookieLanguage === 'english') {
+      this.props.languageCookieDispatch('english');
+    } else {
+
+    }
   }
 
   handleModalShow = () => {
@@ -46,18 +58,40 @@ class Projects extends React.Component {
             </div>
             <div className='col kanda__content'>
               <h3>
-                Kanda Idea
+                {
+                  store.getState().language.value.content.projects.title.kanda
+                }
               </h3>
               <p>
-                Kanda Idea is a respectable GIS and technology based company.
-                in 2021 I had the great opportunity to work together with their development team and I was tasked with the 
-                Front-End of their new website, this was the result.
+                {
+                  store.getState().language.value.content.projects.text.kanda
+                }
                 <br />
-                <span><small>Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.</small></span>
+                <span><small>
+                  {
+                    store.getState().language.value.content.projects.text.kandaDisclaimer
+                  }
+                </small></span>
               </p>
-              <span className='h4'>Visit:</span> &nbsp; <a className='h4 content-link' href='https://kandaidea.com/'>Kanda Idea</a>
+              <span className='h4'>
+                {
+                  store.getState().language.value.content.projects.text.visit
+                }
+              </span>
+              
+               &nbsp; 
+              
+              <a className='h4 content-link' href='https://kandaidea.com/'>
+                {
+                  store.getState().language.value.content.projects.button.kanda
+                }
+              </a>
               <br />
-              <p className='small keywords'>Keywords: Front-End, Javascript, Responsive</p>
+              <p className='small keywords'>
+                {
+                  store.getState().language.value.content.projects.text.kandaKeywords
+                }
+              </p>
             </div>
           </div>
           <div className='row shop'>
@@ -66,47 +100,92 @@ class Projects extends React.Component {
             </div>
             <div className='col shop__content'>
               <h3>
-                Online Shop Project
+                {
+                  store.getState().language.value.content.projects.title.shop
+                }
               </h3>
               <p>
-                Shortly after my departure with Kanda Idea, I focused on learning Back-End,
-                and this project was the ultimate result of that.
+                {
+                  store.getState().language.value.content.projects.text.shop
+                }
                 <br />
-                it pretty much is a back-end skill showcase.
-                <br />
-                <span><small>Disclaimer: Since using Heroku, the website might not work it's full potential.</small></span>
+                <span><small>
+                  {
+                    store.getState().language.value.content.projects.text.shopDisclaimer
+                  }
+                </small></span>
               </p>
-              <span className='h4'>Visit:</span> &nbsp; <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>Online Shop</a>
+              <span className='h4'>
+                {
+                  store.getState().language.value.content.projects.text.visit
+                }
+              </span> 
+              
+              &nbsp; 
+              
+              <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>
+                {
+                  store.getState().language.value.content.projects.button.shop
+                }
+              </a>
               <br />
-              <p className='small keywords'>Keywords: Back-End, Authentication, Database</p>
+              <p className='small keywords'>
+                {
+                  store.getState().language.value.content.projects.text.shopKeywords
+                }
+              </p>
             </div>
           </div>
           <div className='row others'>
             <div className='col-6 col-md mobile__border'>
-              <a href='/jcards.rar'>Japanese Cards</a>
+              <a href='/jcards.rar'>
+                {
+                  store.getState().language.value.content.projects.button.jcards
+                }
+              </a>
               <p className='span'>
-                Practice your Hiragana and Katakana
+                {
+                  store.getState().language.value.content.projects.text.jcards
+                }
               </p>
             </div>
             <div className='col-6 col-md'>
-              <a id='portfolioLink' onClick={this.handleModalShow} href='/projects#portfolio'>Online Portfolio</a>
+              <a id='portfolioLink' onClick={this.handleModalShow} href='/projects#portfolio'>
+                {
+                  store.getState().language.value.content.projects.button.portfolio
+                }
+              </a>
               <p className='span'>
-                More info about the portfolio
+                {
+                  store.getState().language.value.content.projects.text.portfolio
+                }
               </p>
             </div>
 
             <div className='w-100 d-block d-md-none'></div>
 
             <div className='col-6 col-md mobile__border'>
-              <a href='/reader'>Speed Reader App</a>
+              <a href='/reader'>
+                {
+                  store.getState().language.value.content.projects.button.reader
+                }
+              </a>
               <p className='span'>
-                A small app for speed reading
+                {
+                  store.getState().language.value.content.projects.text.reader
+                }
               </p>
             </div>
             <div className='col-6 col-md'>
-              <a href='/stopwatch' target="_blank">Simple Stopwatch</a>
+              <a href='/stopwatch' target="_blank">
+                {
+                  store.getState().language.value.content.projects.button.stopwatch
+                }
+              </a>
               <p className='span'>
-                A stopwatch helpful during workouts
+                {
+                  store.getState().language.value.content.projects.text.stopwatch
+                }
               </p>
             </div>
           </div>
@@ -130,4 +209,28 @@ class Projects extends React.Component {
   };
 };
 
-export default Projects;
+const mapStateToProps = state => {
+  return {
+    language: state.language
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    languageCookieDispatch: (lang) => {
+      switch(lang) {
+        case 'farsi':
+          dispatch(switchFarsi());
+          break;
+        case 'english':
+          dispatch(switchEnglish());
+          break;
+        case 'japanese':
+          dispatch(switchJapanese());
+          break;
+      } 
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);
