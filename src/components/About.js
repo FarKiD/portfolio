@@ -1,15 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import Cookies from 'universal-cookie';
+
+import store from '../store/store';
+import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
 
 import "../styles/about.scss";
 
 import mySelfPic from '../images/myself.png';
 
 class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cookieLanguage: new Cookies().get('language')
+    }
+  }
+
   componentDidMount() {
     $('html, body').css({
       'overflow-y': 'visible',
       'overflow-x': 'hidden'
     });
+
+    if(this.state.cookieLanguage === 'farsi') {
+      this.props.languageCookieDispatch('farsi');
+    } else if (this.state.cookieLanguage === 'english') {
+      this.props.languageCookieDispatch('english');
+    } else {
+
+    }
   }
 
   render() {
@@ -62,15 +82,9 @@ class About extends React.Component {
                   Biography
                 </h3>
                 <p>
-                  Born and raised in Tehran, Iran. I had a fairly simple childhood.
-                  I participated in Biology studies in high-school but very soon after graduation,
-                  I realized my real passion is in programming.
-                  after a few months of practicing C++ to become a game developer, and
-                  doing a very short SEO internship, I found interest in Web Developing
-                  and I have been occupied doing this ever since.
-                  <br />
-                  I am a very proficient self-learner, I've taught myself English and everything I know
-                  about Programming, but that hasn't stop me from learning more!
+                  {
+                    store.getState().language.value.content.about.bio.text
+                  }
                 </p>
               </div>
               <div className='w-100 d-lg-none d-block'></div>
@@ -116,4 +130,29 @@ class About extends React.Component {
   }
 };
 
-export default About;
+
+const mapStateToProps = state => {
+  return {
+    language: state.language
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    languageCookieDispatch: (lang) => {
+      switch(lang) {
+        case 'farsi':
+          dispatch(switchFarsi());
+          break;
+        case 'english':
+          dispatch(switchEnglish());
+          break;
+        case 'japanese':
+          dispatch(switchJapanese());
+          break;
+      } 
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);

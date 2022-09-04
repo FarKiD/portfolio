@@ -50,7 +50,7 @@
     },
     "skills": {
       "title": {
-        "front": "فرانت-اند",
+        "front": "Front-End",
         "back": "Back-End",
         "styling": "Styling",
         "scripting": "Scripting",
@@ -61,45 +61,45 @@
     },
     "about": {
       "name": {
-        "title": "Name: ",
-        "text": "Sajjad Ostadebrahim"
+        "title": "نام: ",
+        "text": "سجاد استادابراهیم"
       },
       "bday": {
-        "title": "Birthdate: ",
-        "text": "25 Nov. 1998"
+        "title": "زادروز: ",
+        "text": "4 آذر 1377"
       },
       "address": {
-        "title": "Location: ",
-        "text": "Tehran, Shahriyar"
+        "title": "محل سکونت: ",
+        "text": "تهران، شهریار"
       },
       "status": {
-        "title": "Marital Status: ",
-        "text": "Single"
+        "title": "وضعیت تأهل: ",
+        "text": "مجرد"
       },
       "exp": {
-        "title": "Development Experience: ",
-        "text": "+3 Years"
+        "title": "سابقه برنامه‌نویسی",
+        "text": "+3 سال"
       },
       "slogan": {
-        "dedication": "Dedication",
-        "aspiration": "Aspiration",
-        "intuition": "Intuition"
+        "dedication": "مصمم",
+        "aspiration": "امیدوار",
+        "intuition": "با فراست"
       },
       "point": {
         "strong": {
-          "focused": "Focused",
-          "unflappable": "Unflappable",
-          "disciplined": "Disciplined"
+          "focused": "متمرکز",
+          "unflappable": "خونسرد",
+          "disciplined": "خودکفا"
         },
         "weak": {
-          "recluse": "Recluse",
-          "prideful": "Prideful",
-          "irritable": "Irritable"
+          "recluse": "گوشه‌گیر",
+          "prideful": "مغرور",
+          "irritable": "زودرنج"
         }
       },
       "bio": {
-        "title": "Biography",
-        "text": "Born and raised in Tehran, Iran. I had a fairly simple childhood. I participated in Biology studies in high-school but very soon after graduation, I realized my real passion is in programming. after a few months of practicing C++ to become a game developer, and doing a very short SEO internship, I found interest in Web Developing and I have been occupied doing this ever since. \n I am a very proficient self-learner, I've taught myself English and everything I know about Programming, but that hasn't stop me from learning more!"
+        "title": "بیوگرافی",
+        "text": "در تهران زاده و بزرگ شده ام، کودکی ساده ای داشتم. در دبیرستان رشته تجربی را انتخاب کردم اما کمی بعد از فارغ التحصیلی علاقه واقعی خودم را در برنامه نویسی یافتم. پس از چندین ماه آموزش زبان ++C جهت استفاده آن در بازی سازی، و گذراندن یک دوره کوتاه سئو، برنامه نویسی وب را به عنوان هدف اصلی خودم انتخاب کردم و تاکنون مشغول به آن بوده ام. \n من خودآموز موفقی هستم، مستند به آن که زبان انگلیسی و برنامه نویسی را به طور خودآموز فراگرفتم، اما این پایان آموختن برای من نیست!"
       }
     }
   }
