@@ -5,6 +5,8 @@ import Cookies from 'universal-cookie';
 import store from '../store/store';
 import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
 
+import { langCssCorrection } from "../js/langCssCorrection.js";
+
 import "../styles/about.scss";
 
 import mySelfPic from '../images/myself.png';
@@ -18,6 +20,8 @@ class About extends React.Component {
   }
 
   componentDidMount() {
+    langCssCorrection(store.getState().language.value.language);
+
     $('html, body').css({
       'overflow-y': 'visible',
       'overflow-x': 'hidden'
@@ -32,6 +36,16 @@ class About extends React.Component {
     }
   }
 
+  componentWillUpdate() {
+    if(store.getState().language.value.language === 'farsi') {
+      langCssCorrection('farsi');
+    } else if (store.getState().language.value.language === 'english') {
+      langCssCorrection('english');
+    } else {
+      // japanese?
+    }
+  }
+
   render() {
     return(
       <>
@@ -43,35 +57,76 @@ class About extends React.Component {
               </div>
               <div className='profile__info'>
                 <p>
-                  <strong>Name: </strong>Sajjad Ostadebrahim
+                  <strong>
+                    {
+                      store.getState().language.value.content.about.name.title
+                    }
+                  </strong>
+                  {
+                    store.getState().language.value.content.about.name.text
+                  }
                 </p>
                 <p>
-                  <strong>Birthdate: </strong>25 Nov. 1998
+                  <strong>
+                    {
+                      store.getState().language.value.content.about.bday.title
+                    }
+                  </strong>
+                  {
+                    store.getState().language.value.content.about.bday.text
+                  }
                 </p>
                 <p>
-                  <strong>Location: </strong>Tehran, Shahriyar
+                  <strong>
+                    {
+                      store.getState().language.value.content.about.address.title
+                    }
+                  </strong>
+                  {
+                    store.getState().language.value.content.about.address.text
+                  } 
                 </p>
                 <p>
-                  <strong>Marital Status: </strong>Single
+                  <strong>
+                    {
+                      store.getState().language.value.content.about.status.title
+                    }
+                  </strong>
+                  {
+                    store.getState().language.value.content.about.status.text
+                  }
                 </p>
                 <p>
-                  <strong>Development Experience: </strong>+3 Years
+                  <strong>
+                    {
+                      store.getState().language.value.content.about.exp.title
+                    }
+                  </strong>
+                  {
+                    store.getState().language.value.content.about.exp.text
+                  }
                 </p>
               </div>
               <div className='profile__slogans__container'>
                 <div className='profile__slogans'>
                   <h2>
-                    Dedication
+                    {
+                      store.getState().language.value.content.about.slogan.dedication
+                    }
                   </h2>
                 </div>
                 <div className='profile__slogans'>
                   <h2>
-                    Aspiration
+                    {
+                      store.getState().language.value.content.about.slogan.aspiration
+                    }
                   </h2>
                 </div>
                 <div className='profile__slogans'>
                   <h2>
-                    Intuition
+                    {
+                      store.getState().language.value.content.about.slogan.intuition
+                    }
                   </h2>
                 </div>
               </div>
@@ -79,7 +134,9 @@ class About extends React.Component {
             <section className='row info'>
               <div className='col info__biography'>
                 <h3>
-                  Biography
+                  {
+                    store.getState().language.value.content.about.bio.title
+                  }
                 </h3>
                 <p>
                   {
@@ -91,33 +148,49 @@ class About extends React.Component {
               <div className='col info__points'>
                 <div className='info__strong'>
                   <h3>
-                    Strong Points
+                    {
+                      store.getState().language.value.content.about.point.strong.title
+                    }
                   </h3>
                   <div className='info__points__items'>
                     <a>
-                      Focused
+                      {
+                        store.getState().language.value.content.about.point.strong.focused
+                      }
                     </a>
                     <a>
-                      Unflappable 
+                      {
+                        store.getState().language.value.content.about.point.strong.unflappable
+                      }
                     </a>
                     <a>
-                      Disciplined
+                      {
+                        store.getState().language.value.content.about.point.strong.disciplined
+                      }
                     </a>
                   </div>
                 </div>
                 <div className='info__weak'>
                   <h3>
-                    Weak Points
+                    {
+                      store.getState().language.value.content.about.point.weak.title
+                    }
                   </h3>
                   <div className='info__points__items'>
                     <a>
-                      Recluse
+                      {
+                        store.getState().language.value.content.about.point.weak.recluse
+                      }
                     </a>
                     <a>
-                      Prideful
+                      {
+                        store.getState().language.value.content.about.point.weak.prideful
+                      }
                     </a>
                     <a>
-                      Irritable
+                      {
+                        store.getState().language.value.content.about.point.weak.irritable
+                      }
                     </a>
                   </div>
                 </div>

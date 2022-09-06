@@ -6,7 +6,9 @@ import store from '../store/store';
 import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
 
 import "../styles/projects.scss";
+import { langCssCorrection } from "../js/langCssCorrection.js";
 import scrollActivator from '../util/scrollActivator';
+
 import { loadModalFromURL, loadAnimations } from '../js/projects';
 import {Modal, Button} from 'react-bootstrap';
 
@@ -24,6 +26,7 @@ class Projects extends React.Component {
   
   componentDidMount() {
     scrollActivator();
+    langCssCorrection(store.getState().language.value.language);
     loadModalFromURL(this.handleModalShow);
     loadAnimations();
 
@@ -38,38 +41,9 @@ class Projects extends React.Component {
 
   componentWillUpdate() {
     if(store.getState().language.value.language === 'farsi') {
-      $('body').css({
-        'font-family': "'vazirmatn', Arial, sans-serif",
-        'letter-spacing': '0.05rem'
-      });
-      
-      $(`
-        .kanda__content,
-        .shop__content
-      `).css({
-        'direction': 'rtl',
-        'background': `linear-gradient(
-          275deg, rgba(0, 21, 35, 0.6),
-          rgba(0, 21, 35, 0.1) 70%,
-          rgba(0, 21, 35, 0) 80%
-        )`
-      });
+      langCssCorrection('farsi');
     } else if (store.getState().language.value.language === 'english') {
-      $('body').css({
-        'font-family': "'outfit', Arial, Helvetica, sans-serif"
-      });
-
-      $(`
-        .kanda__content,
-        .shop__content
-      `).css({
-        'direction': 'ltr',
-        'background': `linear-gradient(
-          75deg, rgba(0, 21, 35, 0.6),
-          rgba(0, 21, 35, 0.1) 70%,
-          rgba(0, 21, 35, 0) 80%
-        )`
-      });
+      langCssCorrection('english');
     } else {
       // japanese?
     }

@@ -48,17 +48,6 @@
         "stopwatch": "یک کرنومتر ساده برای استفاده در شرایط مختلف"
       }
     },
-    "skills": {
-      "title": {
-        "front": "Front-End",
-        "back": "Back-End",
-        "styling": "Styling",
-        "scripting": "Scripting",
-        "server": "Server",
-        "data": "Data Handling",
-        "other": "Other Skills"
-      }
-    },
     "about": {
       "name": {
         "title": "نام: ",
@@ -77,7 +66,7 @@
         "text": "مجرد"
       },
       "exp": {
-        "title": "سابقه برنامه‌نویسی",
+        "title": "سابقه برنامه‌نویسی: ",
         "text": "+3 سال"
       },
       "slogan": {
@@ -87,11 +76,13 @@
       },
       "point": {
         "strong": {
+          "title": "نقاط قوت",
           "focused": "متمرکز",
           "unflappable": "خونسرد",
           "disciplined": "خودکفا"
         },
         "weak": {
+          "title": "نقاط ضعف",
           "recluse": "گوشه‌گیر",
           "prideful": "مغرور",
           "irritable": "زودرنج"

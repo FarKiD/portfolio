@@ -1,12 +1,60 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import Cookies from 'universal-cookie';
+
+import store from '../store/store';
+import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
+
 import { skillsLoad } from "../js/skills.js";
 import scrollActivator from '../util/scrollActivator';
 import "../styles/skills.scss";
 
 class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cookieLanguage: new Cookies().get('language')
+    };
+  }
+
   componentDidMount() {
     skillsLoad();
     scrollActivator();
+
+    if(this.state.cookieLanguage === 'farsi') {
+      this.props.languageCookieDispatch('farsi');
+      //Font
+      $('.header').css({
+        'font-family': "'vazirmatn', Arial, sans-serif",
+        'letter-spacing': '0.05rem'
+      });
+    } else if (this.state.cookieLanguage === 'english') {
+      $('body, .header').css({
+        'font-family': "'outfit', Arial, Helvetica, sans-serif",
+        'letter-spacing': '.1rem'
+      });
+      this.props.languageCookieDispatch('english');
+    } else {
+      // japanese
+    }
+  }
+
+  componentWillUpdate() {
+    // Change style as language changes
+    if(store.getState().language.value.language === 'farsi') {
+      //Font
+      $('.header').css({
+        'font-family': "'vazirmatn', Arial, sans-serif",
+        'letter-spacing': '0.05rem'
+      });
+    } else if (store.getState().language.value.language === 'english') {
+      $('body, .header').css({
+        'font-family': "'outfit', Arial, Helvetica, sans-serif",
+        'letter-spacing': '.1rem'
+      });
+    } else {
+
+    }
   }
 
   toggleSkill = (event) => {
@@ -349,4 +397,28 @@ class Skills extends React.Component {
   }
 };
 
-export default Skills;
+const mapStateToProps = state => {
+  return {
+    language: state.language
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    languageCookieDispatch: (lang) => {
+      switch(lang) {
+        case 'farsi':
+          dispatch(switchFarsi());
+          break;
+        case 'english':
+          dispatch(switchEnglish());
+          break;
+        case 'japanese':
+          dispatch(switchJapanese());
+          break;
+      } 
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Skills);

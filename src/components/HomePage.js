@@ -6,6 +6,7 @@ import Cookies from 'universal-cookie';
 import store from '../store/store';
 
 import { indexLoad } from "../js/index.js";
+import { langCssCorrection } from "../js/langCssCorrection.js";
 import { rmvClassActive, activateNavItem } from "../js/header.js";
 import { useDispatch } from 'react-redux';
 import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
@@ -22,7 +23,8 @@ class HomePage extends React.Component {
 
   // makes the router to reload the script
   componentDidMount() {
-    indexLoad(store.getState().language.value.language);
+    indexLoad();
+    langCssCorrection(store.getState().language.value.language);
     rmvClassActive();
 
     if(this.state.cookieLanguage === 'farsi') {
@@ -35,47 +37,11 @@ class HomePage extends React.Component {
   }
 
   componentWillUpdate() {
+    // Change style as language changes
     if(store.getState().language.value.language === 'farsi') {
-      $('body').css({
-        'font-family': "'vazirmatn', Arial, sans-serif",
-        'letter-spacing': '0.05rem'
-      });
-      
-      $(`
-        .intro__paragraph,
-        .second__paragraph,
-        .outro__content,
-        .intro__link,
-        .outro__link
-      `).css({
-        'direction': 'rtl'
-      });
-      $(`
-        .intro__text,
-        .second__text
-      `).css({
-        'align-items': 'flex-end'
-      });
+      langCssCorrection('farsi');
     } else if (store.getState().language.value.language === 'english') {
-      $('body').css({
-        'font-family': "'outfit', Arial, Helvetica, sans-serif"
-      });
-
-      $(`
-        .intro__paragraph,
-        .second__paragraph,
-        .outro__content,
-        .intro__link,
-        .outro__link
-      `).css({
-        'direction': 'ltr'
-      });
-      $(`
-        .intro__text,
-        .second__text
-      `).css({
-        'align-items': 'flex-start'
-      });
+      langCssCorrection('english');
     } else {
 
     }

@@ -34,23 +34,4 @@ export const indexLoad = (lang) => {
   }, 2000);
   
 // Animations End
-
-// Small correction for Farsi, in case of going back to the page
-if(lang === 'farsi') {
-  $(`
-    .intro__paragraph,
-    .second__paragraph,
-    .outro__content,
-    .intro__link,
-    .outro__link
-  `).css({
-    'direction': 'rtl'
-  });
-  $(`
-      .intro__text,
-      .second__text
-    `).css({
-      'align-items': 'flex-end'
-    });
-  }
 };

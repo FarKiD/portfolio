@@ -48,17 +48,6 @@
         "stopwatch": "A stopwatch helpful during workouts"
       }
     },
-    "skills": {
-      "title": {
-        "front": "Front-End",
-        "back": "Back-End",
-        "styling": "Styling",
-        "scripting": "Scripting",
-        "server": "Server",
-        "data": "Data Handling",
-        "other": "Other Skills"
-      }
-    },
     "about": {
       "name": {
         "title": "Name: ",
@@ -87,11 +76,13 @@
       },
       "point": {
         "strong": {
+          "title": "Strong Points",
           "focused": "Focused",
           "unflappable": "Unflappable",
           "disciplined": "Disciplined"
         },
         "weak": {
+          "title": "Weak Points",
           "recluse": "Recluse",
           "prideful": "Prideful",
           "irritable": "Irritable"
