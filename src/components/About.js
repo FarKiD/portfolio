@@ -36,7 +36,7 @@ class About extends React.Component {
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     if(store.getState().language.value.language === 'farsi') {
       langCssCorrection('farsi');
     } else if (store.getState().language.value.language === 'english') {

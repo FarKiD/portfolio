@@ -21,8 +21,8 @@ class HomePage extends React.Component {
     };
   }
 
-  // makes the router to reload the script
   componentDidMount() {
+    // makes the router to reload the script
     indexLoad();
     langCssCorrection(store.getState().language.value.language);
     rmvClassActive();
@@ -36,7 +36,7 @@ class HomePage extends React.Component {
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     // Change style as language changes
     if(store.getState().language.value.language === 'farsi') {
       langCssCorrection('farsi');

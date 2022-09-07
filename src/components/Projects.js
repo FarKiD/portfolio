@@ -39,7 +39,7 @@ class Projects extends React.Component {
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     if(store.getState().language.value.language === 'farsi') {
       langCssCorrection('farsi');
     } else if (store.getState().language.value.language === 'english') {
@@ -204,15 +204,68 @@ class Projects extends React.Component {
           </div>
           <Modal id="portfolioModal" show={this.state.ModalVisibility} onHide={this.handleModalClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>
+                Portfolio
+              </Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>
+              <div className='skills__container'>
+                <h4>
+                  Advanced skills and technologies used:
+                </h4>
+                <div className='row'>
+                  <div className='col'>
+                    SCSS
+                  </div>
+                  <div className='col'>
+                    React.js
+                  </div>
+                  <div className='col'>
+                    React Router
+                  </div>
+                  <div className='col'>
+                    Redux
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='col'>
+                    Node.js
+                  </div>
+                  <div className='col'>
+                    Express
+                  </div>
+                  <div className='col'>
+                    Webpack
+                  </div>
+                  <div className='col'>
+                    Heroku
+                  </div>
+                </div>
+              </div>
+              <div className='modal__content'>
+                <h4>
+                  Additional Info:
+                </h4>
+                <p>
+                  This is a <a href={"https://stackoverflow.com/a/36623117"}>Hybrid Website</a> using React as it's front and Node for it's server side.
+                </p>
+                <p>
+                  I used Redux alongside some JSON to create the content of the website, therefore the website won't refresh when you change it's language. 
+                </p>
+                <p>
+                  Also, I'm using universal cookies and by utilizing that with react, the language change will persist in your current session.
+                </p>
+                <p>
+                  All the animations, buttons, color schemes and design are made by myself, However, the icons are obtained from various other sources.
+                </p>
+                <p>
+                  By using client-side rendering with React Router, the website has instant reaction time on navigation.
+                </p>
+              </div>
+            </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleModalClose}>
+              <Button onClick={this.handleModalClose}>
                 Close
-              </Button>
-              <Button variant="primary" onClick={this.handleModalClose}>
-                Save Changes
               </Button>
             </Modal.Footer>
           </Modal>

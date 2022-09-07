@@ -39,7 +39,7 @@ class Skills extends React.Component {
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     // Change style as language changes
     if(store.getState().language.value.language === 'farsi') {
       //Font

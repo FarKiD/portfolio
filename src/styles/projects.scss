@@ -21,6 +21,18 @@
   color: $blue1;
 }
 
+@mixin border-bottom {
+  border-width: 0 0 .1rem 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    color.adjust($green0, $alpha: -1),
+    $green0,
+    color.adjust($green0, $alpha: -1)
+  );
+  border-image-slice: 1;
+}
+
 .kanda {
   margin: 4.8rem 0 0 0;
   padding: 0 0 1.4rem 0;
@@ -148,6 +160,59 @@
       color.adjust($aqua2, $alpha: -1)
     );
     border-image-slice: 1;
+  }
+}
+
+// Modal
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.btn-close {
+  display: none;
+}
+
+.modal-content {
+  background: $purple0;
+}
+
+.modal-header {
+  @include border-bottom;
+}
+
+.skills__container {
+  @include border-bottom;
+  padding-bottom: 1rem;
+}
+
+.modal__content {
+  padding-top: 1rem;
+}
+
+.modal-footer {
+  border-width: .1rem 0 0 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    color.adjust($green0, $alpha: -1),
+    $green0,
+    color.adjust($green0, $alpha: -1)
+  );
+  border-image-slice: 1;
+
+  .btn {
+    @include btn;
+    background: color.adjust($green0, $alpha: -0.8) !important;
+    border: .2rem solid color.adjust($green0, $alpha: -0.5) !important;
+    color: $green0 !important;
+  }
+
+  .btn:hover {
+    background: $green0 !important;
+    border-color: $blue4 !important;
+    border-radius: 0rem;
+    box-shadow: 0 0 .5rem .25rem $purple1;
+    color: $blue1 !important;
   }
 }
 
