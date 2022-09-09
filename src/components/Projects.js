@@ -34,8 +34,8 @@ class Projects extends React.Component {
       this.props.languageCookieDispatch('farsi');
     } else if (this.state.cookieLanguage === 'english') {
       this.props.languageCookieDispatch('english');
-    } else {
-      // japanese
+    } else if (this.state.cookieLanguage === 'japanese') {
+      this.props.languageCookieDispatch('japanese');
     }
   }
 

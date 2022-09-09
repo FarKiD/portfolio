@@ -2,21 +2,96 @@
   "language": "japanese",
   "content": {
     "header": {
-      "projects": "test jp",
-      "skills": "Skills",
-      "about": "About Me"
+      "projects": "プロジェクト",
+      "skills": "スキル",
+      "about": "伝記"
     },
     "index": {
-      "title1": "Who Am I?",
-      "title2": "What is this?",
-      "content1": "My name is Sajjad Ostadebrahim I'm a Full-Stack Developer.",
-      "content2": "My comprehensive Portfolio Showcasing a large array of my abilities.",
-      "link1": "Read More About Me",
-      "link2": "Read More About It",
-      "outroHeader1": "Interested in the website?",
-      "outroHeader2": "You can contact me via:",
-      "outroContent1": "Visit and explore the source code on my GitHub!",
-      "outroContent2": "Email: sajjad.eros@gmail.com Cellphone: +989032371898"
+      "title1": "私は \n だれ?",
+      "title2": "何 \n ですか?",
+      "neon": ["サッジャド オスタドエブラヒモ", "ポートフォリオ"],
+      "content1": "僕の名前は \n 私はフルスタックデベロッパー",
+      "content2": "これは私のプロフェッショナル \n ",
+      "link1": "私に関する詳細情報",
+      "link2": "ウェブサイトに関する詳細情報",
+      "outroHeader1": "ウェブサイトに興味がありますか?",
+      "outroHeader2": "私のコンタク：",
+      "outroContent1": "私のギツハボ",
+      "outroContent2": "メール: sajjad.ostadebrahim@gmail.com \n 携帯番号: +989032371898",
+      "outroBtn1": "ギツハボ",
+      "outroBtn2": "テレグラム"
+    },
+    "projects": {
+      "title": {
+        "kanda": "Kanda Idea",
+        "shop": "Online Shop Project"
+      },
+      "button": {
+        "kanda": "Kanda Idea",
+        "shop": "Online Shop",
+        "jcards": "Japanese Cards",
+        "portfolio": "Online Portfolio",
+        "reader": "Speed Reader App",
+        "stopwatch": "Simple Stopwatch"
+      },
+      "text": {
+        "kanda": "Kanda Idea is a respectable GIS and technology based company. in 2021 I had the great opportunity to work together with their development team and I was tasked with the Front-End of their new website, this was the result.",
+        "kandaDisclaimer": "Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.",
+        "kandaKeywords": "Keywords: Front-End, Javascript, Responsive",
+        "shop": "Shortly after my departure with Kanda Idea, I focused on learning Back-End, and this project was the ultimate result of that. it pretty much is a back-end skill showcase.",
+        "shopDisclaimer": "Disclaimer: Since using Heroku, the website might not work it's full potential.",
+        "shopKeywords": "Keywords: Back-End, Authentication, Database",
+        "visit": "Visit:",
+        "jcards": "Practice your Hiragana and Katakana",
+        "portfolio": "More info about the portfolio",
+        "reader": "A small app for speed reading",
+        "stopwatch": "A stopwatch helpful during workouts"
+      }
+    },
+    "about": {
+      "name": {
+        "title": "Name: ",
+        "text": "Sajjad Ostadebrahim"
+      },
+      "bday": {
+        "title": "Birthdate: ",
+        "text": "25 Nov. 1998"
+      },
+      "address": {
+        "title": "Location: ",
+        "text": "Tehran, Shahriyar"
+      },
+      "status": {
+        "title": "Marital Status: ",
+        "text": "Single"
+      },
+      "exp": {
+        "title": "Development Experience: ",
+        "text": "+3 Years"
+      },
+      "slogan": {
+        "dedication": "Dedication",
+        "aspiration": "Aspiration",
+        "intuition": "Intuition"
+      },
+      "point": {
+        "strong": {
+          "title": "Strong Points",
+          "focused": "Focused",
+          "unflappable": "Unflappable",
+          "disciplined": "Disciplined"
+        },
+        "weak": {
+          "title": "Weak Points",
+          "recluse": "Recluse",
+          "prideful": "Prideful",
+          "irritable": "Irritable"
+        }
+      },
+      "bio": {
+        "title": "Biography",
+        "text": "Born and raised in Tehran, Iran. I had a fairly simple childhood. I participated in Biology studies in high-school but very soon after graduation, I realized my real passion is in programming. after a few months of practicing C++ to become a game developer, and doing a very short SEO internship, I found interest in Web Developing and I have been occupied doing this ever since. \n I am a very proficient self-learner, I've taught myself English and everything I know about Programming, but that hasn't stop me from learning more!"
+      }
     }
   }
 }

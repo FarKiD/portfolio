@@ -31,8 +31,8 @@ class About extends React.Component {
       this.props.languageCookieDispatch('farsi');
     } else if (this.state.cookieLanguage === 'english') {
       this.props.languageCookieDispatch('english');
-    } else {
-
+    } else if (this.state.cookieLanguage === 'japanese') {
+      this.props.languageCookieDispatch('japanese');
     }
   }
 
