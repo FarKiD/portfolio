@@ -225,7 +225,7 @@ div.highway-slider {
 
 @keyframes translateinfinite {
   100% {
-    transform: translateX(calc(-12rem * 12));
+    transform: translateX(calc(-11.9rem * 12));
   }
 }
 
@@ -258,10 +258,10 @@ div.highway-slider {
 
     li.highway-car {
       width: 12rem;
-      animation: translateinfinite 20s linear infinite;
+      animation: translateinfinite 5s linear infinite;
 
       span.fab {
-        font-size: 6.5rem;
+        font-size: 6rem;
       }
     }
   }
