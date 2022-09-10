@@ -64,7 +64,6 @@ export const langCssCorrection = (lang) => {
     `).css({
       'direction': 'ltr'
     });
-
     $('.info__points__items > a').css({
       'letter-spacing': '.2rem'
     });
@@ -104,5 +103,44 @@ export const langCssCorrection = (lang) => {
       'font-family': "'mplus', Arial, sans-serif",
       'letter-spacing': '.1rem'
     });
+    // About
+    $(`
+      .profile__info,
+      .info__biography,
+      .info__points h3
+    `).css({
+      'direction': 'ltr'
+    });
+    $('.info__points__items > a').css({
+      'letter-spacing': '.2rem'
+    });
+    // Projects
+    $(`
+        .kanda__content,
+        .shop__content
+      `).css({
+        'direction': 'ltr',
+        'background': `linear-gradient(
+          75deg, rgba(0, 21, 35, 0.6),
+          rgba(0, 21, 35, 0.1) 70%,
+          rgba(0, 21, 35, 0) 80%
+        )`
+      });
+      // Index
+      $(`
+        .intro__paragraph,
+        .second__paragraph,
+        .outro__content,
+        .intro__link,
+        .outro__link
+      `).css({
+        'direction': 'ltr'
+      });
+      $(`
+        .intro__text,
+        .second__text
+      `).css({
+        'align-items': 'flex-start'
+      });
   }
 };
