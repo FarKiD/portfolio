@@ -45,7 +45,7 @@ class Projects extends React.Component {
     } else if (store.getState().language.value.language === 'english') {
       langCssCorrection('english');
     } else {
-      // japanese?
+      langCssCorrection('japanese');
     }
   }
 

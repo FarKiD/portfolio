@@ -77,6 +77,39 @@ span, .span {
   font-size: clamp(1.200rem, calc( 10px + 0.480vw ), 1.350rem);
 }
 
+// SweetAlert module customization
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.swal-modal {
+  background: $blue6;
+}
+
+.swal-text {
+  color: $white;
+}
+
+.swal-button {
+  background: color.adjust($aqua0, $alpha: -0.8);
+  border: .2rem solid color.adjust($aqua2, $alpha: -0.5);
+  border-radius: .2rem;
+  color: $aqua1;
+  transition: 300ms;
+}
+
+.swal-button:hover {
+  background: $aqua0;
+  border-color: $aqua2;
+  border-radius: 0rem;
+  box-shadow: 0 0 .5rem .5rem $blue1;
+  color: $blue1;
+}
+
+.swal-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 // Custom Special Classes
 .no-pad {
   padding: 0;

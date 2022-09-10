@@ -1,4 +1,5 @@
 import React from 'react';
+import swal from 'sweetalert';
 
 import { useDispatch } from 'react-redux';
 import { switchJapanese, switchEnglish, switchFarsi } from '../util/languageSlice';
@@ -31,6 +32,7 @@ const LanguageSwitch = () => {
         </a>
         <a onClick={function() {
           dispatch(switchJapanese());
+          swal('申し訳ありませんが、日本語はまだ開発中です. 私は日本語を勉強しています');
         }} id='japaneseLanguage'>
           <svg>
             <use href="#jpSVG" />

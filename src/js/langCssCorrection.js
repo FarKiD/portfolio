@@ -98,5 +98,11 @@ export const langCssCorrection = (lang) => {
     `).css({
       'align-items': 'flex-start'
     });
+  } else if (lang === 'japanese') {
+    // Font
+    $('body, .header').css({
+      'font-family': "'mplus', Arial, sans-serif",
+      'letter-spacing': '.1rem'
+    });
   }
 };

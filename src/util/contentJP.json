@@ -9,7 +9,7 @@
     "index": {
       "title1": "私は \n だれ?",
       "title2": "何 \n ですか?",
-      "neon": ["サッジャド オスタドエブラヒモ", "ポートフォリオ"],
+      "neon": ["サッジャドオスタドエブラヒモ", "ポートフォリオ"],
       "content1": "僕の名前は \n 私はフルスタックデベロッパー",
       "content2": "これは私のプロフェッショナル \n ",
       "link1": "私に関する詳細情報",
@@ -17,22 +17,22 @@
       "outroHeader1": "ウェブサイトに興味がありますか?",
       "outroHeader2": "私のコンタク：",
       "outroContent1": "私のギツハボ",
-      "outroContent2": "メール: sajjad.ostadebrahim@gmail.com \n 携帯番号: +989032371898",
+      "outroContent2": "メール: SAJJAD.OSTADEBRAHIM@GMAIL.COM \n 携帯番号: +989032371898",
       "outroBtn1": "ギツハボ",
       "outroBtn2": "テレグラム"
     },
     "projects": {
       "title": {
-        "kanda": "Kanda Idea",
-        "shop": "Online Shop Project"
+        "kanda": "カンダアイヂア",
+        "shop": "オンラインショップ"
       },
       "button": {
-        "kanda": "Kanda Idea",
-        "shop": "Online Shop",
-        "jcards": "Japanese Cards",
-        "portfolio": "Online Portfolio",
-        "reader": "Speed Reader App",
-        "stopwatch": "Simple Stopwatch"
+        "kanda": "カンダアイヂア",
+        "shop": "オンラインショップ",
+        "jcards": "日本語フラッシュカード",
+        "portfolio": "オンラインポートフォリオ",
+        "reader": "スピードリーダー",
+        "stopwatch": "ストップウォッチ"
       },
       "text": {
         "kanda": "Kanda Idea is a respectable GIS and technology based company. in 2021 I had the great opportunity to work together with their development team and I was tasked with the Front-End of their new website, this was the result.",
@@ -41,7 +41,7 @@
         "shop": "Shortly after my departure with Kanda Idea, I focused on learning Back-End, and this project was the ultimate result of that. it pretty much is a back-end skill showcase.",
         "shopDisclaimer": "Disclaimer: Since using Heroku, the website might not work it's full potential.",
         "shopKeywords": "Keywords: Back-End, Authentication, Database",
-        "visit": "Visit:",
+        "visit": "訪問:",
         "jcards": "Practice your Hiragana and Katakana",
         "portfolio": "More info about the portfolio",
         "reader": "A small app for speed reading",
@@ -50,46 +50,46 @@
     },
     "about": {
       "name": {
-        "title": "Name: ",
-        "text": "Sajjad Ostadebrahim"
+        "title": "名前: ",
+        "text": "サッジャドオスタドエブラヒモ"
       },
       "bday": {
-        "title": "Birthdate: ",
-        "text": "25 Nov. 1998"
+        "title": "生年月日: ",
+        "text": "25 NOV. 1998"
       },
       "address": {
-        "title": "Location: ",
-        "text": "Tehran, Shahriyar"
+        "title": "ロケーション: ",
+        "text": "テヘラン, イラン"
       },
       "status": {
-        "title": "Marital Status: ",
-        "text": "Single"
+        "title": "配偶者の有無: ",
+        "text": "シングル"
       },
       "exp": {
-        "title": "Development Experience: ",
-        "text": "+3 Years"
+        "title": "経験: ",
+        "text": "+3 年"
       },
       "slogan": {
-        "dedication": "Dedication",
-        "aspiration": "Aspiration",
-        "intuition": "Intuition"
+        "dedication": "献身",
+        "aspiration": "希望",
+        "intuition": "直感"
       },
       "point": {
         "strong": {
-          "title": "Strong Points",
-          "focused": "Focused",
-          "unflappable": "Unflappable",
-          "disciplined": "Disciplined"
+          "title": "フォルテ",
+          "focused": "集中",
+          "unflappable": "穏やか",
+          "disciplined": "規律ある"
         },
         "weak": {
-          "title": "Weak Points",
-          "recluse": "Recluse",
-          "prideful": "Prideful",
-          "irritable": "Irritable"
+          "title": "弱点",
+          "recluse": "孤独な",
+          "prideful": "誇り",
+          "irritable": "過敏な"
         }
       },
       "bio": {
-        "title": "Biography",
+        "title": "伝記",
         "text": "Born and raised in Tehran, Iran. I had a fairly simple childhood. I participated in Biology studies in high-school but very soon after graduation, I realized my real passion is in programming. after a few months of practicing C++ to become a game developer, and doing a very short SEO internship, I found interest in Web Developing and I have been occupied doing this ever since. \n I am a very proficient self-learner, I've taught myself English and everything I know about Programming, but that hasn't stop me from learning more!"
       }
     }

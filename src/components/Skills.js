@@ -29,13 +29,17 @@ class Skills extends React.Component {
         'letter-spacing': '0.05rem'
       });
     } else if (this.state.cookieLanguage === 'english') {
+      this.props.languageCookieDispatch('english');
       $('body, .header').css({
         'font-family': "'outfit', Arial, Helvetica, sans-serif",
         'letter-spacing': '.1rem'
       });
-      this.props.languageCookieDispatch('english');
     } else {
-      // japanese
+      this.props.languageCookieDispatch('japanese');
+      $('body, .header').css({
+        'font-family': "'mplus', Arial, sans-serif",
+        'letter-spacing': '.1rem'
+      });
     }
   }
 
@@ -52,8 +56,11 @@ class Skills extends React.Component {
         'font-family': "'outfit', Arial, Helvetica, sans-serif",
         'letter-spacing': '.1rem'
       });
-    } else {
-
+    } else if (store.getState().language.value.language === 'japanese') {
+      $('body, .header').css({
+        'font-family': "'mplus', Arial, sans-serif",
+        'letter-spacing': '.1rem'
+      });
     }
   }
 

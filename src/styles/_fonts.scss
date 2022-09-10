@@ -38,6 +38,15 @@
   src: url('./fonts/Vazirmatn-Bold.ttf') format('truetype');
   unicode-range: U+0600-06FF;
 }
+// Japanese fonts
+@font-face {
+  font-family: 'mplus';
+  src: url('./fonts/MPLUSRounded1c-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'mplus-bold';
+  src: url('./fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+}
 
 @mixin outfit-thin {
   font-family: 'outfit-thin', Arial, Helvetica, sans-serif;
@@ -60,4 +69,8 @@
 
 @mixin vazirmatn {
   font-family: 'vazirmatn', Arial, sans-serif;
+}
+
+@mixin mplus {
+  font-family: 'mplus', Arial, sans-serif;
 }
