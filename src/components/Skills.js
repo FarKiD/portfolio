@@ -34,7 +34,7 @@ class Skills extends React.Component {
         'font-family': "'outfit', Arial, Helvetica, sans-serif",
         'letter-spacing': '.1rem'
       });
-    } else {
+    } else if (this.state.cookieLanguage === 'japanese') {
       this.props.languageCookieDispatch('japanese');
       $('body, .header').css({
         'font-family': "'mplus', Arial, sans-serif",
