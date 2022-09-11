@@ -1,5 +1,5 @@
 {
-  "name": "words-chain",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "./public/dist/bundle.js",
@@ -12,9 +12,10 @@
     "start": "node server.js",
     "devstart": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["fullstack", "portfolio"],
+  "author": "Sajjad Ostadebrahim <sajjad.ostadebrahim@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.0",
     "babel-cli": "^6.26.0",

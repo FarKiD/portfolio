@@ -226,3 +226,20 @@
 .navigation__language__dropdown svg {
   @include iconSVG;
 }
+
+@media only screen and (max-width: 576px) {
+  .navigation__item {
+    font-size: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
+    padding: 0 1.8rem;
+  }
+
+  .navigation__language {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navigation__item {
+    font-size: clamp(1.380rem, calc( 12px + 0.720vw ), 1.500rem);
+  }
+}

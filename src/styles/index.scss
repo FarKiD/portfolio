@@ -278,34 +278,72 @@ div.highway-slider {
 // RESPONSIVE
 
 @media only screen and (max-width: 768px) {
+  .intro__title {
+    margin-left: -7rem;
+  }
+
+  .second__title {
+    margin-left: calc(-7rem + 5px);
+  }
+
   .intro__text,
   .second__text {
-    align-items: stretch;
+    align-items: stretch !important;
     max-width: none;
-    text-align: center;
+    text-align: center !important;
   }
 
   .outro__boxes {
     margin: 5vh 0 auto 0;
+    text-align: center;
   }
 
   .intro,
   .second {
-    margin-right: -6rem;
+    margin-right: -7rem;
   }
 
   .second__banner {
-    margin-left: -.2rem;
-  }
-
-  .second__title {
-    margin-left: calc(-6rem + 5px);
+    margin-left: -.3rem;
   }
 
   .second__link {
     margin: 0 .2rem 0 0;
   }
+
+  .highway-car > svg {
+    width: 6rem;
+    height: 6rem;
+  }
 }
+@media only screen and (max-width: 576px) {
+  .intro__h2 {
+    font-size: clamp(1.625rem, calc( 12px + 1.300vw ), 1.950rem);
+  }
+
+  .intro {
+    margin-bottom: 6rem;
+  }
+
+  .second {
+    margin-bottom: 3rem;
+  }
+
+  .intro__text,
+  .second__text {
+    p {
+      margin-bottom: 0;
+      font-size: clamp(1rem, calc( 12px + 0.480vw ), 1.350rem);
+    }
+  }
+
+  .intro__link,
+  .second__link {
+    white-space: nowrap;
+    font-size: clamp(1rem, calc( 9px + 0.480vw ), 1.350rem);
+  }
+}
+
 
 @media only screen and (max-width: 400px) {
   .intro,
@@ -313,12 +351,14 @@ div.highway-slider {
     letter-spacing: 0;
   }
 
-  .intro {
-    margin-bottom: 6rem;
+  .intro__title,
+  .second__title {
+    padding: 0 .4rem 0 0;
   }
 
-  .secont {
-    margin-bottom: 3rem;
+  .intro__link,
+  .second__link {
+    white-space: normal;
   }
 
   .intro__banner,
