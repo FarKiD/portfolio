@@ -61,5 +61,5 @@ module.exports = {
     watchFiles: ['src/**'],
     historyApiFallback: true
   },
-  mode: 'development'
+  mode: 'production'
 }
