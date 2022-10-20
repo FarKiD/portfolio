@@ -92,7 +92,7 @@ class Header extends React.Component {
           </Link>
           <LanguageSwitch />
           <div className='navigation__title-container'>
-            <Link onClick={() => rmvClassActive()} className="navigation__title" to="/">
+            <Link aria-label='Go back to homepage' onClick={() => rmvClassActive()} className="navigation__title" to="/">
               <i className="bi bi-house-door"></i>
               <i class="bi bi-house-door-fill"></i>
             </Link>
