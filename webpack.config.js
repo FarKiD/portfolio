@@ -45,7 +45,9 @@ module.exports = {
       template: path.join(__dirname, "src", "index.html"),
       favicon: "./src/favicon.png"
     }),
-    new CompressionPlugin()
+    new CompressionPlugin({
+      deleteOriginalAssets: true
+    })
   ],
   devServer: {
     compress: true,
