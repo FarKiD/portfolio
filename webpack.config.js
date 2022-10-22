@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "app.js"),
@@ -44,9 +43,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
       favicon: "./src/favicon.png"
-    }),
-    new CompressionPlugin({
-      deleteOriginalAssets: true
     })
   ],
   devServer: {
