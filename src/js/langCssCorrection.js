@@ -23,7 +23,7 @@ export const langCssCorrection = (lang) => {
     // Projects
     $(`
       .kanda__content,
-      .shop__content
+      .applanding__content
     `).css({
       'direction': 'rtl',
       'background': `linear-gradient(
@@ -71,7 +71,7 @@ export const langCssCorrection = (lang) => {
     // Projects
     $(`
         .kanda__content,
-        .shop__content
+        .applanding__content
       `).css({
         'direction': 'ltr',
         'background': `linear-gradient(
@@ -117,7 +117,7 @@ export const langCssCorrection = (lang) => {
     // Projects
     $(`
         .kanda__content,
-        .shop__content
+        .applanding__content
       `).css({
         'direction': 'ltr',
         'background': `linear-gradient(

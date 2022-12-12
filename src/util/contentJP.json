@@ -24,11 +24,11 @@
     "projects": {
       "title": {
         "kanda": "カンダアイヂア",
-        "shop": "オンラインショップ"
+        "applanding": "オンラインショップ"
       },
       "button": {
         "kanda": "カンダアイヂア",
-        "shop": "オンラインショップ",
+        "applanding": "オンラインショップ",
         "jcards": "日本語フラッシュカード",
         "portfolio": "オンラインポートフォリオ",
         "reader": "スピードリーダー",
@@ -38,9 +38,9 @@
         "kanda": "Kanda Idea is a respectable GIS and technology based company. in 2021 I had the great opportunity to work together with their development team and I was tasked with the Front-End of their new website, this was the result.",
         "kandaDisclaimer": "Disclaimer: The website has had small changes since I worked on it. I can provide my own version if needed.",
         "kandaKeywords": "Keywords: Front-End, Javascript, Responsive",
-        "shop": "Shortly after my departure with Kanda Idea, I focused on learning Back-End, and this project was the ultimate result of that. it pretty much is a back-end skill showcase.",
-        "shopDisclaimer": "Disclaimer: Since using Heroku, the website might not work it's full potential.",
-        "shopKeywords": "Keywords: Back-End, Authentication, Database",
+        "applanding": "This is a Single Page Application and one of my latest projects, made in Next.JS, it also uses SCSS and TSX. this is supposed to be a demo landing page for an app.",
+        "applandingDisclaimer": "Disclaimer: This is for a demo app, so there is no actual app to download there.",
+        "applandingKeywords": "Keywords: Front-End, Next.js, TypeScript",
         "visit": "訪問:",
         "jcards": "Practice your Hiragana and Katakana",
         "portfolio": "More info about the portfolio",
