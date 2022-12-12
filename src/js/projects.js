@@ -23,12 +23,12 @@ export const loadAnimations = () => {
   }, 500);
 
   setTimeout(() => {
-    $('.kanda__image, .shop__image').css({
+    $('.kanda__image, .applanding__image').css({
       'left': '0',
       'opacity': '100%'
     });
 
-    $('.shop__content > a').css({
+    $('.applanding__content > a').css({
       'opacity': '100%'
     });
   }, 1000);

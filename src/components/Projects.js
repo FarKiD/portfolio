@@ -13,7 +13,7 @@ import { loadModalFromURL, loadAnimations } from '../js/projects';
 import {Modal, Button} from 'react-bootstrap';
 
 import kandaPic from '../images/kanda.jpg';
-import shopPic from '../images/shop.jpg';
+import appLandingPic from '../images/applanding.jpg';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -94,7 +94,7 @@ class Projects extends React.Component {
               
                &nbsp; 
               
-              <a className='h4 content-link' href='https://kandaidea.com/'>
+              <a target='_blank' className='h4 content-link' href='https://kandaidea.com/'>
                 {
                   store.getState().language.value.content.projects.button.kanda
                 }
@@ -107,24 +107,24 @@ class Projects extends React.Component {
               </p>
             </div>
           </div>
-          <div className='row shop'>
-            <div className='col-3 image-container'>
-              <img className='shop__image img-fluid' src={shopPic} />
+          <div className='row applanding'>
+            <div className='col-3 applanding-container'>
+              <img className='applanding__image img-fluid' src={appLandingPic} />
             </div>
-            <div className='col shop__content'>
+            <div className='col applanding__content'>
               <h3>
                 {
-                  store.getState().language.value.content.projects.title.shop
+                  store.getState().language.value.content.projects.title.applanding
                 }
               </h3>
               <p>
                 {
-                  store.getState().language.value.content.projects.text.shop
+                  store.getState().language.value.content.projects.text.applanding
                 }
                 <br />
                 <span><small>
                   {
-                    store.getState().language.value.content.projects.text.shopDisclaimer
+                    store.getState().language.value.content.projects.text.applandingDisclaimer
                   }
                 </small></span>
               </p>
@@ -136,15 +136,15 @@ class Projects extends React.Component {
               
               &nbsp; 
               
-              <a className='h4 content-link' href='https://ostadebrahim-shop.herokuapp.com/'>
+              <a target='_blank' className='h4 content-link' href='https://app-landing-next.vercel.app/'>
                 {
-                  store.getState().language.value.content.projects.button.shop
+                  store.getState().language.value.content.projects.button.applanding
                 }
               </a>
               <br />
               <p className='small keywords'>
                 {
-                  store.getState().language.value.content.projects.text.shopKeywords
+                  store.getState().language.value.content.projects.text.applandingKeywords
                 }
               </p>
             </div>

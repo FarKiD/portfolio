@@ -44,7 +44,7 @@
 }
 
 .kanda__image,
-.shop__image  {
+.applanding__image  {
   position: relative;
   left: -15rem;
   opacity: 0;
@@ -56,7 +56,7 @@
   transition: 600ms;
 }
 
-.shop {
+.applanding {
   margin: 2rem 0 1.4rem 0;
   padding: 2rem 0;
   border-width: .1rem 0;
@@ -71,7 +71,7 @@
 }
 
 .kanda__content,
-.shop__content {
+.applanding__content {
   margin-left: -5rem;
   padding: .5rem 4rem .5rem 1rem;
   background: linear-gradient(
@@ -233,10 +233,6 @@
       padding: 1rem;
     }
   }
-  // .kanda__image,
-  // .shop__image {
-  //   max-height: 15rem;
-  // }
 }
 
 @media only screen and (max-width: 768px) {
@@ -252,7 +248,7 @@
   }
 
   .kanda__content,
-  .shop__content {
+  .applanding__content {
     border-width: 0 .1rem;
     margin-left: 0;
   }
@@ -272,7 +268,7 @@
 
 @media only screen and (max-width: 576px) {
   .kanda__content,
-  .shop__content {
+  .applanding__content {
     background: linear-gradient(
       180deg, color.adjust($blue1, $alpha: -.4),
       color.adjust($blue1, $alpha: -.9) 70%,
@@ -289,7 +285,7 @@
     border-image-slice: 1;
   }
 
-  .shop {
+  .applanding {
     border-width: 0;
   }
 
