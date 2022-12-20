@@ -44,7 +44,8 @@
 }
 
 .kanda__image,
-.applanding__image  {
+.applanding__image,
+.farda__image  {
   position: relative;
   left: -15rem;
   opacity: 0;
@@ -71,7 +72,8 @@
 }
 
 .kanda__content,
-.applanding__content {
+.applanding__content,
+.farda__content {
   margin-left: -5rem;
   padding: .5rem 4rem .5rem 1rem;
   background: linear-gradient(
@@ -96,6 +98,20 @@
   .keywords {
     color: $grey1;
   }
+}
+
+.farda {
+  margin: 2rem 0 1.4rem 0;
+  padding: 2rem 0;
+  border-width: 0 0 .1rem 0;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    color.adjust($aqua2, $alpha: -1),
+    $aqua2,
+    color.adjust($aqua2, $alpha: -1)
+  );
+  border-image-slice: 1;
 }
 
 .content-link {
@@ -248,7 +264,8 @@
   }
 
   .kanda__content,
-  .applanding__content {
+  .applanding__content,
+  .farda__content {
     border-width: 0 .1rem;
     margin-left: 0;
   }
@@ -268,7 +285,8 @@
 
 @media only screen and (max-width: 576px) {
   .kanda__content,
-  .applanding__content {
+  .applanding__content,
+  .farda__content {
     background: linear-gradient(
       180deg, color.adjust($blue1, $alpha: -.4),
       color.adjust($blue1, $alpha: -.9) 70%,
@@ -285,7 +303,7 @@
     border-image-slice: 1;
   }
 
-  .applanding {
+  .applanding, .farda {
     border-width: 0;
   }
 

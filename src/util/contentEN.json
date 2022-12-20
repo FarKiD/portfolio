@@ -24,11 +24,13 @@
     "projects": {
       "title": {
         "kanda": "Kanda Idea",
-        "applanding": "App Landing SPA"
+        "applanding": "App Landing SPA",
+        "farda": "Hamrah Farda Resume"
       },
       "button": {
         "kanda": "Kanda Idea",
         "applanding": "Landing Page",
+        "farda": "Hamrah Farda",
         "jcards": "Japanese Cards",
         "portfolio": "Online Portfolio",
         "reader": "Speed Reader App",
@@ -41,6 +43,9 @@
         "applanding": "This is a Single Page Application and one of my latest projects, made in Next.JS, it also uses SCSS and TSX. this is supposed to be a demo landing page for an app.",
         "applandingDisclaimer": "Disclaimer: This is for a demo app, so there is no actual app to download there.",
         "applandingKeywords": "Keywords: Front-End, Next.js, TypeScript",
+        "farda": "This is an unfinished resume I made for a company I worked with, unfortunately they decided abandon their website ideas. it uses Next JS for SEO purposes.",
+        "fardaDisclaimer": "Disclaimer: due to security reasons, all names and references to the actual company has been redacted.",
+        "fardaKeywords": "Keywords: Front-End, Next.js",
         "visit": "Visit:",
         "jcards": "Practice your Hiragana and Katakana",
         "portfolio": "More info about the portfolio",

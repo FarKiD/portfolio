@@ -34,6 +34,17 @@ export const loadAnimations = () => {
   }, 1000);
 
   setTimeout(() => {
+    $('.farda__image').css({
+      'left': '0',
+      'opacity': '100%'
+    });
+
+    $('.farda__content > a').css({
+      'opacity': '100%'
+    });
+  }, 1500);
+
+  setTimeout(() => {
     $('.others div:nth-of-type(n+1):not(div:nth-of-type(n+3))').css({
       'left': '0'
     });
@@ -41,11 +52,11 @@ export const loadAnimations = () => {
     $('.others div:nth-of-type(n+3)').css({
       'right': '0'
     });
-  }, 1000);
+  }, 2000);
 
   setTimeout(() => {
     $('.others div').css({
       'opacity': '100%'
     });
-  }, 1800);
+  }, 2200);
 };

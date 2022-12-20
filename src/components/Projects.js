@@ -14,6 +14,7 @@ import {Modal, Button} from 'react-bootstrap';
 
 import kandaPic from '../images/kanda.jpg';
 import appLandingPic from '../images/applanding.jpg';
+import fardaPic from '../images/farda.jpg';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -108,7 +109,7 @@ class Projects extends React.Component {
             </div>
           </div>
           <div className='row applanding'>
-            <div className='col-3 applanding-container'>
+            <div className='col-3 image-container applanding-container'>
               <img className='applanding__image img-fluid' src={appLandingPic} />
             </div>
             <div className='col applanding__content'>
@@ -145,6 +146,48 @@ class Projects extends React.Component {
               <p className='small keywords'>
                 {
                   store.getState().language.value.content.projects.text.applandingKeywords
+                }
+              </p>
+            </div>
+          </div>
+          <div className='row farda'>
+            <div className='col-3 image-container farda-container'>
+              <img className='farda__image img-fluid' src={fardaPic} />
+            </div>
+            <div className='col farda__content'>
+              <h3>
+                {
+                  store.getState().language.value.content.projects.title.farda
+                }
+              </h3>
+              <p>
+                {
+                  store.getState().language.value.content.projects.text.farda
+                }
+                <br />
+                <span><small>
+                  {
+                    store.getState().language.value.content.projects.text.fardaDisclaimer
+                  }
+                </small></span>
+              </p>
+              <span className='h4'>
+                {
+                  store.getState().language.value.content.projects.text.visit
+                }
+              </span> 
+              
+              &nbsp; 
+              
+              <a target='_blank' className='h4 content-link' href='https://farda-g4bl3dmyb-farkid.vercel.app/'>
+                {
+                  store.getState().language.value.content.projects.button.farda
+                }
+              </a>
+              <br />
+              <p className='small keywords'>
+                {
+                  store.getState().language.value.content.projects.text.fardaKeywords
                 }
               </p>
             </div>
